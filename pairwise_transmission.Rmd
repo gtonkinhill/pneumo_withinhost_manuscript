@@ -1,0 +1,537 @@
+---
+title: "Pairwise transmission"
+output: html_document
+author: "Gerry Tonkin-Hill"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    fig_width: 12
+    fig_height: 8
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8,
+                      echo=TRUE, warning=FALSE, message=FALSE,
+                      tidy=TRUE)
+options(stringsAsFactors = FALSE)
+```
+
+### Load libraries
+
+Reformat alignments to include reference
+
+```
+for f in ../lofreq/var_calls/*.cram
+do
+prefix=$(basename $f .cram)
+arrIN=(${prefix//-/ })
+ref=../lofreq/cluster_medoids/${arrIN[0]}.fasta
+echo samtools view -T $ref $f -C -O cram,embed_ref -o ${prefix}.cram  >> samtools_cmds.txt
+echo samtools index ${prefix}.cram >> samtools_index_cmds.txt
+done
+```
+
+Generate pileups.
+
+```
+for f in *.cram
+do
+prefix=$(basename $f .cram)
+out=${prefix//\./_}.pile
+arrIN=(${prefix//-/ })
+ref=../lofreq/cluster_medoids/${arrIN[0]}.fasta
+echo bampileup -i $f -o $out -r $ref >> pileup_cmds.txt
+done
+```
+
+Run fasttranscluster
+
+```
+for g in 9 45 60 293 10 20 82 69 16 38 203 1 130 158 25 42 28 47 107 123 71 134 30 149 617 37 320 23 166 84 222 73 106 187 87 611 63 127 8 24 5 40 172 167 43 6 154 173 66 34 122 165 2 128 118 607 48 318 174 608 150 317 96 26 615 264 253 180 215 261 613 57 151 265 283 95 91 104 400 12 177 294 3 32 138 137 49 110 188 214 186 18 359 292 263 14 405 602 616 398 244 565 404 245 257 319 406 287 612 162 618 279
+do
+folder="GPSC_${g}"
+mkdir $folder
+echo "fasttranscluster --pileup ./${g}_*.csv.gz --dates transmission_date_and_epi_data.csv --save_probs -o $folder --prob_threshold 0 --trans_rate 6 --clock_rate 5.3 > ./${folder}/transcluster.log" >> transcluster_pileup_cmds.txt
+done
+
+xsv cat rows GPSC_*/transcluster_probabilities.csv > combined_transcluster_probabilities.csv
+```
+
+```{r, warning=FALSE}
+library(tidyverse)
+library(ggthemes)
+library(lubridate)
+library(data.table)
+library(ape)
+library(geosphere)
+```
+
+Load data
+
+```{r}
+manifests_qc <- fread("./data/manifest_w_QC.csv", data.table = FALSE) %>% as_tibble()
+swab_summary <- fread("./data/epi/Pneumo-DEEP_swab_summary.csv", data.table = FALSE) %>% as_tibble
+abx_summary <- fread("./data/epi/Pneumo-DEEP_illness_abx_summary.csv", data.table = FALSE) %>% as_tibble
+
+swab_summary$specdate <- as_date(swab_summary$specdate)
+swab_summary$ID <- paste(swab_summary$codenum, swab_summary$category, sep = "-")
+
+#map samples with treatment status
+abx_summary$ID <- paste(abx_summary$codenum, "Infant", sep="-")
+abx_summary$date_start <- lubridate::as_date(abx_summary$date_start)
+
+swab_summary$treatment <- map_chr(1:nrow(swab_summary), function(i){
+  sampleID <- swab_summary$ID[[i]]
+  treatments <- abx_summary[abx_summary$ID==sampleID,]
+  treatments <- treatments[!is.na(treatments$drug1),]
+  diff <- swab_summary$specdate[[i]]-treatments$date_start
+  if (any((diff>0) & (diff<=28))){
+    return("TREATED")
+  } else if (any((diff>0) & (diff<60))) {
+    return("AMBIGUOUS")
+  } else {
+    return("NOT_TREATED")
+  }
+})
+
+all_swabs <- swab_summary
+swab_summary <- swab_summary %>% filter(specnum %in% manifests_qc$`DONOR ID (required for EGA)`)
+swab_summary <- merge(swab_summary, manifests_qc[,c('Lane Name', 'DONOR ID (required for EGA)')], 
+                      by.x='specnum', by.y='DONOR ID (required for EGA)', all.x=TRUE)
+
+swab_summary <- as_tibble(swab_summary)
+swab_summary$specdate <- as_date(swab_summary$specdate)
+merged_serotype_calls <- fread('./data/merged_serotype_calls.csv') %>% as_tibble()
+```
+
+```{r}
+date_and_epi_data <- fread('data/transmission_date_and_epi_data.csv') %>% as_tibble()
+date_and_epi_data$date <- as_date(date_and_epi_data$date)
+transcluster <- fread('./data/combined_transcluster_probabilities.csv', header = TRUE) %>% as_tibble() %>%
+  arrange(snp_distance) %>%
+  filter(sampleA!=sampleB)
+transcluster <- transcluster[!duplicated(map2_chr(transcluster$sampleA, transcluster$sampleB, ~{paste(sort(c(.x,.y)), collapse = '')})),]
+
+transcluster$hostA <- date_and_epi_data$host[match(transcluster$sampleA, date_and_epi_data$ref_lane)]
+transcluster$hostB <- date_and_epi_data$host[match(transcluster$sampleB, date_and_epi_data$ref_lane)]
+transcluster$specnumA <- date_and_epi_data$specnum[match(transcluster$sampleA, date_and_epi_data$ref_lane)]
+transcluster$specnumB <- date_and_epi_data$specnum[match(transcluster$sampleB, date_and_epi_data$ref_lane)]
+transcluster$dateA <- date_and_epi_data$date[match(transcluster$sampleA, date_and_epi_data$ref_lane)]
+transcluster$dateB <- date_and_epi_data$date[match(transcluster$sampleB, date_and_epi_data$ref_lane)]
+transcluster$famA <- date_and_epi_data$codenum[match(transcluster$sampleA, date_and_epi_data$ref_lane)]
+transcluster$famB <- date_and_epi_data$codenum[match(transcluster$sampleB, date_and_epi_data$ref_lane)]
+transcluster$categoryA <- date_and_epi_data$category[match(transcluster$sampleA, date_and_epi_data$ref_lane)]
+transcluster$categoryB <- date_and_epi_data$category[match(transcluster$sampleB, date_and_epi_data$ref_lane)]
+transcluster$date_diff <- transcluster$dateB - transcluster$dateA
+transcluster$GPSC <- as.numeric(gsub('_.*','', transcluster$sampleA))
+
+transcluster_diff_host <- transcluster %>% filter(hostA!=hostB)
+```
+
+Look at association between transmission probability and geographic distance within the camp
+
+```{r}
+house_data <- fread("./data/epi/Pneumo-DEEP_infant_house_metadata.csv") %>% as_tibble()
+
+house_lat <- setNames(house_data$house_latitude, house_data$codenum)
+house_long <- setNames(house_data$house_longitude, house_data$codenum)
+
+transcluster_diff_host$geo_dist <- distHaversine(matrix(c(house_long[transcluster_diff_host$famA], 
+                                                          house_lat[transcluster_diff_host$famA]),
+                                                        byrow = FALSE, ncol = 2),
+                                                 matrix(c(house_long[transcluster_diff_host$famB], 
+                                                          house_lat[transcluster_diff_host$famB]),
+                                                        byrow = FALSE, ncol = 2))/1000
+
+trans_geo_dist <- transcluster_diff_host %>%
+  filter(!is.na(geo_dist))
+
+trans_geo_dist$trans_sum <- rowSums(trans_geo_dist[,5:10])
+
+trans_geo_dist$cat <- apply(trans_geo_dist[,5:10], 1, function(r) c('0','1','2','3','4','≥5')[which.max(r)])
+trans_geo_dist$cat <- factor(trans_geo_dist$cat, levels=c('0','1','2','3','4','≥5'))
+trans_geo_dist$withinhouse <- trans_geo_dist$famA==trans_geo_dist$famB
+
+gg1 <- ggplot(trans_geo_dist %>% filter(!withinhouse), aes(x=cat, y=geo_dist)) + 
+  geom_boxplot(outlier.colour = NA, col='#2166ac') +
+  geom_point(pch = 21, position = position_jitter(width=0.1), col='#2166ac') +
+  # scale_color_manual(values = c('#b2182b','#2166ac')) +
+  theme_clean(base_size = 14) +
+  theme(plot.background = element_blank()) +
+  xlab('') +
+  ylab('Distance between\nhouseholds (km)') +
+  ggtitle('Between households')
+
+gg2 <- ggplot(trans_geo_dist %>% filter(withinhouse), aes(x=cat),) + 
+  geom_histogram(stat="count", fill='#b2182b') +
+  # geom_point(pch = 21, position = position_jitter(width=0.1)) +
+  # scale_color_manual(values = c('#b2182b','#2166ac')) +
+  theme_clean(base_size = 14) +
+  theme(plot.background = element_blank()) +
+  xlab('Number of intermediate hosts') +
+  ylab('Count') +
+  ggtitle('Within households')
+
+gg1 + gg2 + patchwork::plot_layout(ncol = 1) + patchwork::plot_layout(design = )
+
+ggsave('Figures/transmission_prob_vs_geographic_dist_boxplot.png', height = 7, width = 10)
+ggsave('Figures/transmission_prob_vs_geographic_dist_boxplot.pdf', height = 7, width = 10)
+```
+
+Create plot of transmission overlaid on map of the Maela camp.
+
+```{r, eval=FALSE}
+# this requires a google maps api so is not run by default
+
+library(ggmap)
+
+register_google(key='AIzaSyBHBKilwLcFzGpDcqUBMpMWVyXb1yEwkko')
+
+
+pdf <- trans_geo_dist %>% 
+  filter(cat %in% c(0, 1))
+
+pdf$latA <- house_lat[pdf$famA]
+pdf$longA <- house_long[pdf$famA]
+pdf$latB <- house_lat[pdf$famB]
+pdf$longB <- house_long[pdf$famB]
+
+tcons <- merged_serotype_calls %>% 
+  filter(!is.na(consensus_percentage)) %>%
+  group_by(specnum) %>% summarise(
+    GPSC=GPSC[which.max(consensus_percentage)]
+  )
+tcons <- setNames(tcons$GPSC, nm = tcons$specnum)
+
+pdf$consensus <- (pdf$GPSC==tcons[pdf$specnumA]) & (pdf$GPSC==tcons[pdf$specnumB])
+pdf$consensus[is.na(pdf$consensus)] <- FALSE
+pdf <- pdf[!duplicated(paste(pdf$famA, pdf$famB)),]
+
+
+style <- list('feature:poi|element:labels|visibility:off', 
+              '&style=feature:road|color:white')
+
+map <- get_googlemap(c(98.38, 17.12),color = 'bw',
+                     zoom = 14, maptype = 'hybrid', scale = 2,
+                     style = style)
+
+ggmap(map) +
+  ggnetwork::geom_edges(data=pdf %>% filter(cat==0),
+             curvature = 0.4, alpha=1, size=0.4, 
+             aes(x=longA, y=latA, xend=longB, yend=latB,
+                                             colour=consensus)) +
+  scale_color_manual(values = c('#e31a1c', '#a6cee3')) +
+  scale_x_continuous(limits = c(98.365,98.397)) +
+  scale_y_continuous(limits = c(17.114,17.136)) +
+  coord_cartesian() +
+  xlab('longitude') + ylab('latitude')
+
+ggsave('figures/transmission_map.png', width = 10, height = 7)
+ggsave('figures/transmission_map.pdf', width = 10, height = 7)
+
+```
+
+## Multiple infection
+
+```{r}
+transcluster_diff_host$trans_sum <- rowSums(transcluster_diff_host[,5:10])
+transcluster_diff_host$cat <- apply(transcluster_diff_host[,5:10], 1, function(r) c('0','1','2','3','4','≥5')[which.max(r)])
+transcluster_diff_host$cat <- factor(transcluster_diff_host$cat, levels=c('0','1','2','3','4','≥5'))
+
+trans_multi <- transcluster_diff_host %>% filter(cat %in% c('0','1'))
+
+
+nsero <- merged_serotype_calls %>% group_by(specnum) %>%
+  summarise(
+    nsero=length(unique(serotype))
+  )
+
+trans_multi$max_nsero <- pmax(nsero$nsero[match(trans_multi$specnumA, nsero$specnum)],
+                              nsero$nsero[match(trans_multi$specnumB, nsero$specnum)])
+trans_multi <- trans_multi %>% 
+  group_by(hostA, hostB) %>%
+  summarise(
+    num=min(max_nsero)
+  )
+  
+involves_multi <- table(trans_multi$num>1)
+involves_multi['TRUE']/sum(involves_multi)
+```
+
+## Mothers & Children
+
+```{r}
+mother_child <- transcluster_diff_host %>% filter(famA==famB)
+table(mother_child$cat)
+
+plot_fam <- function(famID){
+  fam_swabs <- all_swabs %>% filter(codenum==famID)
+  fam_trans <- mother_child  %>% filter(famA==famID) %>% filter(cat %in% c('0','1'))
+  fam_trans$min_date <- pmin(fam_trans$dateA, fam_trans$dateB)
+  fam_trans <- fam_trans %>% arrange(min_date)
+  fam_trans <- fam_trans[!(duplicated(fam_trans$sampleA) & duplicated(fam_trans$sampleB)),]
+  
+  fam_swabs <- map_dfr(1:nrow(fam_swabs), function(i) {
+    spec <- fam_swabs$specnum[[i]]
+    seros <- unique(c(fam_swabs$serotype1[[i]], fam_swabs$serotype2[[i]], fam_swabs$serotype3[[i]], fam_swabs$serotype4[[i]]))
+    if (spec %in% merged_serotype_calls$specnum){
+      seros <- merged_serotype_calls$serotype[spec==merged_serotype_calls$specnum]
+      seros[is.na(seros)] <- '?'
+    } else if (all(is.na(seros))){
+      if (fam_swabs$pnc[[i]]=="No"){
+        seros <- c("Neg")  
+      } else {
+        seros <- c("?")  
+      }
+    } else {
+      seros <- seros[!is.na(seros)]
+    }
+    
+    seros[grepl('.*15.*', seros)] <- '15B/C'
+    
+    df <- tibble(
+      seros=seros
+    )
+    df$category <- fam_swabs$category[[i]]
+    df$is_sequenced <- fam_swabs$specnum[[i]] %in% merged_serotype_calls$specnum
+    df$treatment <- fam_swabs$treatment[[i]]
+    df$specdate <- fam_swabs$specdate[[i]]
+    df$age_d <- fam_swabs$age_d[[i]]
+    return(df)
+  })
+
+  fam_swabs$seros[fam_swabs$seros=="None"] <- NA
+  
+  point_size <- 15
+  fam_swabs$y <- NA
+  fam_swabs$y[fam_swabs$category=='Mother'] <-  beeswarm::swarmy(fam_swabs$specdate[fam_swabs$category=='Mother'], 
+                   rep(1, sum(fam_swabs$category=='Mother')), 
+                   cex = point_size/3, side = 1)[,2]
+  fam_swabs$y[fam_swabs$category=='Infant'] <-  beeswarm::swarmy(fam_swabs$specdate[fam_swabs$category=='Infant'], 
+                   rep(1.5, sum(fam_swabs$category=='Infant')), 
+                   cex = point_size/3, side = 1)[,2]
+  fam_trans$yA <- 1.02+as.numeric(fam_trans$categoryA=='Infant')*0.46
+  fam_trans$yB <- 1.02+as.numeric(fam_trans$categoryB=='Infant')*0.46
+  
+  year_mark <- as_date(swab_summary$dob[swab_summary$codenum==famID][[1]]) + 365
+  
+  gg <- ggplot(fam_swabs, aes(x=specdate, y=y)) +
+    geom_vline(xintercept=year_mark, col='red', size=1) +
+    geom_point(aes(colour=seros, alpha=is_sequenced), size=point_size) +
+    geom_text(aes(label=seros)) +
+    geom_segment(data = fam_trans, aes(x=dateA, y=yA, xend=dateB, yend=yB)) +
+    scale_alpha_manual(values = c(0.3,1), name='sequenced') +
+    scale_y_continuous(breaks = c(1,1.5), labels = c('Mother', 'Infant')) +
+    scale_color_discrete(guide='none') +
+    labs(color='serotype', x='date', y='', title = famID) +
+    theme_bw(base_size = 16)
+  return(gg)
+
+}
+
+keep <- unique((mother_child %>% filter(cat %in% c('0', '1')))$famA)
+all_plots <- map(keep, plot_fam)
+names(all_plots) <- keep
+
+combined_gg <- patchwork::wrap_plots(all_plots, ncol = 1, guides = 'collect')
+
+ggsave(combined_gg, filename = "figures/combined_mother_child_transmission_pairs_within1.pdf", 
+       height = 7*length(all_plots), width = 20, limitsize = FALSE)
+
+ggsave(all_plots[['ARI-0943']], filename = "Figures/example_mother_child_transmission_within1.pdf", 
+       height = 7, width = 20, limitsize = FALSE)
+
+```
+
+Direction was inferred manually using the following set of criteria
+
+- Transmission has to be supported by genomic data with a link inferred to have been within at most 1 intermediate host.
+- To allow for false negatives, at most 1 negative sample can separate a transmission link.
+- The host found to have the serotype first is considered the source. When both mother and child are found to have aquired it on the same date the link is classed as 'ambiguous'
+
+```{r}
+transmission_direction <- fread("./data/manual_transmission_direction.csv") %>% as_tibble()
+plotdf <- melt(transmission_direction, variable.name='Direction', value.name = 'count')
+plotdf$time <- gsub('.*_','', plotdf$Direction)
+plotdf$Direction <- gsub('_.*','',plotdf$Direction)
+
+plotdf <- plotdf %>% group_by(Direction, time) %>%
+  summarise(
+    total=sum(count)
+  )
+
+plotdf$Direction[plotdf$Direction=='ChildToMother'] <- 'Child to Mother'
+plotdf$Direction[plotdf$Direction=='MotherToChild'] <- 'Mother to Child'
+plotdf$`Infant age` <- ifelse(plotdf$time=='1yr', '< 1yr','> 1yr')
+
+ggplot(plotdf, aes(x=Direction, y=total, fill=`Infant age`)) + 
+  geom_col(position = 'dodge') +
+  theme_clean(base_size = 16) +
+  theme(plot.background = element_blank(),
+        legend.background = element_blank()) +
+  scale_fill_manual(values = c('#bcbddc','#756bb1')) +
+  xlab('Transmission direction') +
+  ylab('Count')
+
+ggsave('Figures/transmission_direction.png', height = 7, width = 10)
+ggsave('Figures/transmission_direction.pdf', height = 7, width = 10)
+
+m <- plotdf %>% filter(Direction!='Unknown')
+m <- matrix(m$total, ncol = 2, byrow = TRUE, dimnames = list(unique(m$Direction), unique(m$time)))
+chisq.test(m)
+
+```
+
+## Transmission bottleneck
+
+```{r}
+# Load minority variant calls
+only_minority_single_gpsc_dedup <- fread("./data/only_minority_single_gpsc_dedup.tab") %>%   
+  as_tibble() %>%
+  filter(is.na(region))
+
+# define unique mutation IDs
+only_minority_single_gpsc_dedup$mutID <- paste(only_minority_single_gpsc_dedup$chrom,
+                                               only_minority_single_gpsc_dedup$POS,
+                                               only_minority_single_gpsc_dedup$MUT)
+muts_by_specnum <- split(only_minority_single_gpsc_dedup$mutID,
+                         only_minority_single_gpsc_dedup$specnum)
+
+# only look at those specnums that passed mutation QC
+single_transcluster_diff_host <- transcluster_diff_host %>% 
+  filter(specnumA %in% only_minority_single_gpsc_dedup$specnum) %>%
+  filter(specnumB %in% only_minority_single_gpsc_dedup$specnum)
+
+# count the number of share minority variants between each sample in a transmission pair.
+single_transcluster_diff_host$n_shared_muts <- map2_dbl(single_transcluster_diff_host$specnumA, single_transcluster_diff_host$specnumB, ~{
+  sum(muts_by_specnum[[.x]] %in% muts_by_specnum[[.y]])
+})
+
+# only count the number of shared mutation between each host pair once
+single_transcluster_diff_host$pair <- map2_chr(single_transcluster_diff_host$hostA,
+                                               single_transcluster_diff_host$hostB, 
+                                               ~ paste(sort(c(.x,.y)), collapse = '-'))
+
+# Plot histograms of the number of shared variants
+single_transcluster_diff_host$ncat <- as.character(single_transcluster_diff_host$cat)
+single_transcluster_diff_host$ncat[!single_transcluster_diff_host$ncat %in% c('0','1')] <- '≥2'
+single_transcluster_diff_host$ncat <- factor(paste(single_transcluster_diff_host$ncat, 
+                                            'intermediate hosts'), 
+                                            levels=paste(c('0','1','≥2'),
+                                                         'intermediate hosts'))
+
+ggplot(single_transcluster_diff_host, aes(x=n_shared_muts)) +
+  geom_histogram(bins = 20) +
+  facet_wrap(~ncat, ncol = 1, scales = 'free_y') +
+  theme_clean(base_size = 16) +
+  theme(plot.background = element_blank(),
+        legend.background = element_blank()) +
+  xlab('Number of shared within-host mutations')
+
+
+m <- glm(n_shared_muts ~ `K=0`, data = single_transcluster_diff_host, family = 'poisson')
+summary(m)
+
+ggsave("./Figures/shared_variant_vs_transmission_probability.png", width = 12, height = 10)
+ggsave("./Figures/shared_variant_vs_transmission_probability.pdf", width = 12, height = 10)
+```
+
+
+```{r}
+merged_serotype_calls$host <- swab_summary$ID[match(merged_serotype_calls$specnum, swab_summary$specnum)]
+
+all_gpsc_pairs <- do.call(rbind, merged_serotype_calls %>% 
+  group_by(specnum) %>%
+  group_map(~{
+    gpsc <- .x$GPSC[!is.na(.x$GPSC)]
+    if (length(gpsc)>1){
+      df <- do.call(rbind, combinat::combn(gpsc, 2, simplify = FALSE))
+    } else if (length(gpsc==1)) {
+      df <- matrix(c(sort(gpsc), NA), nrow = 1)
+    } else(
+      return(tibble())
+    )
+    df <- as_tibble(df)
+    colnames(df) <- c('A','B')
+    return(df %>% add_column(host=unique(.x$host), .before = 1))
+  }))
+
+all_gpsc_pairs <- all_gpsc_pairs[!duplicated(all_gpsc_pairs),]
+sum(!is.na(all_gpsc_pairs$B))
+
+
+self_trans <- transcluster %>% filter(hostA==hostB)
+self_trans$cat <- apply(self_trans[,5:10], 1, function(r) c('0','1','2','3','4','≥5')[which.max(r)])
+self_trans$cat <- factor(self_trans$cat, levels=c('0','1','2','3','4','≥5'))
+self_trans <- self_trans %>% filter(cat %in% c(0,1,2))
+
+carriage_strong_links <- do.call(rbind, self_trans %>% 
+  group_by(hostA, GPSC) %>%
+  group_map(~{
+    samples <- unique(c(.x$sampleA, .x$sampleB))
+    n <- length(samples)
+    m <- matrix(1, nrow = n, ncol = n, dim=list(samples, samples))
+    m[as.matrix(.x[,1:2])] <- 0.1
+    m[as.matrix(.x[,2:1])] <- 0.1
+    diag(m) <- 0
+    clust <- cutree(hclust(as.dist(m, ), method = 'single'), h = 0.5)
+    .x$carriage <- clust[.x$sampleA]
+    tb <- tibble(host = unique(.x$hostA),
+           GPSC = unique(.x$GPSC),
+           specnum = c(.x$specnumA, .x$specnumB),
+           carriage = rep(.x$carriage, 2))
+    tb <- tb[!duplicated(tb),]
+    return(tb)
+  }, .keep = TRUE))
+
+specd <- setNames(swab_summary$specdate, nm = swab_summary$specnum)
+conservative_carriage_estimates <- fread("./data/carriage_episode_estimates.csv", data.table = FALSE) %>% as_tibble()
+
+carriage_strong_links$carriage_both <- paste(carriage_strong_links$carriage,
+                    conservative_carriage_estimates$carriage_episode[match(
+                      paste(carriage_strong_links$specnum,
+                            carriage_strong_links$GPSC),
+                      paste(conservative_carriage_estimates$specnum,
+                            conservative_carriage_estimates$GPSC))])
+
+.x <- carriage_strong_links[carriage_strong_links$host=='ARI-0782-Infant',]
+
+MAX_GAP = 70
+
+carriage_lengths <- do.call(rbind, carriage_strong_links %>% 
+  group_by(host) %>%
+  group_map(~{
+    # print(.x)
+   l <- split(.x, paste(.x$GPSC, .x$carriage_both))
+   if (length(l)<2) return(tibble())
+   cm <- combn(1:length(l), 2)
+   return(map2_dfr(cm[1,], cm[2,], function(a,b){
+     # print(paste(a,b))
+     specs <- l[[a]]$specnum[l[[a]]$specnum %in% l[[b]]$specnum]
+     d <- sort(specd[specs])
+     if (length(d)<2) return(tibble())
+     ds <- split(d, cumsum(!c(TRUE, (d[2:length(d)]- d[1:(length(d)-1)]) < MAX_GAP)))
+     tibble(host=unique(l[[a]]$host),
+            GPSC_pair=paste(sort(c(unique(l[[a]]$GPSC), unique(l[[b]]$GPSC))), collapse ='_'),
+            len=max(map_dbl(ds, function(s) max(s)-min(s))))
+   }) )
+  }, .keep = TRUE)) %>% filter(len>0)
+
+nrow(carriage_lengths)/sum(!is.na(all_gpsc_pairs$B))
+
+ggplot(carriage_lengths, aes(x=1, y=len)) +
+  geom_boxplot(outlier.colour = NA) +
+  ggbeeswarm::geom_quasirandom(width = 0.2) +
+  ylab('duration of multiple carriage (days)') +
+   theme_clean(base_size = 20) +
+  theme(plot.background = element_blank(),
+        legend.background = element_blank(),
+        axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank()) 
+
+ggsave('./figures/duration_of_multiple_carriage_of_same_serotypes.png', width = 5, height = 6)
+ggsave('./figures/duration_of_multiple_carriage_of_same_serotypes.pdf', width = 5, height = 6)
+```
