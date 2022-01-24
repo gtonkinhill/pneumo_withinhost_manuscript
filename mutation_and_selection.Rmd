@@ -1,0 +1,724 @@
+---
+title: "Mutation and selection analysis"
+output: html_document
+author: "Gerry Tonkin-Hill"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    fig_width: 12
+    fig_height: 8
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8,
+                      echo=TRUE, warning=FALSE, message=FALSE,
+                      tidy=TRUE)
+options(stringsAsFactors = FALSE)
+```
+
+### Load libraries
+
+```{r, warning=FALSE}
+library(tidyverse)
+library(data.table)
+library(ape)
+library(dndscvmod)
+library(ggthemes)
+```
+
+
+##Cluster genes
+
+We cluster sequences from each of the reference genomes using Panaroo v1.2.5 to obtain clusters of orthologous genes. This allows us to evaluate dN/dS ratio's for each cluster increasing the power of our analyses.
+
+```
+panaroo -i ./cluster_medoids/*.gff -o panaroo_sensitive/ -t 16 --clean-mode sensitive
+```
+
+```{python, eval=FALSE}
+from collections import defaultdict
+import gffutils as gff
+import glob
+from tqdm import tqdm
+
+#Clean other "##" starting lines from gff file, as it confuses parsers
+def clean_gff_string(gff_string):
+    splitlines = gff_string.splitlines()
+    lines_to_delete = []
+    for index in range(len(splitlines)):
+        if '##sequence-region' in splitlines[index]:
+            lines_to_delete.append(index)
+    for index in sorted(lines_to_delete, reverse=True):
+        del splitlines[index]
+    cleaned_gff = "\n".join(splitlines)
+    return cleaned_gff
+
+
+# load presence/absence matrix
+gene_to_cluster = defaultdict(lambda: 'NA')
+with open('./panaroo_medoids_gene_presence_absence.csv', 'r') as infile:
+    next(infile)
+    for line in infile:
+        line=line.strip().split(',')
+        for gc in line[3:]:
+            for g in gc.split(';'):
+                gene_to_cluster[g] = line[0]
+
+
+
+with open('cluster_to_genes.csv', 'w') as outfile:
+    outfile.write('sample\tchrom\tgenename\tgeneid\tcluster\n')
+    for gff_file_name in tqdm(glob.glob('*.gff')):
+        prefix = gff_file_name.replace('.gff', '')
+        gff_file = open(gff_file_name, 'r')
+        #Split file and parse
+        lines = gff_file.read().replace(',', '')
+        split = lines.split('##FASTA')
+        if len(split) != 2:
+            print("Problem reading GFF3 file: ", gff_file.name)
+            raise RuntimeError("Error reading prokka input!")
+        parsed_gff = gff.create_db(clean_gff_string(split[0]),
+                                    dbfn=":memory:",
+                                    force=True,
+                                    keep_order=True,
+                                    from_string=True)
+        # write out in dndscv cds table format
+        no_name_count = 1
+        for entry in parsed_gff.all_features(featuretype=()):
+            if "CDS" not in entry.featuretype: continue
+            try:
+                gene_name = entry.attributes["gene"][0]
+            except KeyError:
+                gene_name = ""
+            if gene_name == "":
+                try:
+                    gene_name = entry.attributes["name"][0]
+                except KeyError:
+                    gene_name = ""
+            if gene_name=="":
+                gene_name = "unknown_gene_" + str(no_name_count)
+                no_name_count += 1
+            o=outfile.write('\t'.join([prefix, entry.chrom, gene_name, entry.id, gene_to_cluster[entry.id]]) + '\n')
+```
+
+##Run dndscv
+
+```{r}
+only_minority_single_gpsc_dedup <- fread("./data/only_minority_single_gpsc_dedup.tab") %>% 
+  as_tibble() %>%
+  filter(is.na(region)) %>%
+  filter(support>11) %>% 
+  filter(depth<1000) %>%
+  filter(alt_forward>1) %>%
+  filter(alt_reverse>1)
+
+clust_conv <- fread('./data/cluster_medoids/cluster_to_genes.csv') %>% as_tibble()
+```
+
+
+## Calculation of dN/dS
+
+```{r, eval=FALSE}
+temp <- paste(only_minority_single_gpsc_dedup$`#CHROM`, 
+              only_minority_single_gpsc_dedup$POS, 
+              only_minority_single_gpsc_dedup$ALT)
+only_minority_single_gpsc_dedup$nobs <- map2_int(1:nrow(only_minority_single_gpsc_dedup),
+                                                 temp, ~{
+                                                   sum(temp[1:.x]==.y)  
+                                                 })
+
+allrefs <- unique(only_minority_single_gpsc_dedup$ref)
+
+all_annotations <- map(allrefs, ~{
+  print(.x)
+  single_gpsc_muts <- only_minority_single_gpsc_dedup %>% 
+    filter(nobs<=3) %>%
+    filter(ref==.x) %>% 
+    # filter(REF==CONS) %>%
+    filter(str_length(CONS)==1) %>%
+    filter(str_length(MUT)==1)
+  
+  too_close <- unlist(imap(split(single_gpsc_muts$POS, paste(single_gpsc_muts$`#CHROM`, single_gpsc_muts$sample)), function(pos,mut){
+    if (length(pos)>1){
+      cmb <-combinat::combn(pos, 2, simplify = FALSE)
+      cmb <- unique(unlist(cmb[map_dbl(cmb, diff)<=150]))
+      return(paste(mut, cmb))
+    } else{
+      return(NULL)
+    }
+  }))
+  single_gpsc_muts <- single_gpsc_muts %>% filter(!paste(`#CHROM`, sample, POS) %in% too_close)
+  
+  dndin <- single_gpsc_muts[,c('host','#CHROM','POS','CONS','MUT')]
+  colnames(dndin) <- c('sampleID','chr','pos','ref', 'mut')
+  
+  temp_refdb <- readRDS(paste(c("./data/cluster_medoids/", .x, "_refcds.RDS"), collapse = ''))
+  temp_annot <- dndscvmod::dndscv_annotate(dndin, refdb = temp_refdb, 
+                                           outp = 3, 
+                                           numcode = 11, 
+                                           max_muts_per_gene_per_sample = 2)
+  
+  return(temp_annot)
+})
+all_annotations <- all_annotations[!is.null(all_annotations)]
+```
+
+```{r}
+merged_annotations <- dndscvmod::dndscv_merge(map(all_annotations, ~ .x$RefCDS),
+                                              clusters = clust_conv)
+
+saveRDS(merged_annotations, "./data/merged_annotations.RDS")
+```
+
+```{r}
+merged_annotations <- readRDS("./data/merged_annotations.RDS")
+
+dndsout <- dndscvmod::dndscv_fit(RefCDS = merged_annotations, 
+                                indels = data.frame(),
+                                outp = 2,
+                                numcode = 11,
+                                sm='192r_3w',
+                                outmats=TRUE)
+
+alpha <- 0.05
+
+temp <- map_dfr(all_annotations, ~ .x$annotmuts) 
+temp$cluster <- clust_conv$cluster[match(temp$pid, clust_conv$geneid)]
+temp <- temp %>%
+  group_by(cluster) %>%
+  summarise(
+    n=length(unique(sampleID))
+  )
+
+top_hits <- dndsout$sel_loc %>%
+  filter(n_syn + n_mis + n_non >= 5)
+top_hits <- top_hits[top_hits$gene_name %in% temp$cluster[temp$n>=3],]
+
+
+top_hits$p.adjust <- p.adjust(top_hits$pall_loc, method = 'BH')
+top_hits <- top_hits %>%
+  filter(p.adjust<alpha) %>%
+  arrange(p.adjust)
+```
+
+One way to check the quality of the variant calls is to consider the distribution of the number of variable sites in coding regions among different coding positions. 
+
+```{r}
+chr2cds = function(pos,cds_int,strand) {
+  if (strand==1) {
+    return(which(unlist(apply(cds_int, 1, function(x) x[1]:x[2])) %in% pos))
+  } else if (strand==-1) {
+    return(which(rev(unlist(apply(cds_int, 1, function(x) x[1]:x[2]))) %in% pos))
+  }
+}
+
+codon_positions <- map_dfr(all_annotations, function(anno){
+  if (is.null(anno)) return(tibble())
+
+  gene_locs <- map(anno$RefCDS, ~ list(.x$intervals_cds, .x$strand))
+  names(gene_locs) <- map_chr(anno$RefCDS, ~ .x$gene_name)
+  
+  anno$annotmuts$cds_int <- gene_locs$cds_int[match(anno$annotmuts$gene, gene_locs$name)]
+  
+  pos_ind <- map2_int(anno$annotmuts$gene, anno$annotmuts$pos, ~{
+    chr2cds(.y,
+            gene_locs[[.x]][[1]],
+            gene_locs[[.x]][[2]])
+  })
+  pos_in_codon = pos_ind-(ceiling(pos_ind/3)-1)*3
+  
+  AF <- only_minority_single_gpsc_dedup$AF[match(paste(anno$annotmuts$sampleID,
+                                                       anno$annotmuts$chr,
+                                                       anno$annotmuts$pos),
+                                                 paste(only_minority_single_gpsc_dedup$host,
+                                                       only_minority_single_gpsc_dedup$`#CHROM`,
+                                                       only_minority_single_gpsc_dedup$POS))]
+  return(tibble(
+    gene = anno$annotmuts$gene,
+    AF = AF,
+    cod_pos = pos_in_codon
+  ))
+})
+
+plotdf <- map_dfr(10^seq(log10(0.0005),log10(0.2),0.1), ~{
+    tb <- table(codon_positions$cod_pos[codon_positions$AF>=.x])
+    tibble(
+        threshold=.x,
+        codon_pos=c('1','2','3'),
+        fraction=tb[c('1','2','3')]/sum(tb)
+    )
+})
+
+ggplot(plotdf, aes(x = threshold, y=fraction, col=codon_pos)) + 
+    geom_line(size=1) +
+    scale_x_log10() +
+    scale_color_discrete(name='condon\nposition') +
+    theme_bw(base_size = 16) +
+    theme(panel.border = element_blank()) +
+    xlab('VAF cuttoff') +
+    ylab('fraction of variant sites')
+
+ggsave("./figures/vaf_cutoff_vs_condon_position.png", width = 7, height = 6)
+ggsave("./figures/vaf_cutoff_vs_condon_position.pdf", width = 7, height = 6)
+```
+
+
+plot global dN/dS rates
+
+```{r}
+plotdfg <- dndsout$globaldnds %>%
+         filter(name %in% c('wmis', 'wnon'))
+plotdfg$name <- ifelse(plotdfg$name=='wmis', 'missense','nonsense')
+ggplot(plotdfg, 
+       aes(x=name, y=mle, col=name)) +
+  # geom_hline(yintercept = 1, col='black', alpha=0.5) +
+  geom_errorbar(aes(ymin=cilow, ymax=cihigh), width=.08, size=1) +
+  geom_point(size=3) +
+  theme_clean(base_size = 16) +
+  theme(plot.background = element_blank(),
+        legend.background = element_blank()) +
+  scale_y_continuous(limits = c(0,1)) +
+  scale_color_manual(values = c('#9970ab','#5aae61')) +
+  theme(legend.position = 'none') +
+  ylab('dN/dS ratio') +
+  xlab('')
+
+ggsave('figures/dnds_global.png', width = 7, height = 5)
+ggsave('figures/dnds_global.pdf', width = 7, height = 5)
+```
+
+Annotate the genes without clear gene names. We also remove those hits that were found to be potential paralogs in the panaroo pangenome graph generated from the single genome assemblies of Chewapreecha et al., 2014 in XXX. 
+
+```{r}
+top_hits$gene <- gsub('~~~.*','',top_hits$gene_name)
+top_hits <- top_hits %>% filter(wmis_loc<9999) #filter those which have failed to fit
+
+gene_pa_table <- fread('./data/cluster_medoids/panaroo_medoids_gene_presence_absence.csv', select = c(1,2,3)) %>% as_tibble()
+top_hits$annotation <- str_trim(gene_pa_table$Annotation[match(top_hits$gene_name, gene_pa_table$Gene)])
+
+
+gene_to_paralog <- fread("./data/gene_to_paralog_summary.csv") %>% 
+  as_tibble() %>%
+  filter(paralog==1)
+
+top_hits <- top_hits[!((map_lgl(top_hits$gene, ~ any(grepl(.x, gene_to_paralog$name))) & !grepl('group_', top_hits$gene_name))),]
+
+
+top_hits <- top_hits[!(map_lgl(top_hits$annotation, ~{
+  any(map_lgl(unlist(str_split(.x, ';')), function(s){
+    any(grepl(s, gene_to_paralog$description))
+  }))
+}) & grepl('group_', top_hits$gene_name)), ]
+
+```
+
+
+```{r}
+tr <- grepl('transposase', top_hits$annotation)
+top_hits$gene[tr] <- paste(top_hits$gene[tr], '(transposase)')
+
+tr <- grepl('chlorohydrolase', top_hits$annotation)
+top_hits$gene[tr] <- paste(top_hits$gene[tr], '(chlorohydrolase)')
+
+top_hits$gene[top_hits$gene=='group_3399'] <- 'group_3399 (DEAD box helicase/type I restriction-modification system)'
+top_hits$gene[top_hits$gene=='group_4404'] <- 'group_4404 (GntR family transcriptional regulator)'
+top_hits$gene[top_hits$gene=='group_3054'] <- 'group_3054 (FtsX-like permease)'
+top_hits$gene[top_hits$gene=='group_3917'] <- 'pspA'
+top_hits$gene[top_hits$gene=='group_2862'] <- 'group_2862 (uncharacterised protein)'
+top_hits$gene[top_hits$gene=='group_294'] <- 'group_294 (glycosyltransferase)'
+top_hits$gene[top_hits$gene=='group_4632'] <- 'group_4632 (transposase)'
+top_hits$gene[top_hits$gene=='group_5049'] <- 'group_5049 (uncharacterised protein)'
+top_hits$gene[top_hits$gene=='group_1921'] <- 'group_1921 (cell wall surface anchor family protein)'
+top_hits$gene[top_hits$gene=='group_2972'] <- 'group_2972 (endo-alpha-N-acetylgalactosaminidase)'
+top_hits$gene[top_hits$gene=='group_109'] <- 'group_109 (type I RM modification enzyme)'
+top_hits$gene[top_hits$gene=='group_3469'] <- 'group_3469 (competence-specific global transcription modulator)'
+top_hits$gene[top_hits$gene=='group_3170'] <- 'group_3170 (Tn5253 hypothetical protein)'
+top_hits$gene[top_hits$gene=='group_3272'] <- 'group_3272 restriction endonuclease S subunit'
+top_hits$gene[top_hits$gene=='group_2972'] <- 'group_2972 (endo-alpha-N-acetylgalactosaminidase)'
+top_hits$gene[top_hits$gene=='group_2393'] <- 'group_2393 (competence-specific global transcription modulator)'
+top_hits$gene[top_hits$gene=='group_3306'] <- 'group_3306 (bacterial lipoprotein)'
+top_hits$gene[top_hits$gene=='group_3169'] <- 'group_3169 (Tn5253 bacteriocine putative)'
+top_hits$gene[top_hits$gene=='group_3143'] <- 'group_3143 (CsbD-like protein)'
+top_hits$gene[top_hits$gene=='group_2261'] <- 'group_2261 (S24 family peptidase / LexA repressor / phage CI-like repressor)'
+top_hits$gene[top_hits$gene=='group_1706'] <- 'group_1706 (Holliday junction-specific endonuclease)'
+top_hits$gene[top_hits$gene=='cglC'] <- 'comYC'
+```
+
+Plot the dN/dS values at the gene level
+
+```{r}
+commonly_filt <- fread("./data/commonly_filtered_genes.csv") %>% as_tibble()
+
+top_hits_filt <- top_hits[!map_lgl(top_hits$gene_name, ~{
+  any(gsub('_.*', '', unlist(str_split(.x, "~~~"))) %in% gsub('_.*', '', commonly_filt$Var1))
+}),]
+
+plotdf <- tibble(
+  loc=c(top_hits_filt$wmis_loc, top_hits_filt$wnon_loc),
+  lower=c(top_hits_filt$lower1, top_hits_filt$lower2),
+  upper=c(top_hits_filt$upper1, top_hits_filt$upper2),
+  gene=rep(top_hits_filt$gene,2),
+  type=rep(c('missense', 'nonsense'), each=nrow(top_hits_filt))
+)
+
+dodge_width <- 0.7
+
+ggplot(plotdf, aes(x=gene, y=loc, col=type)) +
+  geom_hline(yintercept = 1, col='black', alpha=0.5) +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.08, size=0.5, position=position_dodge(width=dodge_width)) +
+  geom_point(size=3, position=position_dodge(width=dodge_width)) +
+  theme_bw(base_size = 16) +
+  scale_color_manual(values = c('#9970ab','#5aae61')) +
+  scale_y_sqrt(breaks=c(1,10,20), limits=c(0,20), expand = c(0,1)) +
+  ylab('dN/dS ratio') +
+  xlab('') +
+  coord_flip()
+
+ggsave('figures/dnds_gene_all.pdf', width = 12, height = 15)
+ggsave('figures/dnds_gene_all.png', width = 12, height = 15)
+```
+
+Concentrate on just those with predefined gene names
+
+```{r}
+ggplot(plotdf %>% 
+         filter(!gsub('_.*', '', gene) %in% gsub('_.*', '', commonly_filt$Var1)) %>%
+         filter(!grepl('transposase', gene)) %>%
+         filter(!grepl('chlorohydrolase', gene)),
+       aes(x=gene, y=loc, col=type)) +
+  geom_hline(yintercept = 1, col='black', alpha=0.5) +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.08, size=0.5, position=position_dodge(width=dodge_width)) +
+  geom_point(size=3, position=position_dodge(width=dodge_width)) +
+  theme_clean(base_size = 16) +
+  theme(plot.background = element_blank(),
+        legend.background = element_blank()) +
+  scale_color_manual(values = c('#9970ab','#5aae61')) +
+  scale_y_sqrt(breaks=c(1,10,50,100,200), expand = c(0,1)) +
+  ylab('dN/dS ratio') +
+  xlab('') +
+  coord_flip()
+
+ggsave('figures/dnds_gene_subset.pdf', width = 12, height = 7)
+ggsave('figures/dnds_gene_subset.png', width = 12, height = 7)
+```
+
+
+```{r}
+allmuts <- map_dfr(all_annotations, ~ .x$annotmuts)
+
+allmuts$AF <- only_minority_single_gpsc_dedup$AF[match(paste(allmuts$sampleID, allmuts$chr, allmuts$pos),
+  paste(only_minority_single_gpsc_dedup$host, only_minority_single_gpsc_dedup$`#CHROM`, only_minority_single_gpsc_dedup$POS))]
+
+only_minority_single_gpsc_dedup$gene <- allmuts$gene[match(
+  paste(only_minority_single_gpsc_dedup$host, only_minority_single_gpsc_dedup$`#CHROM`, only_minority_single_gpsc_dedup$POS),
+                                              paste(allmuts$sampleID, allmuts$chr, allmuts$pos))]
+pattern <- '.*1921.*'
+top_hits[grepl(pattern, top_hits$gene_name),]
+
+pcpAmuts <- allmuts[allmuts$pid %in% clust_conv$geneid[grepl(pattern, clust_conv$cluster)],]
+
+ggplot(pcpAmuts, aes(x=pos, y=sampleID, col=AF)) +
+  geom_point() +
+  facet_wrap(~chr, scales='free_x') +
+  theme(axis.text.y=element_blank())
+```
+
+
+## Mutational Spectrum
+
+
+###Between host mutational spectre
+
+First we take the core genome alignments of Chewapreecha et al., 2014 and filter out those with more than 10% ambigous or missing sites.
+
+```{python, eval=FALSE}
+import pyfastx
+import glob
+import re
+from shutil import copyfile
+
+
+for msa in glob.glob("./aligned_gene_sequences/*.fas"):
+  n = 0
+  total_length = 0
+  nmissing = 0
+  for name, seq in pyfastx.Fasta(msa, build_index=False):
+    total_length += len(seq)
+    nmissing += len(seq) - len(re.findall('[ACGT]', seq.upper()))
+    n += 1
+  if (n>=5) and (float(nmissing)/total_length < 0.1):
+    copyfile(msa, './qc_aligned_gene_seqs/' + msa.split('/')[-1])
+```
+
+
+```
+for f in *.aln
+do
+prefix=$(basename $f .aln)
+echo run_gubbins.py --threads 20 --tree-builder fasttree --filter-percentage 10 --prefix $prefix $f >> gubbins_cmds.txt
+done
+```
+
+```
+for f in *.aln
+do
+prefix=$(basename $f .aln)
+echo python mask_gubbins.py --missing-char N --aln $f --gff ${prefix}.recombination_predictions.gff --out ${prefix}_masked.aln >> mask_cmds.txt
+done
+```
+
+```
+for f in *_masked.aln
+do
+echo python calculate_mutation_freqs.py --msa $f -o ./ -t 20 --quiet >> calc_mut_cmds.txt
+done
+
+
+
+parallel -J 50 --progress < calc_mut_cmds.txt
+```
+
+
+### Within-host spectrum
+
+First we count the occurrence of each tri-nucleotide in the reference genomes to account for the genetic background.
+
+```{python, eval=FALSE}
+import pyfastx
+import glob
+from collections import Counter
+
+tri_count = Counter()
+
+for f in glob.glob("*.fasta"):
+  print(f)
+  for name, seq in pyfastx.Fasta(f, build_index=False):
+    for i in range(len(seq)-3):
+      s = seq[i:(i+3)].upper()
+      if 'N' not in s:
+        tri_count[s] += 1
+
+with open('pneumo_tri_nucleotide_count.csv', 'w') as outfile:
+  outfile.write('tri,count\n')
+  for tri in tri_count:
+    outfile.write(tri + ',' + str(tri_count[tri]) + '\n')
+```
+
+
+```{r}
+nts = c("A","C","G","T")
+genome_lengths <- fread('./data/genome_contig_lengths.csv') %>% as_tibble()
+
+mean_genome_length <- mean(map_dbl(split(genome_lengths$length, genome_lengths$genome), ~{sum(.x)}))
+trinfreq <- fread('./data/pneumo_tri_nucleotide_count.csv') %>% as_tibble()
+trinfreq$norm_count <- round((trinfreq$count/sum(trinfreq$count))*(mean_genome_length-2))
+
+trinfreq <- setNames(trinfreq$norm_count, trinfreq$tri)
+trinucs = paste(rep(nts,each=16,times=1),rep(nts,each=4,times=4),rep(nts,each=1,times=16), sep="")
+trinfreq = trinfreq[trinucs]; trinfreq[is.na(trinfreq)] = 0; names(trinfreq) = trinucs
+
+trinfreq <- fread('./data/original_claire_gubbins_ref_tri_context_masked.csv') %>% as_tibble()
+colnames(trinfreq) <- c('cluster','tri','count')
+mean_genome_length <-  mean((trinfreq %>% group_by(cluster) %>%
+  summarise(
+    length=sum(count)
+  ))$length)
+trinfreq <- trinfreq %>% group_by(tri) %>%
+  summarise(
+    count=sum(count)
+  )
+trinfreq$single <- substr(trinfreq$tri, 2, 2)
+single_freq <- map_int(split(trinfreq$count, trinfreq$single), sum)
+single_freq <- round(single_freq/(sum(single_freq))*mean_genome_length)
+
+trinfreq$norm_count <- round((trinfreq$count/sum(trinfreq$count))*(mean_genome_length-2))
+
+trinfreq <- setNames(trinfreq$norm_count, trinfreq$tri)
+trinucs = paste(rep(nts,each=16,times=1),rep(nts,each=4,times=4),rep(nts,each=1,times=16), sep="")
+trinfreq = trinfreq[trinucs]; trinfreq[is.na(trinfreq)] = 0; names(trinfreq) = trinucs
+
+ntcomp <- c(A="T",C="G",G="C",T="A")
+plotdf<- fread("./data/original_claire_gubbins_mutations_masked.csv") %>% as_tibble()
+colnames(plotdf) <- c("chr","pos","ref","mut","context")
+plotdf <- plotdf %>% group_by(context, ref, mut) %>%
+  summarise(
+    count=n()
+  )
+plotdf$norm_count <- plotdf$count/trinfreq[plotdf$context]
+plotdf$norm_count <- plotdf$norm_count/sum(plotdf$norm_count)
+plotdf$spec <- map2_chr(plotdf$ref, plotdf$mut, ~{
+  if (.x %in% c('A', 'G')){
+    paste(ntcomp[.x], ntcomp[.y], sep = '>')
+  } else {
+    paste(.x, .y, sep = '>')
+  }
+})
+plotdf$context2 <- map2_chr(plotdf$ref, plotdf$context, ~{
+  if (.x %in% c('A', 'G')){
+   .y <-  paste(ntcomp[substr(.y, 1, 1)], ntcomp[substr(.y, 3, 3)], sep = '-')
+  } else {
+    substr(.y, 2, 2) <- '-'
+  }
+  return(.y)
+})
+plotdf_claire <- plotdf %>% add_column(category='between')
+
+#######
+
+
+trinfreq <- fread('./data/pneumo_tri_nucleotide_count.csv') %>% as_tibble()
+trinfreq$norm_count <- round((trinfreq$count/sum(trinfreq$count))*(mean_genome_length-2))
+trinfreq$single <- substr(trinfreq$tri, 2, 2)
+between_single_freq <- map_int(split(trinfreq$count, trinfreq$single), sum)
+between_single_freq <- round(between_single_freq/(sum(between_single_freq))*mean_genome_length)
+
+trinfreq <- setNames(trinfreq$norm_count, trinfreq$tri)
+trinucs = paste(rep(nts,each=16,times=1),rep(nts,each=4,times=4),rep(nts,each=1,times=16), sep="")
+trinfreq = trinfreq[trinucs]; trinfreq[is.na(trinfreq)] = 0; names(trinfreq) = trinucs
+
+only_minority_single_gpsc_dedup <- fread("./data/only_minority_single_gpsc_dedup.tab") %>% as_tibble()  %>%
+  filter(is.na(region)) %>%
+  # filter(AF<0.5) %>%
+  filter(support>11) %>%
+  filter(depth<1000) %>%
+  filter(alt_forward>1) %>%
+  filter(alt_reverse>1)
+
+too_close <- unlist(imap(split(only_minority_single_gpsc_dedup$POS, paste(only_minority_single_gpsc_dedup$`#CHROM`, only_minority_single_gpsc_dedup$sample)), function(pos,mut){
+    if (length(pos)>1){
+      cmb <-combinat::combn(pos, 2, simplify = FALSE)
+      cmb <- unique(unlist(cmb[map_dbl(cmb, diff)<=150]))
+      return(paste(mut, cmb))
+    } else{
+      return(NULL)
+    }
+  }))
+only_minority_single_gpsc_dedup_filt <- only_minority_single_gpsc_dedup %>% filter(!paste(`#CHROM`, sample, POS) %in% too_close)
+
+
+plotdf <- unique(only_minority_single_gpsc_dedup_filt[,c('chrom', 'POS', 'CONS', 'MUT', 'context')])
+colnames(plotdf) <- c("chr","pos","ref","mut","context")
+plotdf <- plotdf[str_length(plotdf$ref)==1,]
+plotdf <- plotdf[!grepl('.*N.*', plotdf$context),]
+plotdf <- plotdf %>% group_by(chr, context, ref, mut) %>%
+  summarise(
+    count=n()
+  )
+plotdf$norm_count <- plotdf$count/trinfreq[plotdf$context]
+plotdf$norm_count <- plotdf$norm_count/sum(plotdf$norm_count)
+plotdf$spec <- map2_chr(plotdf$ref, plotdf$mut, ~{
+  if (.x %in% c('A', 'G')){
+    paste(ntcomp[.x], ntcomp[.y], sep = '>')
+  } else {
+    paste(.x, .y, sep = '>')
+  }
+})
+plotdf$context2 <- map2_chr(plotdf$ref, plotdf$context, ~{
+  if (.x %in% c('A', 'G')){
+   .y <-  paste(ntcomp[substr(.y, 1, 1)], ntcomp[substr(.y, 3, 3)], sep = '-')
+  } else {
+    substr(.y, 2, 2) <- '-'
+  }
+  return(.y)
+})
+plotdf$category <- 'within'
+plotdf <- rbind(plotdf, plotdf_claire)
+
+ggplot(plotdf, aes(x=context2, y=norm_count, fill=spec)) +
+  geom_col() +
+  facet_grid(category~spec) +
+  theme_bw(base_size=22) +
+  theme(axis.text.x = element_text(angle = 90, size=9, vjust = 0.5),
+        legend.position = "none") +
+  xlab('') +
+  ylab('Relative mutation rate')
+ggsave('./Figures/tri_context_base_spectrum_within_vs_between.png', width = 12, height = 7)
+ggsave('./Figures/tri_context_base_spectrum_within_vs_between.pdf', width = 12, height = 7)
+
+plotdf2 <- plotdf %>% group_by(chr, ref, category, spec) %>%
+  summarise(
+    count=sum(count)
+  )
+plotdf2$norm_count <- plotdf2$count
+plotdf2$norm_count[plotdf2$category=='within'] <- plotdf2$norm_count[plotdf2$category=='within'] /single_freq[plotdf2$ref[plotdf2$category=='within']]
+plotdf2$norm_count[plotdf2$category=='within'] <- plotdf2$norm_count[plotdf2$category=='within']/sum(plotdf2$norm_count[plotdf2$category=='within'])
+plotdf2$norm_count[plotdf2$category=='between'] <- plotdf2$norm_count[plotdf2$category=='between'] /between_single_freq[plotdf2$ref[plotdf2$category=='between']]
+plotdf2$norm_count[plotdf2$category=='between'] <- plotdf2$norm_count[plotdf2$category=='between']/sum(plotdf2$norm_count[plotdf2$category=='between'])
+
+plotdf3 <- plotdf2 %>% group_by(category, spec) %>%
+  summarise(norm_count=sum(norm_count))
+
+ggplot(plotdf3, aes(x=spec, y=norm_count, fill=spec)) +
+  geom_col() +
+  facet_wrap(~category) +
+  theme_clean(base_size = 25) +
+  theme(plot.background = element_blank(),
+        legend.background = element_blank()) +
+  theme(axis.text.x = element_text(angle = 90, size=20, vjust = 0.5),
+        legend.position = "none") +
+  xlab('') +
+  ylab('Relative mutation rate')
+
+ggsave('./Figures/single_base_spectrum_within_vs_between.png', width = 12, height = 7)
+ggsave('./Figures/single_base_spectrum_within_vs_between.pdf', width = 12, height = 7, device = cairo_pdf)
+```
+
+We can also test for differences in the mutational spectrum using permutation
+
+```{r}
+testdf <- unique(only_minority_single_gpsc_dedup_filt[,c('chrom', 'POS', 'CONS', 'MUT', 'context')])
+colnames(testdf) <- c("chr","pos","ref","mut","context")
+testdf <- testdf[str_length(testdf$ref)==1,]
+testdf <- testdf[!grepl('.*N.*', testdf$context),]
+testdf$spec <- map2_chr(testdf$ref, testdf$mut, ~{
+  if (.x %in% c('A', 'G')){
+    paste(ntcomp[.x], ntcomp[.y], sep = '>')
+  } else {
+    paste(.x, .y, sep = '>')
+  }
+})
+testdf$type <- 'within'
+
+bwtndf <- fread("./data/original_claire_gubbins_mutations_masked.csv") %>% as_tibble()
+colnames(bwtndf) <- c("chr","pos","ref","mut","context")
+bwtndf$spec <- map2_chr(bwtndf$ref, bwtndf$mut, ~{
+  if (.x %in% c('A', 'G')){
+    paste(ntcomp[.x], ntcomp[.y], sep = '>')
+  } else {
+    paste(.x, .y, sep = '>')
+  }
+})
+bwtndf$type <- 'between'
+
+testdf <- rbind(testdf,bwtndf)
+testdf$spec <- factor(testdf$spec)
+testdf$type <- factor(testdf$type)
+ttemp <- table(testdf$spec, testdf$type)
+ttemp <- t(t(ttemp)/colSums(ttemp))
+true_diff <- abs(ttemp[,2] - ttemp[,1])
+
+tt <- t(t(ttemp)/colSums(ttemp))
+tt[,1]-tt[,2]
+
+## permutation test
+nperm <- 1e4
+perms <- map_dfr(1:nperm, ~{
+  # sample_rows <- c(sample(c(1:nrow(testdf))[testdf$type=='within'], replace = TRUE, size=1e4),
+  #                  sample(c(1:nrow(testdf))[testdf$type!='within'], replace = TRUE, size=1e4))
+  temp <- sample(testdf$spec, replace = FALSE, size = nrow(testdf))
+  temp <- table(temp, testdf$type)
+  temp <- t(t(temp)/colSums(temp))
+  diff <- abs(temp[,2] - temp[,1])
+  tibble(
+    spec = names(true_diff),
+    d=(diff>=true_diff)
+  )
+}) %>% group_by(spec) %>%
+  summarise(
+    count=(sum(d)+1)/(nperm + 1)
+  )
+perms
+```
+

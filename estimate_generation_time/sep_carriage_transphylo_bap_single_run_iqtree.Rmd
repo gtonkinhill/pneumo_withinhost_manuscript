@@ -1,0 +1,434 @@
+---
+title: "TransPhylo - hierBAPS - All at once"
+author: "Gerry Tonkin-Hill"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    fig_width: 12
+    fig_height: 8
+editor_options: 
+  chunk_output_type: console
+params:
+  file: "./data/estimate_scale_single_isolate_per_carriage/BAPS_cluster_31_gubbins.final_tree.tre"
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8,
+                      echo=TRUE, warning=FALSE, message=FALSE,
+                      tidy=TRUE)
+```
+
+##Libraries
+```{r}
+library(TransPhylo)
+library(data.table)
+library(phytools)
+library(treedater)
+library(parallel)
+library(ape)
+library(epitrix)
+library(stringr)
+library(ggtree)
+library(lubridate)
+```
+
+#Load Epi data
+```{r}
+epi_data <- fread("./data/epi_loc_w_new_hierBAPS.csv", 
+                  data.table = FALSE,
+                  na.strings=c("", "#N/A", "NA"))
+
+epi_data$date_of_collection.x <- as.Date(epi_data$date_of_collection.x,
+                                        format="%Y-%m-%d")
+epi_data$date_of_collection.y <- as.Date(epi_data$date_of_collection.y,
+                                        format="%Y-%m-%d")
+
+#Remove those without BAPS clusters for now
+epi_data <- epi_data[!is.na(epi_data$level1),]
+```
+
+#Carriage cases
+We have already grouped sequences into BAPS clusters but we would like to only include one case per carriage episode. For now we take the very conservative appraoch and only include on isolate per person/serotype pair.
+
+```{r, eval=FALSE}
+epi_data$Unique.host.sero <- paste(epi_data$Host.y, epi_data$serotype, sep="_")
+
+write.table(epi_data[,c("Unique.host.sero", "Fastq")], "./data/summary_individual_carriage.csv",
+            col.names = TRUE, row.names = FALSE, sep = ",",
+            quote = FALSE)
+```
+
+#Sequence preperation
+First need to remove recombination regions and genes that are under selection. We can do this using Gubbins. For now to make things fast I used fasttree as the tree building algorithm.
+
+Initially the seperate fasta files are created for each BAPs cluster
+```{python, eval=FALSE, python.reticulate = FALSE}
+from mungo.fasta import FastaReader
+from collections import defaultdict
+
+baps_dict = defaultdict(list)
+
+carriage_eps = {}
+
+with open("summary_individual_carriage.csv", 'rU') as infile:
+    header = infile.next().strip().split(",")
+    for line in infile:
+        line=line.strip().split(",")
+        carriage_eps[line[1]] = line[0]
+
+seen = set()    
+
+with open("epi_loc_w_new_hierBAPS.csv", 'rU') as infile:
+    header = infile.next().strip().split(",")
+    for line in infile:
+        line = line.strip().split(",")
+        baps = line[20]
+        fastq = line[0]
+        if int(baps) in [1, 2, 7, 8, 27, 9, 14, 36]: continue
+        if fastq not in carriage_eps:
+            print fastq
+        elif carriage_eps[fastq] not in seen:
+            seen.add(carriage_eps[fastq])
+            baps_dict[baps].append(fastq)
+
+fasta_dict = {}
+for h,s in FastaReader("maela3k_snps.fasta"):
+    h=h.split("_S")[0]
+    fasta_dict[h]=s
+    
+
+for B in baps_dict:
+    with open("BAPS_cluster_" + str(B) + ".fasta", 'w') as outfile:
+        for h in baps_dict[B]:
+            outfile.write(">" + h + "\n" + fasta_dict[h] + "\n")
+```
+
+Gubbins is then run on each fasta file.
+```{bash, eval=FALSE}
+for fasta in BAPS_cluster_*.fasta
+do
+
+filename="${fasta%.*}"
+bsub -o "./${filename}_out.log" -e "./${filename}_error.log" -q long -n2 -R"span[hosts=1]" -R"select[mem>10000] rusage[mem=10000]" -M10000  "/nfs/users/nfs_g/gt4/scripts/run_gubbins.sh" ${fasta}
+done
+
+mkdir final_gubbins_trees
+cp ./BAPS*/*BAPS_cluster_*_gubbins.final_tree.tre ./final_gubbins_trees/
+cp BAPS_cluster_*/BAPS_cluster_*_gubbins.filtered_polymorphic_sites.fasta ./final_gubbins_trees/
+```
+
+where the run_gubbins scripts is
+```{bash, eval=FALSE}
+#!/bin/bash
+set -e
+
+fasta=$1
+filename="${fasta%.*}"
+
+mkdir $filename
+cp $fasta "./${filename}/"
+cd $filename
+
+/software/pathogen/external/apps/usr/local/Python-3.6.0/bin/run_gubbins.py  --prefix "${filename}_gubbins" ${fasta}
+
+cd ..
+```
+
+##Tree dating
+We can make use of the fast treedater program to infer the dates on the tree.
+```{r}
+options(warn=1)
+
+tree.phylo <- read.newick(params$file)
+
+#for iqtree need to relabel
+# tree.phylo$tip.label <- apply(str_split_fixed(tree.phylo$tip.label, "_", 3), 1,
+#                               function (r) paste(paste(r[1:(length(r)-1)], collapse="_"), r[length(r)], sep="#"))
+
+baps_cluster <- as.numeric(gsub("_gubbins.*", "", gsub(".*cluster_", "", params$file)))
+
+# seq <- adegenet::fasta2DNAbin(paste(c("./data/estimate_scale_single_isolate_per_carriage/BAPS_cluster_", baps_cluster, "_gubbins.filtered_polymorphic_sites.fasta"), collapse=""))
+# PRE.GUBBINS.ALIGNMENT.LENGTH <- 392524
+
+temp_epi_df <- epi_data[epi_data$level1==baps_cluster,]
+
+#Convert to numeric decimal date (required by treedater)
+sample_dates <- 1970+as.numeric(temp_epi_df$date_of_collection.y)/365
+names(sample_dates) <- temp_epi_df$Fastq
+
+ggtree(unroot(tree.phylo))+ theme_tree2() + geom_tiplab(size=2)
+
+patristic.dist <- ape::cophenetic.phylo(tree.phylo)
+barplot(rowSums(patristic.dist), las=2)
+
+bad.tip.thresholds <- list(
+  `4`=50000,
+  `5`=40000,
+  `6`=40000,
+  `10`=50000,
+  `11`=12000,
+  `16`=20000,
+  `18`=10000,
+  `20`=79000,
+  `22`=20000,
+  `23`=20000,
+  `29`=1500,
+  `30`=1500,
+  `31`=2000,
+  `34`=2000,
+  `35`=2000
+)
+tree.phylo <- drop.tip(tree.phylo,
+                       rownames(patristic.dist)[rowSums(patristic.dist)>unlist(
+                         bad.tip.thresholds[names(bad.tip.thresholds)==baps_cluster])])
+
+ggtree(unroot(tree.phylo))+ theme_tree2() + geom_tiplab(size=2)
+
+sample_dates <- sample_dates[match(tree.phylo$tip.label, names(sample_dates))]
+decdates <- sample_dates
+stopifnot(all(names(decdates)==tree.phylo$tip.label))
+tre.rtt <- rtt(tree.phylo, decdates)
+tree.rd <- adephylo::distRoot(tre.rtt)
+tree.td <- decdates[match(tre.rtt$tip.label,names(decdates))]
+rdtd <- data.frame(RootDistance=tree.rd,SamplingTime=tree.td)
+ggplot(rdtd,aes(x=SamplingTime,y=RootDistance))+geom_point(color="blue",alpha=0.5) +
+  geom_smooth(method="lm",se=FALSE,fullrange=TRUE,color="red") +
+  scale_x_continuous(limits=c(2005,2011)) +
+  theme(legend.position = "none")
+
+ggtree(tree.phylo)+ theme_tree2() + geom_tiplab(size=2)+ geom_text2(aes(label = node))
+
+# ggtree(phytools::reroot(tree.phylo, node.number = 56, position = 5))+ theme_tree2() + geom_tiplab(size=2)+ geom_text2(aes(label = node))
+
+if (baps_cluster=="10"){
+  tree.phylo.list <- treeSlice(tree.phylo, 2)
+} else if (baps_cluster=="3") {
+  tree.phylo <- phytools::reroot(tree.phylo, node.number = 45, position = 10)
+  tree.phylo.list <- treeSlice(tree.phylo, 2)
+  tree.phylo.list <- tree.phylo.list[unlist(lapply(tree.phylo.list, function(x) length(x$tip.label)))>3]
+} else if (baps_cluster=="12") {
+  tree.phylo.list <- treeSlice(tree.phylo, 2)
+  tree.phylo.list <- tree.phylo.list[unlist(lapply(tree.phylo.list, function(x) length(x$tip.label)))>3]
+} else if (baps_cluster=="16") {
+  tree.phylo <- phytools::reroot(tree.phylo, node.number = 56, position = 5)
+  tree.phylo.list <- treeSlice(tree.phylo, 20)
+  tree.phylo.list <- tree.phylo.list[unlist(lapply(tree.phylo.list, function(x) length(x$tip.label)))>3]
+} else if (baps_cluster=="19") {
+  tree.phylo.list <- treeSlice(tree.phylo, 2)
+  tree.phylo.list <- tree.phylo.list[unlist(lapply(tree.phylo.list, function(x) length(x$tip.label)))>3]
+} else if (baps_cluster=="20") {
+  tree.phylo <- phytools::reroot(tree.phylo, node.number = 44)
+  tree.phylo.list <- treeSlice(tree.phylo, 2)
+  tree.phylo.list <- tree.phylo.list[unlist(lapply(tree.phylo.list, function(x) length(x$tip.label)))>3]
+} else if (baps_cluster=="21") {
+  tree.phylo <- phytools::reroot(tree.phylo, node.number = 25, position = 10)
+  tree.phylo.list <- treeSlice(tree.phylo, 2)
+  tree.phylo.list <- tree.phylo.list[unlist(lapply(tree.phylo.list, function(x) length(x$tip.label)))>3]
+} else if (baps_cluster=="22") {
+  tree.phylo.list <- treeSlice(tree.phylo, 2)
+  tree.phylo.list <- tree.phylo.list[unlist(lapply(tree.phylo.list, function(x) length(x$tip.label)))>3]
+} else if (baps_cluster=="28") {
+  tree.phylo <- phytools::reroot(tree.phylo, node.number = 30)
+  tree.phylo.list <- treeSlice(tree.phylo, 2)
+  tree.phylo.list <- tree.phylo.list[unlist(lapply(tree.phylo.list, function(x) length(x$tip.label)))>3]
+} else if (baps_cluster=="32") {
+  tree.phylo.list <- treeSlice(tree.phylo, 2)
+  tree.phylo.list <- tree.phylo.list[unlist(lapply(tree.phylo.list, function(x) length(x$tip.label)))>3]
+} else if (baps_cluster=="33") {
+  tree.phylo <- phytools::reroot(tree.phylo, node.number = 57, position = 10)
+  tree.phylo.list <- treeSlice(tree.phylo, 2)
+  tree.phylo.list <- tree.phylo.list[unlist(lapply(tree.phylo.list, function(x) length(x$tip.label)))>3]
+} else {
+  tree.phylo.list <- list(tree.phylo)
+}
+
+estimate.mu.fix <- function (t, node.dates, p.tol = 0.05) 
+{
+    g <- glm(node.depth.edgelength(t)[1:length(node.dates)] ~ 
+        node.dates, na.action = na.omit)
+    null.g <- glm(node.depth.edgelength(t)[1:length(node.dates)] ~ 
+        1, na.action = na.omit)
+    p <- 1 - pchisq(AIC(null.g) - AIC(g) + 2, df = 1)
+    if (p > p.tol) {
+        warning(paste("Cannot reject null hypothesis (p=", p, ")"))
+    }
+    coef(g)[[2]]
+}
+
+tree.phylo.list <- lapply(tree.phylo.list, function(tree.phylo.t){
+  print(tree.phylo.t$Nnode)
+  tree.phylo.t$edge.length <- tree.phylo.t$edge.length + min(tree.phylo.t$edge.length)/2
+  
+  #Date Phylogentic tree using estimate.dates
+  sample_dates.t <- sample_dates[match(tree.phylo.t$tip.label, names(sample_dates))]
+  stopifnot(all(names(sample_dates.t)==tree.phylo.t$tip.label))
+  
+  #Plots
+  print(ggtree(tree.phylo.t)+ theme_tree2() + geom_tiplab(size=2))
+  decdates <- sample_dates.t
+  tre.rtt <- rtt(tree.phylo.t, decdates)
+  tree.rd <- adephylo::distRoot(tre.rtt)
+  tree.td <- decdates[match(tre.rtt$tip.label,names(decdates))]
+  rdtd <- data.frame(RootDistance=tree.rd,SamplingTime=tree.td)
+  print(ggplot(rdtd,aes(x=SamplingTime,y=RootDistance))+geom_point(color="blue",alpha=0.5) +
+    geom_smooth(method="lm",se=FALSE,fullrange=TRUE,color="red") +
+    scale_x_continuous(limits=c(2005,2011)) +
+    theme(legend.position = "none"))
+  
+  #Date subtree
+  tree.phylo.2 <- rtt(tree.phylo.t, sample_dates.t)
+  mu <- estimate.mu.fix(tree.phylo.2, sample_dates.t)
+  node.date <- estimate.dates(tree.phylo.2, sample_dates.t, mu, nsteps = 0, lik.tol = 1e-4)
+  tree.phylo.2$edge.length <- node.date[tree.phylo.2$edge[, 2]] - node.date[tree.phylo.2$edge[, 1]]
+  tree.phylo.2$edge.length <- tree.phylo.2$edge.length+1e-10
+  
+  # tree.phylo.2 <- treedater::dater(tree.phylo.t, sts = sample_dates.t, s = 100)
+  
+  treephylo2 <- tree.phylo.2
+  class(treephylo2) <- "phylo"
+  print(ggtree(treephylo2, ndigits=2, mrsd=format(date_decimal(max(sample_dates)), "%Y-%m-%d")) +
+    theme_tree2() + geom_tiplab(size=2))
+  return(tree.phylo.2)
+})
+
+
+```
+
+```{r}
+#Set parameters
+
+w.scale.initial <- 1.5625
+w.shape.initial <- 1
+
+pi <- 0.1201906
+ws.shape <- 0.25
+ws.scale <- 0.168
+off.r <- 1
+date.t=2011
+
+tree.phylo.list <- unlist(lapply(tree.phylo.list, function(tree.phylo.2){
+  #Date when observation ended
+  sample_dates.t <- sample_dates[match(tree.phylo.2$tip.label, names(sample_dates))]
+  date.last.sample <- max(sample_dates.t)
+  date.top <- date.last.sample - max(node.depth.edgelength(tree.phylo.2))
+  
+  if (date.top < 2007.8){
+    phylo.2.split <- phytools::treeSlice(tree.phylo.2, slice=2007.8-date.top, trivial = FALSE)
+    phylo.2.split <- phylo.2.split[unlist(lapply(phylo.2.split, function(x) length(x$tip.label)))>1]
+    phylo.2.split
+  } else {
+    phylo.2.split <- list(tree.phylo.2)
+  }
+}), recursive = FALSE)
+
+
+tree.num <- 1
+ggtree(tree.phylo.list[[tree.num]], ndigits=2, mrsd=format(date_decimal(max(sample_dates[names(sample_dates) %in% tree.phylo.list[[tree.num]]$tip.label])), "%Y-%m-%d")) +
+  theme_tree2() + geom_tiplab(size=2)
+
+ptree.months.list <- lapply(tree.phylo.list, function(phy){
+  ptree <- ptreeFromPhylo(tr = phy,
+    dateLastSample=max(sample_dates[names(sample_dates) %in% phy$tip.label]))
+  ptree$ptree[,1] <- ptree$ptree[,1]*12
+  return(ptree)
+})
+
+write.table(data.frame(BAPS=rep(baps_cluster, length(ptree.months.list)), 
+                       sub.tree.size=unlist(lapply(ptree.months.list, function(x) length(x$nam)))),
+            file = paste(c("./data/estimate_scale_single_isolate_per_carriage/sub_tree_sizes", baps_cluster, ".csv"), collapse = ""),
+            col.names = TRUE, row.names = FALSE, sep=",", quote = FALSE)
+```
+
+Infer the transmission trees using TransPhylo
+```{r run transphylo, eval=FALSE}
+
+mucv <- gamma_shapescale2mucv(shape = w.shape.initial, scale = w.scale.initial)
+mu.months <- mucv$mu*12
+w.shape.months <- gamma_mucv2shapescale(mu = mu.months, cv = mucv$cv)$shape
+w.scale.months <- gamma_mucv2shapescale(mu = mu.months, cv = mucv$cv)$scale
+
+mucv <- gamma_shapescale2mucv(shape = ws.shape, scale = ws.scale)
+mu.months <- mucv$mu*12
+ws.shape.months <- gamma_mucv2shapescale(mu = mu.months, cv = mucv$cv)$shape
+ws.scale.months <- gamma_mucv2shapescale(mu = mu.months, cv = mucv$cv)$scale
+
+date.t.months <- date.t*12
+record <- TransPhylo::inferMultiTTree(ptree.months.list, mcmcIterations=1e4,
+                       w.scale=w.scale.months, update.w.scale=TRUE,
+                       w.shape=w.shape.months, update.w.shape=FALSE,
+                       startPi=pi, updatePi = FALSE,
+                       ws.scale = ws.shape.months, ws.shape = ws.shape.months,
+                       startOff.r = off.r, updateOff.r = FALSE,
+                       dateT=date.t.months, optiStart = FALSE, delta.t = 0.1, thinning = 10)
+  
+saveRDS(record, paste(c("./data/transPhylo_iqtree_estimate_scale", baps_cluster,
+                        ".RDS"), collapse = ""))
+```
+
+#Generate Plots
+
+Generate some transmission plots along with parameter values for the MCMC chains to check convergence.
+
+```{r,  create plots, eval=FALSE}
+record <- readRDS(paste(c("./data/transPhylo_iqtree_estimate_scale", baps_cluster,
+                        ".RDS"), collapse = ""))
+
+saveRDS(sapply(record,function(x) x$w.scale)*sapply(record,function(x) x$w.shape), 
+        file=paste(c("./data/shape_x_scale_baps", baps_cluster,
+                        ".RDS"), collapse = ""))
+
+write.table(computeMatTDistMulti(record), file=paste(c("./data/matrixTDist_baps", baps_cluster,
+                        ".csv"), collapse = ""),
+            row.names = TRUE, col.names = TRUE, quote = FALSE, sep=",")
+
+write.table(computeMatWIWMulti(record), file=paste(c("./data/matrixWIW_baps", baps_cluster,
+                        ".csv"), collapse = ""),
+            row.names = TRUE, col.names = TRUE, quote = FALSE, sep=",")
+
+
+bestIteration.list <- TransPhylo:::selectMultiTTree(record)
+
+
+pdf(paste(c("./images/transmission_iqtree_estimate_scale", baps_cluster, ".pdf"),
+          collapse = ""),
+    width=10, height=2*length(bestIteration.list), paper='special')
+par(mfrow=c(length(bestIteration.list),1))
+for (i in 1:length(bestIteration.list)){
+  bestIteration <- record[[bestIteration.list[[i]]]]
+  bestIteration$ctree <- bestIteration$ctree.list[[i]]
+  bestIteration$source <- bestIteration$source.list[[i]]
+  bestIteration$ctree$ctree[,1] <- bestIteration$ctree$ctree[,1]/12
+  plotTTree2(TransPhylo::consTTree(list(bestIteration)))
+}
+par(mfrow=c(1,1))
+dev.off()
+
+
+pdf(paste(c("./images/MCMC_trace_iqtree_estimate_scale", baps_cluster, ".pdf"),
+          collapse = ""), 
+    width=15, height=10, paper='special') 
+par(mfrow=c(5,2))
+plot(sapply(record,function(x) x$pTTree+x$pPTree),ylab='Posterior probability',
+xlab='MCMC iterations',type='l')
+plot(sapply(record,function(x) x$pi),ylab='Sampling proportion pi',
+xlab='MCMC iterations',type='l')
+plot(sapply(record,function(x) x$neg),ylab='Within-host coalescent rate Ne*g',
+xlab='MCMC iterations',type='l')
+plot(sapply(record,function(x) x$off.r),ylab='Basic reproduction number R',
+xlab='MCMC iterations',type='l')
+plot(sapply(record,function(x) x$off.p),ylab='Negative Binomial parameter p',
+xlab='MCMC iterations',type='l')
+plot(sapply(record,function(x) x$w.scale),ylab='Generation time scale parameter',
+xlab='MCMC iterations',type='l')
+plot(sapply(record,function(x) x$w.shape),ylab='Generation time shape parameter',
+xlab='MCMC iterations',type='l')
+hist(sapply(record,function(x) x$w.scale)[(length(record)/2):length(record)], breaks=100,
+     xlab='Generation time scale parameter')
+hist(sapply(record,function(x) x$w.shape)[(length(record)/2):length(record)], breaks=100,
+     xlab='Generation time shape parameter')
+hist(sapply(record,function(x) x$w.scale)[(length(record)/2):length(record)]*sapply(record,function(x) x$w.shape)[(length(record)/2):length(record)], breaks=100,
+     xlab='Mean shape*scale')
+par(mfrow=c(1,1))
+dev.off()
+
+```

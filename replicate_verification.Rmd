@@ -1,0 +1,349 @@
+---
+title: "Replicate verification"
+author: "Gerry Tonkin-Hill"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    fig_width: 12
+    fig_height: 8
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(fig.width=20, fig.height=12,
+                      echo=TRUE, warning=FALSE, message=FALSE,
+                      tidy=TRUE)
+options(stringsAsFactors = FALSE)
+```
+
+A number of replicates were performed including 8 samples, which were separately cultured, plate scrapes taken and sequenced. A further 
+192 samples were cultured once but sequenced in replicate with separate reverse transcription (RT), PCR amplification, and library preparation steps. This allows us to consider both the impact of culture and sequencing errors on our results.
+
+```{r}
+library(data.table)
+library(tidyverse)
+library(ggthemes)
+```
+
+We first load the metadata and define which samples have been cultured in replicate and which have only been sequenced in replicate.
+
+```{r}
+manifests_orig <- fread("./data/manifests.csv", data.table = FALSE)
+stats <- fread("./data/pipeline_qc/5000.pathfind_stats.csv", data.table = FALSE)
+manifests_orig <- merge(manifests_orig, stats, by.x="SANGER SAMPLE ID", by.y = "Sample", all.x = TRUE)
+
+swab_summary <- fread("./data/epi/Pneumo-DEEP_swab_summary.csv", data.table = FALSE) %>% as_tibble
+swab_summary$specdate <- lubridate::as_date(swab_summary$specdate)
+swab_summary$ID <- paste(swab_summary$codenum, swab_summary$category, sep = "-")
+
+temp <- manifests_orig %>% 
+  group_by(`SUPPLIER SAMPLE NAME`) %>%
+  summarise(
+    n_sanger_samples = length(unique(`SANGER SAMPLE ID`)),
+    n_seq = n()
+  ) %>% 
+  filter(!`SUPPLIER SAMPLE NAME` %in% c('','SMRU')) %>%
+  filter(n_seq>1) %>%
+  filter(!grepl('.*_.*', `SUPPLIER SAMPLE NAME`))
+
+cultured_in_rep_specs <- temp$`SUPPLIER SAMPLE NAME`[temp$n_sanger_samples>1]
+cultured_in_rep_lanes <- manifests_orig$`Lane Name`[manifests_orig$`SUPPLIER SAMPLE NAME` %in% cultured_in_rep_specs]
+sequenced_in_rep_specs <- temp$`SUPPLIER SAMPLE NAME`[temp$n_sanger_samples==1]
+sequenced_in_rep_lanes <- manifests_orig$`Lane Name`[manifests_orig$`SUPPLIER SAMPLE NAME` %in% sequenced_in_rep_specs]
+```
+
+We only consider those samples were both replicates have passed the initial QC thresholds. This reduced the number of cultured replicates to 3 and the number of sequenced replicates to 161.
+
+```{r}
+#load samples that have passed QC
+manifests <- fread("./data/manifest_w_QC.csv", data.table = FALSE)
+
+cultured_in_rep_specs <- (manifests %>%
+  filter(`Lane Name` %in% cultured_in_rep_lanes) %>%
+  group_by(`SUPPLIER SAMPLE NAME`) %>%
+  summarise(
+    n=n()
+  ) %>% 
+  filter(n>1))$`SUPPLIER SAMPLE NAME`
+
+cultured_in_rep_lanes <- manifests_orig[,c('Lane Name', 'SUPPLIER SAMPLE NAME')] %>% 
+  filter(`SUPPLIER SAMPLE NAME` %in% cultured_in_rep_specs)
+colnames(cultured_in_rep_lanes) <- c('lane', 'specnum')
+
+sequenced_in_rep_specs <- (manifests %>%
+  filter(`Lane Name` %in% sequenced_in_rep_lanes) %>%
+  group_by(`SUPPLIER SAMPLE NAME`) %>%
+  summarise(
+    n=n()
+  ) %>% 
+  filter(n>1))$`SUPPLIER SAMPLE NAME`
+
+sequenced_in_rep_lanes <- manifests_orig[,c('Lane Name', 'SUPPLIER SAMPLE NAME')] %>% 
+  filter(`SUPPLIER SAMPLE NAME` %in% sequenced_in_rep_specs)
+colnames(sequenced_in_rep_lanes) <- c('lane', 'specnum')
+```
+
+## Comparison of lineage and serotype calls
+
+```{r}
+merged_serotype_calls <- fread("./data/merged_serotype_calls.csv", data.table = FALSE) %>% as_tibble()
+gpsc_serotype_calls <- fread("./data/msweep_analysis/combined_seroba_calls.txt", data.table = FALSE,
+                             col.names = c("sample", "GPSC", "serotype", "comment")) %>% as_tibble()
+
+cultured_in_rep_lanes$lineage <- gpsc_serotype_calls$GPSC[match(cultured_in_rep_lanes$lane, gpsc_serotype_calls$sample)]
+cultured_in_rep_lanes$serotype <- gpsc_serotype_calls$serotype[match(cultured_in_rep_lanes$lane, gpsc_serotype_calls$sample)]
+
+sequenced_in_rep_lanes$lineage <- gpsc_serotype_calls$GPSC[match(sequenced_in_rep_lanes$lane, gpsc_serotype_calls$sample)]
+sequenced_in_rep_lanes$serotype <- gpsc_serotype_calls$serotype[match(sequenced_in_rep_lanes$lane, gpsc_serotype_calls$sample)]
+
+tb_sero_c <- table(table(paste(cultured_in_rep_lanes$specnum, cultured_in_rep_lanes$serotype)))
+tb_lineage_c <- table(table(paste(cultured_in_rep_lanes$specnum, cultured_in_rep_lanes$lineage)))
+
+tb_sero <- table(table(paste(sequenced_in_rep_lanes$specnum, sequenced_in_rep_lanes$serotype)))
+tb_lineage <- table(table(paste(sequenced_in_rep_lanes$specnum, sequenced_in_rep_lanes$lineage)))
+
+accuracy <- tibble(
+ `replicate type` = c('sequencing', 'sequencing','culture','culture'),
+ `call type` = c('serotype', 'lineage','serotype', 'lineage'),
+ total_calls = c(sum(tb_sero), sum(tb_lineage), sum(tb_sero_c), sum(tb_lineage_c)),
+ accuracy = c(tb_sero[['2']]/sum(tb_sero), tb_lineage[['2']]/sum(tb_lineage),
+              tb_sero_c[['2']]/sum(tb_sero_c), tb_lineage_c[['2']]/sum(tb_lineage_c))
+)
+
+write.csv(accuracy, './data/replicate_lineage_serotype_accuracy.csv', quote = FALSE, row.names = FALSE)
+knitr::kable(accuracy)
+```
+
+## Lineage frequency estimates
+
+```{r}
+msweep_props <- fread("./data/msweep_analysis/combined_msweep_proportions.csv",
+                      data.table = FALSE) %>% as_tibble()
+
+replicate_sequencing_props <- msweep_props %>% 
+  filter(lane %in% sequenced_in_rep_lanes$lane)
+replicate_sequencing_props$specnum <- sequenced_in_rep_lanes$specnum[match(replicate_sequencing_props$lane,
+                                                                           sequenced_in_rep_lanes$lane)]
+
+pdf <- replicate_sequencing_props %>% 
+  group_by(specnum, GPSC) %>%
+  summarise(
+    rep1 = theta[1],
+    rep2 = theta[2],
+    n=n(),
+    .groups = 'keep'
+  ) %>% filter(n>1)
+
+cor.test(pdf$rep1, pdf$rep2)
+
+ggplot(pdf, aes(x=rep1, y=rep2)) + 
+  geom_point() +
+  theme_clean(base_size = 16) +
+  theme(plot.background = element_blank(),
+        legend.background = element_blank()) +
+  geom_vline(xintercept = 0.01, col='red') +
+  scale_y_sqrt(breaks=c(0.01,0.1,0.25,0.5,1)) +
+  scale_x_sqrt(breaks=c(0.01,0.1,0.25,0.5,1)) +
+  xlab('lineage frequency replicate 1') +
+  ylab('lineage frequency replicate 2')
+
+ggsave('./figures/correlation_msweep_freq_sequencing_reps.png', width = 10, height = 7)
+ggsave('./figures/correlation_msweep_freq_sequencing_reps.pdf', width = 10, height = 7)
+
+
+
+
+replicate_culture_props <- msweep_props %>% 
+  filter(lane %in% cultured_in_rep_lanes$lane)
+replicate_culture_props$specnum <- cultured_in_rep_lanes$specnum[match(replicate_culture_props$lane,
+                                                                           cultured_in_rep_lanes$lane)]
+
+pdf <- replicate_culture_props %>% 
+  group_by(specnum, GPSC) %>%
+  summarise(
+    rep1 = theta[1],
+    rep2 = theta[2],
+    n=n(),
+    .groups = 'keep'
+  ) %>% filter(n>1)
+
+ggplot(pdf, aes(x=rep1, y=rep2)) + 
+  geom_point(size=5) +
+  theme_clean(base_size = 16) +
+  theme(plot.background = element_blank(),
+        legend.background = element_blank()) +
+  xlab('lineage frequency replicate 1') +
+  ylab('lineage frequency replicate 2')
+
+cor.test(pdf$rep1, pdf$rep2)
+
+ggsave('./figures/correlation_msweep_freq_culture_reps.png', width = 10, height = 7)
+ggsave('./figures/correlation_msweep_freq_culture_reps.pdf', width = 10, height = 7)
+```
+
+## Comparison of variant calls
+
+We now consider within host minority variant calls. Thus we restrict the comparison to those samples that involve only a single lineage and have passed the stricter QC filters imposed in the transmission and selection analyses. We count the number of variants that are found in the sample with lower depth which are missing from the sample with higher depth. This is to avoid unfairly penalizing replicates with larger difference in sequencing depth.
+
+```{r}
+minority_calls <- fread('./data/only_minority_single_gpsc.tab') %>% as_tibble()
+minority_calls$lane <- gsub('.*-', '', minority_calls$sample)
+
+minority_calls_seq_rep <- minority_calls %>% 
+  filter(lane %in% replicate_sequencing_props$lane)
+
+keep <- (minority_calls_seq_rep %>% 
+  group_by(specnum) %>%
+  summarise(
+    n = length(unique(lane))
+  ) %>% filter(n>1))$specnum
+minority_calls_seq_rep <- minority_calls_seq_rep %>% filter(specnum %in% keep)
+
+
+temp <- minority_calls_seq_rep %>% 
+  group_by(specnum, lane) %>%
+  summarise(
+    mean_depth = mean(depth)
+  ) %>% 
+  arrange(-mean_depth)
+temp <- temp$lane[!duplicated(temp$specnum)]
+
+#sort by depth to avoid penalizing low frequency calls in higher depth samples
+minority_calls_seq_rep$min_forward <- pmin(minority_calls_seq_rep$alt_forward, minority_calls_seq_rep$ref_forward)
+minority_calls_seq_rep$min_reverse <- pmin(minority_calls_seq_rep$alt_reverse, minority_calls_seq_rep$ref_reverse)
+
+minority_calls_seq_rep_d1 <- minority_calls_seq_rep %>% 
+  filter(lane %in% temp)
+
+minority_calls_seq_rep_d2 <- minority_calls_seq_rep %>% 
+  filter(!lane %in% temp)%>%
+  filter(is.na(region))%>%
+  filter(support>11)  %>%
+  # filter(AF>0.01)
+  filter(min_forward>1) %>%
+  filter(min_reverse>1) %>%
+  filter(depth<1000)
+
+d1 <- paste(minority_calls_seq_rep_d1$specnum,
+      minority_calls_seq_rep_d1$chrom,
+      minority_calls_seq_rep_d1$POS,
+      minority_calls_seq_rep_d1$ALT)
+d2 <- paste(minority_calls_seq_rep_d2$specnum,
+      minority_calls_seq_rep_d2$chrom,
+      minority_calls_seq_rep_d2$POS,
+      minority_calls_seq_rep_d2$ALT)
+
+both <- sum(d2 %in% d1)
+missing <- sum(!d2 %in% d1)
+
+both/(both+missing)
+
+pdf <- map_df(unique(minority_calls_seq_rep_d1$specnum), ~{
+  d1 <- minority_calls_seq_rep_d1 %>% 
+    filter(specnum==.x)
+  d2 <- minority_calls_seq_rep_d2 %>% 
+    filter(specnum==.x)
+  
+  d1 <- paste(d1$chrom, d1$POS, d1$ALT)
+  d2 <- paste(d2$chrom, d2$POS, d2$ALT)
+  return(
+    tibble(
+      specnum = .x,
+      fraction_replicated = sum(d2 %in% d1)/(sum(d2 %in% d1) + sum(!d2 %in% d1)),
+      d1=length(d1),
+      d2=length(d2)
+    )
+  )
+})
+pdf$rep <- 'rep'
+
+ggplot(pdf, aes(x=rep, y=fraction_replicated)) +
+  geom_boxplot(outlier.colour = NA) +
+  geom_jitter(height = 0, width = 0.1) +
+  theme_clean(base_size = 20) +
+  theme(plot.background = element_blank(),
+        legend.background = element_blank(),
+        axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank()) +
+  ylab('fraction of minority variants replicated')
+
+ggsave('./figures/minority_variants_sequence_replicated_box.png', width = 10, height = 7)
+ggsave('./figures/minority_variants_sequence_replicated_box.pdf', width = 10, height = 7)
+```
+
+```{r}
+minority_calls <- fread('./data/only_minority_single_gpsc.tab') %>% as_tibble()
+minority_calls$lane <- gsub('.*-', '', minority_calls$sample)
+
+minority_calls_seq_rep <- minority_calls %>% 
+  filter(lane %in% replicate_culture_props$lane) %>%
+  filter(is.na(region))%>%
+  filter(support>11)  %>% 
+  filter(depth<1000)
+
+keep <- (minority_calls_seq_rep %>% 
+  group_by(specnum) %>%
+  summarise(
+    n = length(unique(lane))
+  ) %>% filter(n>1))$specnum
+minority_calls_seq_rep <- minority_calls_seq_rep %>% filter(specnum %in% keep)
+
+
+temp <- minority_calls_seq_rep %>% 
+  group_by(specnum, lane) %>%
+  summarise(
+    mean_depth = mean(depth)
+  ) %>% 
+  arrange(-mean_depth)
+temp <- temp$lane[!duplicated(temp$specnum)]
+
+#sort by depth to avoid penalizing low frequency calls in higher depth samples
+minority_calls_seq_rep_d1 <- minority_calls_seq_rep %>% filter(lane %in% temp)
+minority_calls_seq_rep_d2 <- minority_calls_seq_rep %>% filter(!lane %in% temp)
+
+d1 <- paste(minority_calls_seq_rep_d1$specnum,
+      minority_calls_seq_rep_d1$chrom,
+      minority_calls_seq_rep_d1$POS,
+      minority_calls_seq_rep_d1$ALT)
+d2 <- paste(minority_calls_seq_rep_d2$specnum,
+      minority_calls_seq_rep_d2$chrom,
+      minority_calls_seq_rep_d2$POS,
+      minority_calls_seq_rep_d2$ALT)
+
+both <- sum(d2 %in% d1)
+missing <- sum(!d2 %in% d1)
+
+both/(both+missing)
+
+pdf <- map_df(unique(minority_calls_seq_rep_d1$specnum), ~{
+  d1 <- minority_calls_seq_rep_d1 %>% filter(specnum==.x)
+  d2 <- minority_calls_seq_rep_d2 %>% filter(specnum==.x)
+  d1 <- paste(d1$chrom, d1$POS, d1$ALT)
+  d2 <- paste(d2$chrom, d2$POS, d2$ALT)
+  return(
+    tibble(
+      specnum = .x,
+      fraction_replicated = sum(d2 %in% d1)/(sum(d2 %in% d1) + sum(!d2 %in% d1)),
+      d1=length(d1),
+      d2=length(d2)
+    )
+  )
+})
+
+ggplot(pdf, aes(x=specnum, y=fraction_replicated)) +
+  geom_col() +
+  theme_clean(base_size = 20) +
+  theme(plot.background = element_blank(),
+        legend.background = element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank()) +
+  scale_y_continuous(limit = c(0,1)) +
+  xlab('swab') +
+  ylab('fraction of minority variants replicated')
+
+ggsave('./figures/minority_variants_culture_replicated_box.png', width = 10, height = 7)
+ggsave('./figures/minority_variants_culture_replicated_box.pdf', width = 10, height = 7)
+```
+

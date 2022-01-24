@@ -1,0 +1,755 @@
+---
+title: "Predict using Transphylo as Standard"
+author: "Gerry Tonkin-Hill"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    fig_width: 12
+    fig_height: 8
+editor_options: 
+  chunk_output_type: console
+params:
+  file: ""
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8,
+                      echo=TRUE, warning=FALSE, message=FALSE,
+                      tidy=TRUE)
+```
+
+##Libraries
+
+```{r}
+library(TransPhylo)
+library(tidyverse)
+library(ggplot2)
+library(data.table)
+library(pbapply)
+library(phytools)
+library(treedater)
+library(parallel)
+library(epitrix)
+library(stringr)
+library(purrr)
+library(patchwork)
+library(adephylo)
+library(gdata)
+library(randomForest)
+library(rfUtilities)
+```
+
+##Re-create tree
+```{r}
+epi_data <- fread("./data/epi_loc_w_new_hierBAPS.csv", 
+                  data.table = FALSE,
+                  na.strings=c("", "#N/A", "NA"))
+epi_data$date_of_collection.x <- as.Date(epi_data$date_of_collection.x,
+                                        format="%Y-%m-%d")
+epi_data$date_of_collection.y <- as.Date(epi_data$date_of_collection.y,
+                                        format="%Y-%m-%d")
+#Remove those without BAPS clusters for now
+epi_data <- epi_data[!is.na(epi_data$level1),]
+
+get_tree <- function(baps){
+  tree.phylo <- read.newick(paste(c("./data/estimate_scale_single_isolate_per_carriage/BAPS_cluster_",
+                                    baps, "_gubbins.final_tree.tre"), collapse = ""))
+  # tree.phylo$tip.label <- apply(str_split_fixed(tree.phylo$tip.label, "_", 3), 1,
+  #                               function (r) paste(paste(r[1:(length(r)-1)], collapse="_"), 
+  #                                                  r[length(r)], sep="#"))
+  temp_epi_df <- epi_data[epi_data$level1==baps,]
+  #Convert to numeric decimal date (required by treedater)
+  sample_dates <- temp_epi_df$date_of_collection.y[match(tree.phylo$tip.label, temp_epi_df$Fastq)]
+  sample_dates <- 1970+as.numeric(sample_dates)/365
+  names(sample_dates) <- tree.phylo$tip.label
+  tree.phylo$edge.length <- tree.phylo$edge.length + 1e-10
+  #Date Phylogentic tree using treedater
+  stopifnot(length(tree.phylo$tip.label)==length(sample_dates))
+  
+  phy2 <- tree.phylo
+  
+  return(list(phylo=tree.phylo, sample_dates=sample_dates))
+}
+```
+
+##Load TransPhylo and Epi data
+
+```{r}
+options(warn=1)
+files <- Sys.glob("./data/estimate_scale_single_isolate_per_carriage/*TDist*.csv")
+trans.data.list <- purrr::map(files, function(f){
+  baps <- gsub(".*_baps", "", f)
+  baps <- gsub("\\.csv", "", baps)
+  print(baps)
+  tree.data <- get_tree(baps)
+  tdist <- data.matrix(read.csv(f, row.names = 1, header= TRUE))
+  colnames(tdist) <- rownames(tdist)
+  
+  wiw.dist <- data.matrix(read.csv(paste(c("./data/estimate_scale_single_isolate_per_carriage/matrixWIW_baps", baps, ".csv"),
+                                      collapse = ""), row.names = 1, header= TRUE))
+  colnames(wiw.dist) <- rownames(wiw.dist)
+
+  patristic.dist <- adephylo::distTips(tree.data$phylo, tips = "all", method = "patristic")
+  
+  list(baps=baps, tdist=tdist, wiw.dist=wiw.dist, 
+       sample.dates=tree.data$sample_dates, patristic.dist=patristic.dist)
+})
+
+files <- Sys.glob("./data/estimate_scale_single_isolate_per_carriage/shape_x_scale_baps*.RDS")
+generation_times <- lapply(files, readRDS)
+names(generation_times) <- gsub("\\.RDS", "", gsub(".*_baps", "", files))
+
+files <- Sys.glob("./data/estimate_scale_single_isolate_per_carriage/sub_tree_sizes*.csv")
+trans.tree.sizes <- do.call(rbind, lapply(files, fread, data.table=FALSE))
+
+house.data <- fread("./data/pneumo_deep_epi_files/Pneumo-DEEP_infant_house_metadata.csv",
+                        data.table = FALSE, na.strings = c("", "NA"))
+illness.antibiotix.data <- fread("./data/pneumo_deep_epi_files/Pneumo-DEEP_illness_abx_summary.csv",
+                        data.table = FALSE, na.strings = c("", "NA"))
+swab.summary.data <- fread("./data/pneumo_deep_epi_files/Pneumo-DEEP_swab_summary.csv",
+                        data.table = FALSE, na.strings = c("", "NA"))
+pnc.isolate.data <- fread("./data/pneumo_deep_epi_files/Pneumo-DEEP_pnc_isolate_summary.csv",
+                        data.table = FALSE, na.strings = c("", "NA"))
+carriage.data <- fread("./data/pneumo_deep_epi_files/Pneumo-DEEP_carriage_summary_RESTRICTED.csv",
+                        data.table = FALSE, na.strings = c("", "NA"))
+
+camp.population.CCSDPT.data <- data.frame(
+  Year = c(2007L, 2008L, 2009L, 2010L),
+  Under.Five.yrs = c(6820L, 5888L, 5350L, 5774L),
+  Over.Five.yrs = c(41768L, 38678L, 38309L, 37947L),
+  ALL = c(48588L, 44566L, 43659L, 43721L),
+  Live.births = c(1525L, 1210L, 1378L, 1309L)
+)
+```
+
+##Compare patristic distance
+```{r}
+pat.vs.tdist <- do.call(rbind, lapply(trans.data.list[1], function(x){
+  tdist <- as.matrix(x$tdist)
+  pat <- as.matrix(x$patristic.dist)
+  pat <- pat[,match(colnames(tdist), colnames(pat))]
+  pat <- pat[match(rownames(tdist), rownames(pat)),]
+  stopifnot(all(rownames(tdist)==rownames(pat)))
+  stopifnot(all(colnames(tdist)==colnames(pat)))
+  cbind(as.vector(tdist), as.vector(pat))
+}))
+pat.vs.tdist <- pat.vs.tdist[!is.infinite(rowSums(pat.vs.tdist)),]
+plot(pat.vs.tdist, xlab="transmission distance", ylab="patristic distance")
+cor.test(pat.vs.tdist[,1], pat.vs.tdist[,2])
+```
+
+##Compare Transmission Generation Times with Carriage
+```{r}
+carriage.with.lanes <- carriage.data[!is.na(carriage.data$lanes),]
+carriage.with.lanes <- carriage.with.lanes[carriage.with.lanes$length>1,]
+
+all.isolates <- unique(unlist(lapply(trans.data.list, function(x) rownames(x$tdist))))
+carriage.with.lanes <- carriage.with.lanes[unlist(lapply(carriage.with.lanes$lanes, function(cariage){
+  sum(unlist(str_split(cariage, ";")) %in% all.isolates)>0
+})),]
+
+# cbind(unlist(lapply(carriage.with.lanes$lanes, function(lanes){
+#     paste(names(table(epi_data$level1[epi_data$Fastq %in% unlist(str_split(lanes, ";"))])), collapse = "-")})), carriage.with.lanes$serotype)
+
+carriage.with.lanes$top_BAPS <- unlist(lapply(carriage.with.lanes$lanes, function(lanes){
+  tble <- table(epi_data$level1[epi_data$Fastq %in% unlist(str_split(lanes, ";"))])
+  b <- names(tble)[which.max(tble)]
+  b
+}))
+
+
+
+carriage.by.baps <- carriage.with.lanes %>% group_by(top_BAPS) %>%
+  summarise(n=n(),
+            quant_05=quantile(length, p=0.05, na.rm = TRUE),
+            median.carriage=quantile(length, p=0.5, na.rm = TRUE),
+            quant_95=quantile(length, p=0.95, na.rm = TRUE),
+            mean.carriage=mean(length))
+
+gen.times.by.baps <- data.frame(do.call(rbind, lapply(generation_times, function(gens){
+  gens <- gens[floor(length(gens)/2):length(gens)]
+  q <- quantile(gens, probs=c(0.05,0.5,0.95))
+  q <- q/12*365 #Convert from months to years
+  q <- c(q, mean(gens))
+  names(q)[[4]] <- "mean.gen"
+  return(q)
+})), stringsAsFactors = FALSE)
+gen.times.by.baps$baps.id <- names(generation_times)
+```
+
+```{r}
+gen.time.plot.df <- do.call(rbind, lapply(1:length(generation_times), function(i){
+  b <- names(generation_times)[[i]]
+  gens <- generation_times[[i]][floor(length(generation_times[[i]])/2):length(generation_times[[i]])]
+  return(data.frame(baps=rep(b, length(gens)), 
+                                       time=gens, 
+                                       stringsAsFactors = FALSE))
+}))
+
+gen.time.plot.df$Car.vs.Gen <- "Generation"
+temp.df <- carriage.with.lanes[,c("top_BAPS", "length")]
+temp.df$length <- temp.df$length/365*12
+temp.df$Car.vs.Gen <- "Carriage"
+colnames(temp.df) <- c("baps", "time", "Car.vs.Gen")
+temp.df <- temp.df[temp.df$baps %in% gen.time.plot.df$baps,]
+
+gen.time.plot.df <- rbind(gen.time.plot.df, temp.df)
+
+gen.time.plot.df$baps <- factor(as.character(gen.time.plot.df$baps), 
+                                levels = as.character(sort(as.numeric(unique(gen.time.plot.df$baps)))))
+p1 <- ggplot(gen.time.plot.df[gen.time.plot.df$Car.vs.Gen=="Generation",], aes(x=baps, y=time, col=baps)) +
+  geom_boxplot(varwidth = TRUE) + #theme_bw() + 
+  xlab("BAPs Cluster") + ylab("generation time (months)") +
+  theme(legend.position="none") + theme(text = element_text(size=11))
+
+temp.df <- gen.time.plot.df[gen.time.plot.df$Car.vs.Gen=="Generation",]
+temp.df <- temp.df[!duplicated(temp.df$baps),]
+temp.df <- merge(temp.df, carriage.by.baps[,c("top_BAPS","n")], by.x="baps", by.y="top_BAPS",
+                 all.x = TRUE)
+
+
+psize <- ggplot(temp.df, aes(x=baps, y=n)) +
+  geom_col() + #theme_bw() + 
+  xlab("BAPs Cluster") + ylab("Number of unique people") +
+  theme(legend.position="none") + theme(text = element_text(size=12)) 
+
+p1 +  psize + plot_layout(ncol = 1)
+
+trans.tree.size <- ggplot(trans.tree.sizes, aes(x=factor(BAPS), y=sub.tree.size)) +
+  geom_jitter(height = 0, width = 0.2) + theme(legend.position="none") + theme(text = element_text(size=12)) +
+  xlab("BAPs Cluster") + ylab("sub tree size")
+
+trans.tree.total.size <- trans.tree.sizes %>% group_by(BAPS) %>%
+  summarise(
+    n=n(),
+    total.isolates=sum(sub.tree.size)
+  )
+
+trans.total.size <- ggplot(trans.tree.total.size, aes(x=factor(BAPS), y=total.isolates)) +
+  geom_col() + theme(legend.position="none") + theme(text = element_text(size=12)) +
+  xlab("BAPs Cluster") + ylab("total isolates")
+
+p1 +  trans.tree.size + trans.total.size + plot_layout(ncol = 1)
+
+
+p3 <- ggplot(gen.time.plot.df, aes(x=Car.vs.Gen, y=time, col=baps)) +
+  geom_boxplot(varwidth = FALSE) + #theme_bw() + 
+  facet_wrap(~ baps, nrow = 1) +
+  xlab("BAPs Cluster") + ylab("time (months)") +
+  theme(legend.position="none") + theme(text = element_text(size=14)) +
+  theme(axis.text.x = element_text(angle=90))
+
+p3 
+
+
+baps.serotype.df <- epi_data[, c("serotype", "level1")]
+baps.serotype.df <- do.call(rbind, lapply(split(baps.serotype.df, baps.serotype.df$level1), function(x){
+  fraction <- table(x$serotype)/nrow(x)
+  return(data.frame(level1=rep(unique(x$level1), length(fraction)), serotype=names(fraction),
+                   fraction=as.vector(fraction), stringsAsFactors=FALSE))
+  
+}))
+baps.serotype.df$level1 <- factor(as.character(baps.serotype.df$level1), 
+                                levels = levels(gen.time.plot.df$baps))
+baps.serotype.df <- baps.serotype.df[baps.serotype.df$level1 %in% temp.df$baps,]
+p4 <- ggplot(baps.serotype.df, aes(x=factor(level1), y=serotype, alpha=fraction)) + 
+  geom_tile() + 
+  theme(legend.position="none") + theme(text = element_text(size=12)) +
+  xlab("BAPs Cluster")
+
+p1 + p4 + plot_layout(ncol = 1)
+
+baps.sample.dates <- do.call(rbind, lapply(trans.data.list, function(x){
+  data.frame(baps=rep(x$baps, length(x$sample.dates)), dates=x$sample.dates, stringsAsFactors = FALSE)
+}))
+baps.sample.dates$baps <- factor(as.character(baps.sample.dates$baps), 
+                                levels = levels(gen.time.plot.df$baps))
+p5 <- ggplot(baps.sample.dates, aes(x=baps, y=dates, alpha=0.2)) +
+  geom_point()+ 
+  theme(legend.position="none") + theme(text = element_text(size=12)) +
+  xlab("BAPs Cluster") + ylab("sample dates")
+
+p1 + p5  + plot_layout(ncol = 1)
+
+```
+
+
+
+```{r}
+
+uncertainty <- gen.time.plot.df[gen.time.plot.df$Car.vs.Gen=="Generation",] %>% group_by(baps) %>%
+  summarise(
+    window.size=abs(quantile(time, 0.05)- quantile(time, 0.95))
+  )
+
+uncertainty.vs.size <- merge(trans.tree.total.size, uncertainty, by.x="BAPS", by.y = "baps", all = TRUE)
+plot(uncertainty.vs.size$window.size, uncertainty.vs.size$total.isolates,
+     xlab="95% Quantile Range", ylab="Cluster Size", type='n')
+text(uncertainty.vs.size$window.size,  uncertainty.vs.size$total.isolates, uncertainty.vs.size$BAPS, cex=0.45)
+cor.test(uncertainty.vs.size$window.size, uncertainty.vs.size$total.isolates, 
+         use = "complete.obs", method = "spearman")
+
+
+
+carriage.vs.gen <- merge(carriage.by.baps, gen.times.by.baps,
+                         by.x="top_BAPS", by.y="baps.id", all = TRUE)
+carriage.vs.gen$n.in.clade <- table(epi_data$level1)[as.numeric(carriage.vs.gen$top_BAPS)]
+
+#remove clusters 15, 23, 31
+carriage.vs.gen <- carriage.vs.gen[!(as.numeric(carriage.vs.gen$top_BAPS) %in% c("15", "23", "31")),]
+
+plot(carriage.vs.gen$X50., carriage.vs.gen$n.in.clade,
+     xlab="median generation time", ylab="Cluster Size", type='n')
+text(carriage.vs.gen$X50., carriage.vs.gen$n.in.clade, carriage.vs.gen$top_BAPS, cex=0.45)
+
+cor.test(carriage.vs.gen$X50., carriage.vs.gen$n.in.clade, 
+         use = "complete.obs", method = "spearman")
+
+plot(carriage.vs.gen$median.carriage, carriage.vs.gen$n.in.clade,
+     xlab="median carriage", ylab="Cluster Size", type='n')
+text(carriage.vs.gen$median.carriage, carriage.vs.gen$n.in.clade, 
+     carriage.vs.gen$top_BAPS, cex=0.45)
+
+cor.test(carriage.vs.gen$median.carriage, carriage.vs.gen$n.in.clade, 
+         use = "complete.obs", method = "spearman")
+
+#median
+plot(carriage.vs.gen$median.carriage, carriage.vs.gen$X50.,
+     xlab="median carriage", ylab="median generation time", type='n')
+text(carriage.vs.gen$median.carriage, carriage.vs.gen$X50., 
+     carriage.vs.gen$top_BAPS, cex=0.45)
+
+cor.test(carriage.vs.gen$median.carriage, carriage.vs.gen$X50., 
+         use = "complete.obs", method = "spearman")
+
+plot(carriage.vs.gen$mean.carriage, carriage.vs.gen$mean.gen,
+     xlab="mean carriage", ylab="mean generation time", type='n')
+text(carriage.vs.gen$mean.carriage, carriage.vs.gen$mean.gen, 
+     carriage.vs.gen$top_BAPS, cex=0.45)
+
+cor.test(carriage.vs.gen$mean.carriage, carriage.vs.gen$mean.gen, 
+         use = "complete.obs", method = "spearman")
+
+
+```
+
+##Inferring Transmission from Epi
+
+```{r}
+
+pairs <- do.call(rbind, lapply(trans.data.list, function(x) {
+  p <- t(combn(rownames(x$tdist), 2))
+  cbind(p, x$tdist[p])
+  }))
+
+ids <- data.frame(personID=paste(swab.summary.data$codenum, swab.summary.data$category, sep="_"),
+           specnum = swab.summary.data$specnum,
+           stringsAsFactors = FALSE)
+pnc.data <- merge(ids, pnc.isolate.data, by.x = "specnum", by.y = "specnum", all = TRUE)
+pnc.data <- pnc.data[!is.na(pnc.data$lane_id),]
+head(pnc.data)
+
+epi_data$Host.y <- gsub("INFANT", "Infant", epi_data$Host.y)
+epi_data$Host.y <- gsub("MOTHER", "Mother", epi_data$Host.y)
+
+#Remove those pairs not found in pnc data
+pairs <- pairs[pairs[,1] %in% pnc.isolate.data$lane_id,]
+pairs <- pairs[pairs[,2] %in% pnc.isolate.data$lane_id,]
+
+pairs[,1] <- pnc.isolate.data$specnum[match(pairs[,1], pnc.isolate.data$lane_id)]
+pairs[,2] <- pnc.isolate.data$specnum[match(pairs[,2], pnc.isolate.data$lane_id)]
+
+#Remove duplicate in house data
+house.data <- house.data[!duplicated(house.data$codenum),]
+
+swab.summary.data$combinedID <- paste(swab.summary.data$codenum, swab.summary.data$category, sep="_")
+
+pairwise.epi.dist <- pblapply(split(pairs, seq(NROW(pairs))), function(pair){
+  p1.codenum <- swab.summary.data$codenum[pair[[1]]==swab.summary.data$specnum]
+  p2.codenum <- swab.summary.data$codenum[pair[[2]]==swab.summary.data$specnum]
+  
+  moth.child.pair <- p1.codenum==p2.codenum
+  
+  h.id.A <- house.data$codenum==p1.codenum
+  if(sum(h.id.A)!=1) {
+    print(p1.codenum)
+    print(pair[[1]])
+    stop("h.id.A!=1")
+  }
+  h.id.B <- house.data$codenum==p2.codenum
+  # print(c(pair, gsub("_.*", "", pair[[2]])))
+  if(sum(h.id.B)!=1) {
+    print(p2.codenum)
+    print(pair[[2]])
+    stop("h.id.A!=1")
+  }
+  
+  #Will  be the same for mothers and their babies
+  dob.dist <- abs(as.numeric(as.Date(house.data$infant_dob[h.id.A])-as.Date(
+    house.data$infant_dob[h.id.B])))
+  
+  #Very close so lets not worry about the Earths curvature
+  geo.dist <- dist(matrix(c(house.data$house_latitude[h.id.A], house.data$house_longitude[h.id.A],
+                            house.data$house_latitude[h.id.B], house.data$house_longitude[h.id.B]),
+                          byrow = TRUE, ncol=2), method = "eu")
+  
+  #number of peeps in the house
+  sum.num.house <- house.data$number_household[h.id.A] + house.data$number_household[h.id.B]
+  sum.num.less5y <- house.data$num_child_less5y[h.id.A] + house.data$num_child_less5y[h.id.B]
+  sum.num.5_14y <- house.data$num_child_5_14y[h.id.A] + house.data$num_child_5_14y[h.id.B]
+  sum.num.adult_60y <- house.data$num_adult_60y[h.id.A] + house.data$num_adult_60y[h.id.B]
+  
+  #Infant genders
+  same.gender <- house.data$infant_gender[h.id.A] == house.data$infant_gender[h.id.B]
+  
+  #Treat ethnicity as a binary variable
+  same.ethnicity <- house.data$mother_ethnic_group[h.id.A]==house.data$mother_ethnic_group[h.id.B]
+  
+  #Home delivery: 0=Neither, 1=Only one in the pair, 2=Both, NA=At least one unkown
+  home.delivery <- sum(house.data$home_delivery[h.id.A]=="Yes",
+                       house.data$home_delivery[h.id.B]=="Yes")
+  
+  #Min distance between swab dates
+  # swab.dates.A <- as.numeric(as.Date(
+  #   swab.summary.data$specdate[swab.summary.data$combinedID==pair[[1]]]))
+  # swab.dates.B <- as.numeric(as.Date(
+  #   swab.summary.data$specdate[swab.summary.data$combinedID==pair[[2]]]))
+  # 
+  # if(length(swab.dates.A)<=0){
+  #   swab.dates.A <- NA
+  # }
+  # if(length(swab.dates.B)<=0){
+  #   swab.dates.B <- NA
+  # }
+  # 
+  # m <- expand.grid(swab.dates.A, swab.dates.B)
+  # swab.dates.dist <- min(abs(m[,1]-m[,2]))
+  swab.date.A <- swab.summary.data$specdate[swab.summary.data$specnum==pair[[1]]]
+  swab.date.B <- swab.summary.data$specdate[swab.summary.data$specnum==pair[[2]]]
+  swab.dates.dist <- as.numeric(abs(as.Date(swab.date.A)-as.Date(swab.date.B)))
+  
+  swab.age.A <- swab.summary.data$age_d[swab.summary.data$specnum==pair[[1]]]
+  swab.age.B <- swab.summary.data$age_d[swab.summary.data$specnum==pair[[2]]]
+  swab.age.diff <- as.numeric(abs(swab.age.A-swab.age.B))
+  
+  #Serotype (shared/not shared (or NA))
+  seroA <- unique(as.vector(swab.summary.data[swab.summary.data$specnum==pair[[1]],c(
+    "serotype1","serotype2","serotype3","serotype4")]))
+  seroB <- unique(as.vector(swab.summary.data[swab.summary.data$specnum==pair[[2]],c(
+    "serotype1","serotype2","serotype3","serotype4")]))
+   if(sum(!is.na(intersect(seroA, seroB)))>0){
+     sero.shared <- intersect(seroA, seroB)[[1]]
+   } else {
+     sero.shared <- "different"
+   }
+  
+  #Antibiotic resitance
+  drug.A <- unlist(apply(pnc.data[pnc.data$specnum==pair[[1]],4:10], 2, function(c){
+    tbl <- table(c)
+    return(names(tbl)[which.max(tbl)])
+  }))
+  if(sum(pnc.data$specnum==pair[[1]])==0){
+    drug.A <- rep(NA, 7)
+  }
+  drug.B <- unlist(apply(pnc.data[pnc.data$specnum==pair[[2]],4:10], 2, function(c){
+    tbl <- table(c)
+    return(names(tbl)[which.max(tbl)])
+  }))
+  if(sum(pnc.data$specnum==pair[[2]])==0){
+    drug.B <- rep(NA, 7)
+  }
+  drugs.dist <- drug.A == drug.B
+  
+  return(c(dob.dist, geo.dist, sum.num.house, sum.num.less5y,
+           sum.num.5_14y, sum.num.adult_60y, same.gender,
+           same.ethnicity, home.delivery, swab.dates.dist,
+           swab.age.diff, sero.shared, moth.child.pair,
+           drugs.dist))
+  
+})
+
+pairwise.epi.dist <- do.call(rbind, pairwise.epi.dist)
+pairwise.epi.dist <- cbind(pairs, pairwise.epi.dist)
+colnames(pairwise.epi.dist)[1:16] <- c("Isolate.A", "Isolate.B", "tdist", "dob.dist", "geo.dist",
+                                       "sum.num.house", "sum.num.less5y",
+                                       "sum.num.5_14y", "sum.num.adult_60y", "same.gender",
+                                       "same.ethnicity", "home.delivery", "swab.dates.dist",
+                                       "swab.age.diff", "sero.shared", "moth.child.pair")
+pairwise.epi.dist <- data.frame(pairwise.epi.dist, stringsAsFactors = FALSE)
+class(pairwise.epi.dist$tdist) <- "numeric"
+class(pairwise.epi.dist$geo.dist) <- "numeric"
+class(pairwise.epi.dist$dob.dist) <- "numeric"
+class(pairwise.epi.dist$sum.num.house) <- "numeric"
+class(pairwise.epi.dist$sum.num.less5y) <- "numeric"
+class(pairwise.epi.dist$sum.num.5_14y) <- "numeric"
+class(pairwise.epi.dist$sum.num.adult_60y) <- "numeric"
+class(pairwise.epi.dist$swab.dates.dist) <- "numeric"
+class(pairwise.epi.dist$same.gender) <- "Factor"
+class(pairwise.epi.dist$same.ethnicity) <- "Factor"
+class(pairwise.epi.dist$home.delivery) <- "Factor"
+class(pairwise.epi.dist$sero.shared) <- "Factor"
+pairwise.epi.dist$ceftriaxone <- NULL #As these are all identical
+class(pairwise.epi.dist$chloramphenicol) <- "Factor"
+class(pairwise.epi.dist$clindamycin) <- "Factor"
+class(pairwise.epi.dist$co.trimoxazole) <- "Factor"
+class(pairwise.epi.dist$erythromycin) <- "Factor"
+class(pairwise.epi.dist$penicillin) <- "Factor"
+class(pairwise.epi.dist$tetracycline) <- "Factor"
+class(pairwise.epi.dist$swab.age.diff) <- "numeric"
+class(pairwise.epi.dist$moth.child.pair) <- "Factor"
+```
+
+##Missing data
+
+```{r}
+barplot(colSums(is.na(pairwise.epi.dist)), las=2, cex.names =0.5,
+        main = "Missing Data by Column")
+
+#A simple but likely biased fix is to impute the geo distance with the mean for each column. 
+pairwise.epi.dist$geo.dist[is.na(pairwise.epi.dist$geo.dist)] <- mean(pairwise.epi.dist$geo.dist, na.rm = TRUE)
+
+#For now I will discard the samples with any other NA (969 or ~1.8%)
+pairwise.epi.dist <- pairwise.epi.dist[apply(pairwise.epi.dist, 1, function(x) sum(is.na(x)))==0, ]
+```
+We have `r sum(apply(pairwise.epi.dist, 1, function(x) sum(is.na(x)))>0)/nrow(pairwise.epi.dist)`% missing rows
+
+##Prediction attempt - Random Forest
+
+Cross validation
+```{r}
+hist(pairwise.epi.dist$tdist[!is.infinite(pairwise.epi.dist$tdist)], breaks=1000)
+
+pairwise.epi.dist.cat <- pairwise.epi.dist
+# pairwise.epi.dist.cat <- pairwise.epi.dist.cat[pairwise.epi.dist.cat$moth.child.pair!=1,]
+pairwise.epi.dist.cat$moth.child.pair <- NULL
+cuts <- c(-1,5,10,15,20,Inf)
+pairwise.epi.dist.cat$tdist <- cut(pairwise.epi.dist.cat$tdist, cuts)
+
+
+N_CV <- 10
+percent.cv <- 0.2
+x <- model.matrix( ~ .-1, pairwise.epi.dist.cat[,4:ncol(pairwise.epi.dist.cat)])
+unique.people <- unique(c(pairwise.epi.dist.cat$Isolate.A, pairwise.epi.dist.cat$Isolate.B))
+y <- pairwise.epi.dist.cat[,3]
+confusion.matrices.rf <- lapply(1:N_CV, function(i){
+  print(paste("Iteration:", i))
+  n.test <- floor(percent.cv*length(unique.people))
+  test.people <- sample(unique.people, size = n.test)
+  test.index <- unique(c(1:nrow(pairwise.epi.dist.cat
+                                ))[pairwise.epi.dist.cat$Isolate.A %in% test.people],
+                         c(1:nrow(pairwise.epi.dist.cat
+                                ))[pairwise.epi.dist.cat$Isolate.B %in% test.people])
+  
+  x.train <- x[-test.index,]
+  y.train <- y[-test.index]
+  x.test <- x[test.index,]
+  y.test <- y[test.index]
+  
+  rf.model <- randomForest(x.train, y=y.train)
+  p <- predict(rf.model, x.test)
+  print(table(truth=y.test, estimate=p))
+  return(table(truth=y.test, estimate=p))
+})
+
+
+#By category
+cats <- sort(unique(y))
+cv.results.df <- do.call(rbind, lapply(confusion.matrices.rf, function(t.c.matrix){
+  c.matrix <- matrix(0, nrow = length(cats), ncol=length(cats), dimnames = list(cats, cats))
+  c.matrix[as.matrix(expand.grid(rownames=rownames(t.c.matrix),colnames=colnames(t.c.matrix)))] <- as.vector(t.c.matrix)
+  # print(c.matrix)
+  data.frame(category=rownames(c.matrix),
+             recall = diag(c.matrix)/rowSums(c.matrix),
+             precision = diag(c.matrix)/colSums(c.matrix),
+             overall.accuracy = rep(sum(diag(c.matrix))/sum(c.matrix), nrow(c.matrix)),
+             stringsAsFactors = FALSE)
+}))
+mean.overall.accuracy <- mean(cv.results.df$overall.accuracy)
+cv.results.df$overall.accuracy <- NULL
+cv.results.df <- melt(cv.results.df, id.vars="category")
+
+cv.results.df$category <- factor(cv.results.df$category, c("(-1,5]",   "(5,10]",   "(10,15]",  "(15,20]",  "(20,Inf]"))
+
+ggplot(cv.results.df, aes(x=category, y=value, col=category)) +
+  geom_boxplot() + facet_wrap(~ variable, ncol=1) +
+  xlab("Interval") + theme(text = element_text(size=14)) +
+  theme(legend.position="none") + scale_y_continuous(limits = c(0,1))
+```
+
+Now to make predictions on those pairs we don't have genetic data for. First we generate a model based on all our genetic data.
+
+```{r}
+pairwise.epi.dist.cat <- pairwise.epi.dist
+pairwise.epi.dist.cat$moth.child.pair <- NULL
+cuts <- c(-1,5,10,15,20,Inf)
+pairwise.epi.dist.cat$tdist <- cut(pairwise.epi.dist.cat$tdist, cuts)
+
+x <- model.matrix( ~ .-1, pairwise.epi.dist.cat[,4:ncol(pairwise.epi.dist.cat)])
+y <- pairwise.epi.dist.cat[,3]
+
+rf.model <- randomForest(x, y=y, importance = TRUE)
+
+plot(rf.model)
+randomForest::varImpPlot(rf.model)
+# View the forest results.
+print(rf.model)
+
+importance.df <- data.frame(variable=rownames(rf.model$importance),
+                            mean.decrease.accuracy=rf.model$importance[,5],
+                            mean.decrease.gini=rf.model$importance[,6], stringsAsFactors = FALSE)
+
+importance.df$variable <- factor(importance.df$variable, levels = importance.df$variable[order(importance.df$mean.decrease.gini)]) 
+ggplot(importance.df, aes(x=variable, y=mean.decrease.gini)) +
+  geom_point() + coord_flip() +
+  ylab("Mean decrease Gini") +
+  theme(text = element_text(size=18))
+
+importance.df$variable <- factor(importance.df$variable, levels = importance.df$variable[order(importance.df$mean.decrease.accuracy)]) 
+ggplot(importance.df, aes(x=variable, y=mean.decrease.accuracy)) +
+  geom_point() + coord_flip() +
+  ylab("Mean decrease accuracy") +
+  theme(text = element_text(size=18))
+
+# Importance of each predictor.
+print(importance(rf.model,type = 2))
+```
+
+Now to create the pairwise information required to predict links between swabs where we might not have genetic data.
+
+```{r}
+
+#split into overlapping year blocks to make things more manageable
+pnc.isolate.data$specdate <- as.numeric(as.Date(
+  swab.summary.data$specdate[match(pnc.isolate.data$specnum,
+                                   swab.summary.data$specnum)]))/365+1970
+pnc.pairs <- do.call(rbind, lapply(seq(2007, 2010, 0.5), function(year) {
+  t(combn(unique(pnc.isolate.data$specnum[(
+    pnc.isolate.data$specdate>year) & (pnc.isolate.data$specdate<(year+1))]), 2))
+}))
+pnc.pairs <- pnc.pairs[!duplicated(paste(pnc.pairs[,1], pnc.pairs[,2])),]
+
+pnc.pairs <- data.frame(pnc.pairs, stringsAsFactors = FALSE)
+colnames(pnc.pairs) <- c("spec_p1", "spec_p2")
+pnc.pairs$p1.codenum <- swab.summary.data$codenum[match(pnc.pairs$spec_p1,
+                                   swab.summary.data$specnum)]
+pnc.pairs$p2.codenum <- swab.summary.data$codenum[match(pnc.pairs$spec_p2,
+                                   swab.summary.data$specnum)]
+
+h.id.A <- match(pnc.pairs$p1.codenum, house.data$codenum)
+h.id.B <- match(pnc.pairs$p2.codenum, house.data$codenum)
+
+pnc.pairs$dob.dist <- abs(as.numeric(as.Date(
+  house.data$infant_dob[h.id.A])-as.Date(house.data$infant_dob[h.id.B])))
+
+pnc.pairs$geo.dist <- sqrt((house.data$house_latitude[h.id.A]-house.data$house_latitude[h.id.B])^2 +
+                             (house.data$house_longitude[h.id.A]-house.data$house_longitude[h.id.B])^2)
+#fill with mean for missing geo distances
+pnc.pairs$geo.dist[is.na(pnc.pairs$geo.dist)] <- mean(pnc.pairs$geo.dist, na.rm = TRUE)
+
+#number of peeps in the house
+pnc.pairs$sum.num.house <- house.data$number_household[h.id.A] + house.data$number_household[h.id.B]
+pnc.pairs$sum.num.less5y <- house.data$num_child_less5y[h.id.A] + house.data$num_child_less5y[h.id.B]
+pnc.pairs$sum.num.5_14y <- house.data$num_child_5_14y[h.id.A] + house.data$num_child_5_14y[h.id.B]
+pnc.pairs$sum.num.adult_60y <- house.data$num_adult_60y[h.id.A] + house.data$num_adult_60y[h.id.B]
+
+#Infant genders
+pnc.pairs$same.gender <- house.data$infant_gender[h.id.A] == house.data$infant_gender[h.id.B]
+
+#Treat ethnicity as a binary variable
+pnc.pairs$same.ethnicity <- house.data$mother_ethnic_group[h.id.A]==house.data$mother_ethnic_group[h.id.B]
+#Set as FALSE for missing ethincities
+pnc.pairs$same.ethnicity[is.na(pnc.pairs$same.ethnicity)] <- FALSE
+  
+#Home delivery: 0=Neither, 1=Only one in the pair, 2=Both, NA=At least one unkown
+pnc.pairs$home.delivery <- ((house.data$home_delivery[h.id.A]=="Yes") +
+                              (house.data$home_delivery[h.id.B]=="Yes"))
+
+#swab dates
+swab.date.A <- swab.summary.data$specdate[match(pnc.pairs$spec_p1, swab.summary.data$specnum)]
+swab.date.B <- swab.summary.data$specdate[match(pnc.pairs$spec_p2, swab.summary.data$specnum)]
+pnc.pairs$swab.dates.dist <- as.numeric(abs(as.Date(swab.date.A)-as.Date(swab.date.B)))
+  
+swab.age.A <- swab.summary.data$age_d[match(pnc.pairs$spec_p1, swab.summary.data$specnum)]
+swab.age.B <- swab.summary.data$age_d[match(pnc.pairs$spec_p2, swab.summary.data$specnum)]
+pnc.pairs$swab.age.diff <- as.numeric(abs(swab.age.A-swab.age.B))
+
+#Serotype (shared/not shared (or NA))
+seroA <- swab.summary.data[match(pnc.pairs$spec_p1, swab.summary.data$specnum),c(
+  "serotype1","serotype2","serotype3","serotype4")]
+seroB <- swab.summary.data[match(pnc.pairs$spec_p2, swab.summary.data$specnum),c(
+  "serotype1","serotype2","serotype3","serotype4")]
+colnames(seroB) <- paste("B", colnames(seroB), sep="_")
+
+temp <- rowSums(seroA$serotype1==seroB, na.rm = TRUE)
+pnc.pairs$sero.shared[temp>0] <- seroA$serotype1[temp>0]
+temp <- rowSums(seroA$serotype2==seroB, na.rm = TRUE)
+pnc.pairs$sero.shared[temp>0] <- seroA$serotype1[temp>0]
+temp <- rowSums(seroA$serotype3==seroB, na.rm = TRUE)
+pnc.pairs$sero.shared[temp>0] <- seroA$serotype1[temp>0]
+temp <- rowSums(seroA$serotype4==seroB, na.rm = TRUE)
+pnc.pairs$sero.shared[temp>0] <- seroA$serotype1[temp>0]
+pnc.pairs$sero.shared[is.na(pnc.pairs$sero.shared)] <- "different"
+
+
+#Antibiotic resitance
+pnc.id.A <- match(pnc.pairs$spec_p1, pnc.isolate.data$specnum)
+pnc.id.B <- match(pnc.pairs$spec_p1, pnc.isolate.data$specnum)
+
+pnc.pairs$ceftriaxone <- pnc.isolate.data$ceftriaxone[pnc.id.A]==pnc.isolate.data$ceftriaxone[pnc.id.B]
+pnc.pairs$chloramphenicol <- pnc.isolate.data$chloramphenicol[pnc.id.A]==pnc.isolate.data$chloramphenicol[pnc.id.B]
+pnc.pairs$clindamycin <- pnc.isolate.data$clindamycin[pnc.id.A]==pnc.isolate.data$clindamycin[pnc.id.B]
+pnc.pairs$co.trimoxazole <- pnc.isolate.data$co.trimoxazole[pnc.id.A]==pnc.isolate.data$co.trimoxazole[pnc.id.B]
+pnc.pairs$erythromycin <- pnc.isolate.data$erythromycin[pnc.id.A]==pnc.isolate.data$erythromycin[pnc.id.B]
+pnc.pairs$penicillin <- pnc.isolate.data$penicillin[pnc.id.A]==pnc.isolate.data$penicillin[pnc.id.B]
+pnc.pairs$tetracycline <- pnc.isolate.data$tetracycline[pnc.id.A]==pnc.isolate.data$tetracycline[pnc.id.B]
+
+pnc.pairwise.epi.dist <- pnc.pairs
+pnc.pairwise.epi.dist[,3] <- NA
+pnc.pairwise.epi.dist[,4] <- NULL
+colnames(pnc.pairwise.epi.dist)[1:3] <- c("Isolate.A", "Isolate.B", "tdist")
+
+class(pnc.pairwise.epi.dist$tdist) <- "numeric"
+class(pnc.pairwise.epi.dist$geo.dist) <- "numeric"
+class(pnc.pairwise.epi.dist$dob.dist) <- "numeric"
+class(pnc.pairwise.epi.dist$sum.num.house) <- "numeric"
+class(pnc.pairwise.epi.dist$sum.num.less5y) <- "numeric"
+class(pnc.pairwise.epi.dist$sum.num.5_14y) <- "numeric"
+class(pnc.pairwise.epi.dist$sum.num.adult_60y) <- "numeric"
+class(pnc.pairwise.epi.dist$swab.dates.dist) <- "numeric"
+class(pnc.pairwise.epi.dist$same.gender) <- "Factor"
+class(pnc.pairwise.epi.dist$same.ethnicity) <- "Factor"
+class(pnc.pairwise.epi.dist$home.delivery) <- "Factor"
+class(pnc.pairwise.epi.dist$sero.shared) <- "Factor"
+pnc.pairwise.epi.dist$ceftriaxone <- NULL #As these are all identical
+class(pnc.pairwise.epi.dist$chloramphenicol) <- "Factor"
+class(pnc.pairwise.epi.dist$clindamycin) <- "Factor"
+class(pnc.pairwise.epi.dist$co.trimoxazole) <- "Factor"
+class(pnc.pairwise.epi.dist$erythromycin) <- "Factor"
+class(pnc.pairwise.epi.dist$penicillin) <- "Factor"
+class(pnc.pairwise.epi.dist$tetracycline) <- "Factor"
+class(pnc.pairwise.epi.dist$swab.age.diff) <- "numeric"
+```
+
+Now we can predict!
+
+```{r}
+pnc.pairwise.epi.dist$home.delivery <- as.character(pnc.pairwise.epi.dist$home.delivery)
+stopifnot(all(colSums(is.na(pnc.pairwise.epi.dist[,4:ncol(pnc.pairwise.epi.dist)]))==0))
+x.new <- model.matrix( ~ .-1, pnc.pairwise.epi.dist[,4:ncol(pnc.pairwise.epi.dist)])
+#Some features are available in the full dataset that are missing in the training datset so we filter them out
+x.new <- x.new[,match(colnames(x), colnames(x.new))]
+
+pred.pairs <- predict(rf.model, x.new)
+
+# write.table(data.frame(specnum.A=pnc.pairwise.epi.dist$Isolate.A,
+#                        specnum.B=pnc.pairwise.epi.dist$Isolate.B,
+#                        RF.prediction=pred.pairs, stringsAsFactors = FALSE),
+#             file = "./data/estimate_scale_single_isolate_per_carriage/RF_predictions.tsv",
+#             quote = FALSE, row.names = FALSE, col.names = TRUE, sep = "\t")
+```
+
+##Session Information
+
+```{r}
+sessionInfo()
+```

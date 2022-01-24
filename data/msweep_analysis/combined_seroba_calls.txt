@@ -1,0 +1,5224 @@
+27859_1#189	1_seroba	untypable	
+27859_1#189	248_seroba	untypable	
+27859_1#189	3_seroba	33F	
+27463_4#145	73_seroba	11A	
+27754_1#78	87_seroba	33B	
+28157_2#126	45_seroba	34	
+28049_1#5	1_seroba	19F	
+28157_2#185	1_seroba	19F	
+28157_2#178	1_seroba	19F	
+27630_2#68	180_seroba	untypable	
+27630_2#68	5_seroba	23A	
+28157_3#106	1_seroba	19F	
+28157_3#22	45_seroba	34	
+27958_1#48	1_seroba	19F	
+27535_1#125	127_seroba	13	
+27689_4#84	20_seroba	23F	
+27689_4#84	342_seroba	6E(6B)	
+27689_4#84	37_seroba	6E(6B)	
+27689_4#84	509_seroba	6E(6B)	
+28157_2#151	1_seroba	19F	
+28157_2#151	28_seroba	untypable	
+27463_3#191	128_seroba	03	
+27689_2#19	104_seroba	untypable	
+27689_2#19	118_seroba	alternative_aliB_NT	
+27958_1#88	10_seroba	19A	
+28354_1#79	10_seroba	19A	
+27859_1#64	137_seroba	09N	contamination
+27958_1#81	28_seroba	untypable	
+27958_1#81	569_seroba	untypable	
+27958_1#81	611_seroba	untypable	
+27958_1#81	69_seroba	15A	
+27463_3#137	149_seroba	32F	
+27536_3#19	20_seroba	23F	
+27536_3#19	45_seroba	34	
+28042_1#104	127_seroba	13	contamination
+28042_1#104	69_seroba	15A	
+27958_1#149	1_seroba	19F	
+27689_4#55	118_seroba	46	
+27689_4#55	134_seroba	untypable	
+27689_4#55	26_seroba	12B	
+27463_4#9	106_seroba	23F	
+27463_4#9	63_seroba	06A	contamination
+27859_1#187	20_seroba	23F	
+27535_1#59	40_seroba	22A	contamination
+27463_3#177	47_seroba	6E(6B)	
+27689_4#192	186_seroba	35B	contamination
+27425_7#154	320_seroba	13	
+27689_4#171	10_seroba	19A	
+28048_1#179	87_seroba	33B	
+27754_1#104	1_seroba	untypable	
+27754_1#104	42_seroba	Swiss_NT	contamination
+27754_1#104	60_seroba	Swiss_NT	contamination
+27754_1#134	10_seroba	19A	
+28157_3#137	69_seroba	15A	
+28157_3#137	91_seroba	07C	contamination
+27689_1#5	1_seroba	19F	
+27689_1#5	263_seroba	6E(6B)	
+27689_4#163	186_seroba	35B	contamination
+27689_4#163	30_seroba	10B	
+28049_1#43	12_seroba	03	
+28049_1#56	69_seroba	15A	
+27754_1#136	20_seroba	23F	
+28354_1#70	1_seroba	untypable	
+28354_1#70	293_seroba	untypable	
+28354_1#70	38_seroba	38	contamination
+28354_1#70	69_seroba	untypable	
+27859_1#75	32_seroba	07F	contamination
+27859_1#75	9_seroba	14	
+27425_7#189	47_seroba	6E(6B)	
+28049_1#105	10_seroba	19A	
+28049_1#105	45_seroba	34	
+28049_1#65	82_seroba	06A	
+28042_1#22	28_seroba	14	
+28157_2#133	10_seroba	19A	
+28042_1#61	1_seroba	19F	
+28049_1#125	1_seroba	19F	
+28049_1#125	454_seroba	untypable	
+28157_2#18	45_seroba	34	
+28049_1#69	45_seroba	34	
+27463_4#190	73_seroba	11A	
+28157_3#90	1_seroba	19F	
+28042_1#47	107_seroba	18C	
+28042_1#47	28_seroba	untypable	
+27644_5#147	37_seroba	6E(6B)	
+28042_1#83	40_seroba	22A	
+28042_1#83	45_seroba	34	
+28042_1#83	82_seroba	06A	
+27425_7#143	20_seroba	23F	
+27754_1#42	106_seroba	untypable	
+27754_1#42	20_seroba	23F	
+28157_3#167	10_seroba	19A	
+27463_3#34	96_seroba	02	
+27958_1#2	20_seroba	23F	
+28157_2#59	1_seroba	19F	
+28048_1#24	69_seroba	15A	
+27463_3#29	69_seroba	15A	
+27425_7#67	106_seroba	23F	
+28157_1#55	73_seroba	11A	
+28354_1#81	20_seroba	23F	
+28049_1#174	9_seroba	14	
+27535_1#69	319_seroba	untypable	
+27535_1#69	323_seroba	untypable	
+27535_1#69	49_seroba	17F	
+27535_1#69	61_seroba	untypable	
+27535_1#69	63_seroba	untypable	
+28157_1#182	20_seroba	23F	
+27463_3#49	1_seroba	19F	
+27859_1#2	1_seroba	19F	
+27859_1#2	397_seroba	untypable	
+27859_1#2	451_seroba	untypable	
+27859_1#2	60_seroba	untypable	
+28049_1#83	1_seroba	19F	
+28049_1#83	167_seroba	34	
+27644_5#100	1_seroba	19F	
+27689_3#103	1_seroba	19F	
+28049_1#179	66_seroba	untypable	
+27689_1#46	122_seroba	10A	
+28048_1#49	127_seroba	13	
+27754_1#94	47_seroba	6E(6B)	
+27689_2#23	106_seroba	23A	
+27630_2#112	283_seroba	35C	
+27754_1#75	25_seroba	15C	
+28157_1#19	110_seroba	untypable	
+28157_1#19	47_seroba	6E(6B)	
+28157_2#96	45_seroba	34	
+27689_1#57	167_seroba	34	
+27689_1#57	71_seroba	21	
+27644_5#36	1_seroba	19F	
+27859_1#85	294_seroba	untypable	
+27859_1#85	73_seroba	11A	
+28354_1#26	166_seroba	06A	
+28354_1#26	180_seroba	06A	
+28049_1#3	118_seroba	untypable	
+28049_1#3	25_seroba	15B/15C	contamination
+28049_1#3	613_seroba	untypable	
+27754_1#99	9_seroba	14	
+27859_1#32	87_seroba	6E(6B)	
+27689_3#51	23_seroba	6E(6B)	
+27630_2#4	30_seroba	10B	
+28157_1#70	134_seroba	13	
+28157_2#135	1_seroba	19F	contamination
+27425_7#86	20_seroba	23F	
+27689_3#79	1_seroba	19F	
+27689_3#79	63_seroba	06C	
+27689_4#53	28_seroba	14	
+28157_2#123	1_seroba	19F	
+28157_2#123	534_seroba	untypable	
+28048_1#71	165_seroba	33C	
+28042_1#65	43_seroba	09V	contamination
+28042_1#65	63_seroba	06A	
+27689_4#144	118_seroba	untypable	
+27689_4#144	611_seroba	untypable	
+28157_3#8	1_seroba	19F	
+28157_3#8	69_seroba	15A	
+27689_1#174	185_seroba	untypable	
+27689_1#174	257_seroba	untypable	
+27689_1#174	259_seroba	untypable	
+27689_1#174	282_seroba	untypable	
+27689_1#174	374_seroba	13	contamination
+27689_1#174	456_seroba	untypable	
+27689_1#174	495_seroba	13	
+27689_1#174	508_seroba	13	
+27689_1#174	565_seroba	untypable	
+27689_1#174	91_seroba	untypable	
+27536_3#185	1_seroba	19F	
+28042_1#117	45_seroba	34	
+27463_3#61	154_seroba	35F	
+27463_3#61	42_seroba	Swiss_NT	contamination
+27689_1#168	107_seroba	18C	
+27689_3#179	1_seroba	19F	
+27535_1#185	63_seroba	06C	
+27859_1#21	1_seroba	19F	
+28157_2#84	1_seroba	19F	
+28157_2#84	534_seroba	untypable	
+27536_3#125	1_seroba	19F	
+27536_3#125	87_seroba	untypable	
+27859_1#38	1_seroba	19F	
+27859_1#38	60_seroba	Swiss_NT	
+27859_1#38	82_seroba	06C	
+27463_4#135	37_seroba	6E(6B)	
+27463_4#135	63_seroba	untypable	
+28049_1#40	10_seroba	19A	
+28049_1#40	25_seroba	15B	
+28049_1#40	28_seroba	untypable	
+27689_2#106	1_seroba	19F	
+27463_4#138	87_seroba	33B	
+27535_1#120	1_seroba	19F	
+27535_1#120	166_seroba	06A	
+27535_1#120	20_seroba	23F	
+28157_2#90	166_seroba	06A	
+28157_2#90	28_seroba	untypable	
+28157_2#90	534_seroba	06A	
+27689_1#106	118_seroba	untypable	
+27689_1#106	613_seroba	untypable	
+27859_1#133	47_seroba	6E(6B)	
+27535_1#7	45_seroba	34	
+28157_1#46	23_seroba	06A	
+28157_3#147	104_seroba	16F	contamination
+27754_1#52	1_seroba	19F	
+27689_1#162	602_seroba	19B	
+27689_4#131	166_seroba	06A	
+27689_4#131	400_seroba	untypable	
+27689_4#131	69_seroba	15A	
+27463_3#74	30_seroba	10B	
+27630_2#35	20_seroba	23F	
+27689_2#27	490_seroba	untypable	
+27689_2#27	9_seroba	14	
+28157_1#102	23_seroba	6E(6B)	
+28042_1#95	20_seroba	23F	
+28042_1#95	60_seroba	Swiss_NT	
+27689_3#146	149_seroba	28F	
+27958_1#73	16_seroba	19F	
+28049_1#145	28_seroba	untypable	
+27644_5#8	138_seroba	09L	contamination
+27644_5#8	203_seroba	35A	
+27644_5#8	45_seroba	34	
+28048_1#156	47_seroba	6E(6B)	
+27536_3#180	20_seroba	23F	
+27536_3#180	47_seroba	untypable	
+27754_1#125	37_seroba	untypable	
+27754_1#125	82_seroba	06A	
+28048_1#104	1_seroba	19F	
+28048_1#104	264_seroba	untypable	
+28048_1#180	20_seroba	23F	
+27689_3#150	1_seroba	19F	
+27689_3#150	215_seroba	22F	contamination
+27535_1#43	28_seroba	14	
+27535_1#43	71_seroba	21	
+27859_1#174	10_seroba	19A	
+27689_2#146	1_seroba	19F	
+27689_2#146	60_seroba	untypable	
+27689_4#177	263_seroba	6E(6B)	
+27689_2#190	118_seroba	untypable	
+27689_2#190	138_seroba	untypable	
+27689_2#190	214_seroba	untypable	
+27689_2#190	264_seroba	untypable	
+27689_2#190	359_seroba	untypable	
+27689_2#190	363_seroba	untypable	
+27689_2#190	406_seroba	untypable	
+27689_2#190	42_seroba	untypable	
+27689_2#190	48_seroba	untypable	
+27689_2#190	53_seroba	untypable	
+27689_2#190	603_seroba	untypable	
+27689_2#190	611_seroba	untypable	
+27689_2#190	614_seroba	untypable	
+27689_2#190	615_seroba	untypable	
+27689_2#190	66_seroba	untypable	
+27689_2#75	1_seroba	19F	
+27463_4#19	47_seroba	6E(6B)	
+27958_1#77	14_seroba	23F	
+27958_1#33	106_seroba	untypable	
+27958_1#33	20_seroba	23F	
+27536_3#62	48_seroba	untypable	
+27536_3#62	615_seroba	untypable	
+28048_1#119	1_seroba	19F	
+28048_1#119	454_seroba	untypable	
+28157_3#39	251_seroba	untypable	
+28157_3#39	28_seroba	untypable	
+28157_3#39	293_seroba	10X	contamination
+27535_1#174	1_seroba	19F	
+27463_4#49	130_seroba	04	
+27463_4#49	30_seroba	10B	
+27958_1#177	1_seroba	19F	
+27644_5#17	28_seroba	14	
+27859_1#119	12_seroba	03	
+27644_5#57	30_seroba	10B	
+27644_5#57	407_seroba	untypable	
+27644_5#57	513_seroba	untypable	
+27644_5#57	580_seroba	untypable	
+27536_3#11	25_seroba	15C	
+27536_3#11	66_seroba	untypable	
+27536_3#11	87_seroba	33B	
+27859_1#66	107_seroba	18C	
+28048_1#47	1_seroba	19F	
+28048_1#47	28_seroba	untypable	
+27425_7#174	47_seroba	6E(6B)	
+28049_1#17	9_seroba	14	contamination
+28354_1#19	14_seroba	23F	
+28354_1#19	293_seroba	10X	contamination
+27536_3#29	30_seroba	10B	
+27536_3#29	37_seroba	6E(6B)	
+27754_1#25	1_seroba	19F	
+27754_1#25	287_seroba	untypable	
+27689_4#52	37_seroba	6E(6B)	
+27689_4#52	63_seroba	untypable	
+27689_1#83	1_seroba	19F	
+28049_1#62	23_seroba	6E(6B)	
+27689_4#2	63_seroba	06C	
+28157_3#151	1_seroba	19F	
+27463_3#102	106_seroba	23A	
+28157_3#83	1_seroba	19F	
+28157_3#83	45_seroba	34	
+27463_4#182	118_seroba	untypable	
+28042_1#118	1_seroba	19F	
+28042_1#118	167_seroba	untypable	
+28354_1#76	293_seroba	10X	
+28049_1#190	43_seroba	09V	
+28049_1#190	87_seroba	33B	
+27958_1#162	1_seroba	19F	
+28049_1#98	118_seroba	untypable	
+28049_1#98	134_seroba	13	contamination
+28049_1#98	603_seroba	untypable	
+28049_1#98	606_seroba	untypable	
+27689_3#100	30_seroba	10B	
+27958_1#29	20_seroba	23F	
+27958_1#29	28_seroba	untypable	
+28157_2#189	25_seroba	15B	
+27425_7#52	1_seroba	19F	
+27425_7#52	9_seroba	14	contamination
+27958_1#106	1_seroba	19F	
+27644_5#142	47_seroba	6E(6B)	
+27689_3#29	69_seroba	15A	
+27535_1#35	20_seroba	23F	
+28157_2#141	47_seroba	6E(6B)	
+27536_3#8	166_seroba	untypable	
+27536_3#8	25_seroba	15B/15C	contamination
+27536_3#8	66_seroba	untypable	
+27536_3#8	9_seroba	14	
+28049_1#11	104_seroba	16F	contamination
+27689_4#29	1_seroba	19F	
+27425_7#53	87_seroba	33B	
+27644_5#155	122_seroba	10A	
+28157_2#176	82_seroba	06A	
+27536_3#154	37_seroba	6E(6B)	contamination
+27536_3#154	63_seroba	untypable	
+28354_1#121	110_seroba	06A	
+27535_1#147	47_seroba	6E(6B)	
+27536_3#191	128_seroba	03	
+27536_3#191	138_seroba	09L	contamination
+27630_2#55	20_seroba	23F	
+28157_1#175	25_seroba	15C	
+28157_1#175	42_seroba	untypable	
+28049_1#153	47_seroba	untypable	
+28042_1#116	45_seroba	34	
+28042_1#116	60_seroba	Swiss_NT	contamination
+28157_2#67	130_seroba	04	
+28157_2#67	20_seroba	23F	
+27644_5#92	1_seroba	19F	
+28048_1#54	25_seroba	15B	
+27689_2#144	118_seroba	untypable	
+27689_2#144	138_seroba	untypable	
+27689_2#144	214_seroba	untypable	
+27689_2#144	264_seroba	untypable	
+27689_2#144	359_seroba	untypable	
+27689_2#144	363_seroba	untypable	
+27689_2#144	406_seroba	untypable	
+27689_2#144	42_seroba	untypable	
+27689_2#144	48_seroba	untypable	
+27689_2#144	53_seroba	untypable	
+27689_2#144	603_seroba	untypable	
+27689_2#144	611_seroba	untypable	
+27689_2#144	614_seroba	untypable	
+27689_2#144	615_seroba	untypable	
+27689_2#144	66_seroba	untypable	
+28354_1#2	180_seroba	06A	contamination
+28354_1#2	24_seroba	23F	
+28354_1#2	3_seroba	33F	
+28354_1#2	382_seroba	06A	contamination
+28354_1#2	82_seroba	06A	contamination
+28048_1#84	23_seroba	6E(6B)	
+28049_1#119	37_seroba	6E(6B)	
+27463_4#187	28_seroba	untypable	
+27463_4#58	60_seroba	Swiss_NT	contamination
+27754_1#145	28_seroba	untypable	
+27644_5#35	42_seroba	untypable	
+27754_1#41	110_seroba	06A	contamination
+27754_1#41	45_seroba	34	
+28354_1#9	180_seroba	06A	
+27689_3#163	1_seroba	19F	
+27859_1#97	47_seroba	6E(6B)	
+27859_1#97	69_seroba	15A	
+28049_1#53	107_seroba	18C	
+28049_1#53	134_seroba	untypable	
+27630_2#142	1_seroba	19F	
+27630_2#142	400_seroba	untypable	
+27689_2#180	82_seroba	06C	
+27689_2#180	87_seroba	33B	
+27958_1#114	1_seroba	19F	
+27958_1#114	20_seroba	23F	
+27958_1#114	47_seroba	untypable	
+27754_1#109	127_seroba	13	
+27754_1#109	20_seroba	23F	
+27535_1#131	166_seroba	06A	
+27689_3#165	16_seroba	19F	
+28354_1#38	310_seroba	untypable	
+28354_1#38	42_seroba	untypable	
+28354_1#38	5_seroba	23F	
+28354_1#38	539_seroba	untypable	
+27463_4#149	20_seroba	23F	
+27689_2#81	1_seroba	19F	
+27689_1#65	398_seroba	Swiss_NT	contamination
+27958_1#83	87_seroba	33B	
+28049_1#99	158_seroba	16F	contamination
+28049_1#99	28_seroba	untypable	
+27754_1#97	47_seroba	6E(6B)	
+27754_1#97	9_seroba	14	
+28157_2#177	20_seroba	23F	
+28157_2#177	47_seroba	6E(6B)	
+28049_1#162	173_seroba	35B	contamination
+27689_2#93	106_seroba	23F	
+27689_2#93	107_seroba	18C	contamination
+27689_2#93	42_seroba	untypable	
+27859_1#116	20_seroba	23F	
+27754_1#93	1_seroba	19F	
+28157_2#40	45_seroba	coverage too low	
+28157_2#40	47_seroba	untypable	
+27689_2#152	45_seroba	34	
+27689_2#166	118_seroba	untypable	
+27689_2#166	603_seroba	untypable	
+27689_2#166	606_seroba	untypable	
+27689_2#166	66_seroba	untypable	
+27859_1#145	24_seroba	23F	
+27463_3#84	20_seroba	23F	
+27689_4#182	24_seroba	23F	
+27630_2#16	165_seroba	33C	
+27630_2#16	60_seroba	Swiss_NT	contamination
+27689_1#94	188_seroba	35F	
+27958_1#144	1_seroba	19F	
+27463_4#94	106_seroba	23F	
+28157_3#169	69_seroba	15A	
+27536_3#4	18_seroba	07C	
+27536_3#4	203_seroba	35A	
+27536_3#4	28_seroba	untypable	
+28048_1#12	180_seroba	possible 06D	 but wciP gene might not be complete
+28048_1#12	24_seroba	23F	
+27644_5#129	186_seroba	35B	contamination
+28157_2#54	1_seroba	19F	
+27958_1#97	25_seroba	15B	
+28354_1#44	1_seroba	19F	
+27536_3#67	20_seroba	23F	
+28354_1#75	37_seroba	6E(6B)	
+28354_1#75	509_seroba	6E(6B)	
+27689_3#21	167_seroba	34	
+27689_3#21	224_seroba	08	
+27689_3#21	28_seroba	untypable	
+28157_1#32	69_seroba	15A	
+28157_3#163	23_seroba	6E(6B)	
+27689_3#139	1_seroba	19F	
+27630_2#121	20_seroba	23F	
+28157_3#113	1_seroba	19F	
+28157_3#113	167_seroba	untypable	
+28157_2#136	47_seroba	6E(6B)	
+28157_2#136	87_seroba	33B	
+27644_5#153	1_seroba	19F	
+28048_1#33	150_seroba	serogroup 24	contamination
+28157_3#84	73_seroba	11A	
+28354_1#10	9_seroba	14	
+27463_3#128	20_seroba	23F	
+28048_1#159	9_seroba	14	contamination
+28049_1#92	73_seroba	11A	
+27958_1#174	187_seroba	35F	
+27754_1#95	127_seroba	13	
+27754_1#95	84_seroba	19F	
+27536_3#32	87_seroba	33B	
+28048_1#176	20_seroba	23F	
+27630_2#96	47_seroba	6E(6B)	
+27689_4#71	20_seroba	23F	contamination
+28157_1#61	47_seroba	6E(6B)	
+27689_2#113	42_seroba	Swiss_NT	
+27689_2#113	47_seroba	6E(6B)	
+27958_1#154	9_seroba	14	
+27535_1#132	10_seroba	19A	
+27689_3#93	110_seroba	possible 06D	 but wciP gene might not be complete
+27689_3#93	118_seroba	untypable	
+27689_3#93	158_seroba	untypable	
+27689_3#93	173_seroba	untypable	
+27689_3#93	177_seroba	untypable	
+27689_3#93	180_seroba	possible 06F	 but wciP gene might not be complete
+27689_3#93	185_seroba	untypable	
+27689_3#93	189_seroba	06C	
+27689_3#93	287_seroba	06C	
+27689_3#93	339_seroba	untypable	
+27689_3#93	381_seroba	untypable	
+27689_3#93	382_seroba	06C	
+27689_3#93	406_seroba	untypable	
+27689_3#93	48_seroba	untypable	
+27689_3#93	603_seroba	untypable	
+27689_3#93	611_seroba	untypable	
+27689_3#93	614_seroba	untypable	
+27689_3#93	615_seroba	untypable	
+27689_3#93	82_seroba	06C	
+28157_3#49	1_seroba	19F	
+28157_3#49	167_seroba	untypable	
+28157_3#49	173_seroba	35B	contamination
+27644_5#117	137_seroba	09N	contamination
+27689_4#184	110_seroba	06A	
+27689_4#184	180_seroba	06A	
+27689_4#184	534_seroba	06A	
+28354_1#108	20_seroba	23F	
+27689_4#15	28_seroba	14	contamination
+27644_5#97	1_seroba	19F	
+27644_5#97	215_seroba	22F	contamination
+27536_3#71	323_seroba	untypable	
+27536_3#71	49_seroba	17F	contamination
+27536_3#71	61_seroba	untypable	
+28157_3#36	20_seroba	23F	contamination
+28157_3#36	63_seroba	06C	
+27689_4#173	73_seroba	11A	
+28048_1#135	47_seroba	6E(6B)	
+28157_2#139	1_seroba	19F	
+28157_2#139	18_seroba	07C	contamination
+28157_2#139	28_seroba	untypable	
+27535_1#63	30_seroba	untypable	
+27535_1#63	402_seroba	untypable	
+27535_1#63	42_seroba	untypable	
+27689_4#19	1_seroba	19F	
+27644_5#49	47_seroba	6E(6B)	
+27463_4#41	47_seroba	6E(6A)	
+27425_7#64	1_seroba	19F	
+27425_7#64	43_seroba	09V	contamination
+27425_7#64	63_seroba	06A	
+27689_3#140	25_seroba	15C	
+27689_4#27	137_seroba	09N	contamination
+28048_1#101	20_seroba	23F	
+28048_1#101	28_seroba	untypable	
+27535_1#90	215_seroba	untypable	
+27535_1#90	42_seroba	untypable	
+27535_1#90	82_seroba	06C	
+27536_3#28	73_seroba	untypable	
+27536_3#28	87_seroba	33B	
+27859_1#86	1_seroba	19F	
+27859_1#86	397_seroba	untypable	
+27859_1#86	451_seroba	untypable	
+28048_1#63	1_seroba	19F	
+27689_1#38	28_seroba	untypable	
+27689_1#38	5_seroba	23F	
+27689_1#38	539_seroba	untypable	
+27859_1#178	20_seroba	23F	
+27859_1#178	69_seroba	15A	
+28157_2#159	1_seroba	19F	
+27754_1#89	20_seroba	23F	
+27463_3#48	28_seroba	14	contamination
+27859_1#11	45_seroba	34	
+27754_1#63	47_seroba	6E(6B)	
+27859_1#16	1_seroba	19F	
+27859_1#16	287_seroba	untypable	
+27859_1#16	40_seroba	untypable	
+27958_1#101	1_seroba	19F	contamination
+27536_3#104	104_seroba	16F	
+28157_3#186	1_seroba	19F	
+27644_5#71	25_seroba	15B/15C	contamination
+28354_1#49	10_seroba	19A	
+27689_3#23	45_seroba	34	
+27689_3#173	25_seroba	15C	
+27689_4#123	1_seroba	19F	
+27689_4#123	151_seroba	23B1	contamination
+28157_3#4	47_seroba	6E(6B)	
+27644_5#186	1_seroba	19F	
+28354_1#115	30_seroba	10B	
+28354_1#115	66_seroba	untypable	
+28042_1#133	1_seroba	19F	
+28042_1#133	611_seroba	untypable	
+27689_4#149	138_seroba	09L	contamination
+27689_4#94	149_seroba	28F	contamination
+27689_4#94	47_seroba	6E(6B)	
+27536_3#1	43_seroba	09V	contamination
+27535_1#51	1_seroba	19F	contamination
+28157_1#181	9_seroba	14	
+28157_1#122	104_seroba	16F	contamination
+28157_1#122	134_seroba	13	
+27689_3#192	1_seroba	19F	
+28049_1#182	25_seroba	15C	
+28157_2#12	1_seroba	19F	
+28157_2#12	20_seroba	23F	
+28042_1#45	107_seroba	18C	
+28042_1#45	28_seroba	untypable	
+28049_1#143	180_seroba	06A	
+28354_1#33	1_seroba	19F	
+28354_1#33	9_seroba	14	
+27689_4#151	165_seroba	33C	
+27689_1#144	2_seroba	untypable	
+27689_1#144	323_seroba	untypable	
+27689_1#144	49_seroba	17F	contamination
+27689_1#144	61_seroba	untypable	
+27689_4#112	1_seroba	19F	
+28157_3#19	1_seroba	19F	
+28157_3#19	20_seroba	23F	
+28157_2#19	138_seroba	09L	contamination
+28048_1#182	10_seroba	19A	
+28048_1#182	28_seroba	untypable	
+27689_4#116	1_seroba	19F	
+28157_1#138	1_seroba	19F	
+28157_2#165	1_seroba	19F	
+27689_1#23	47_seroba	6E(6B)	
+28157_3#98	110_seroba	06A	
+27958_1#153	1_seroba	19F	
+27958_1#153	20_seroba	23F	
+27536_3#156	10_seroba	19A	
+27536_3#75	118_seroba	untypable	
+27536_3#75	120_seroba	untypable	
+27536_3#75	127_seroba	untypable	
+27536_3#75	171_seroba	untypable	
+27536_3#75	248_seroba	untypable	
+27536_3#75	258_seroba	untypable	
+27536_3#75	263_seroba	untypable	
+27536_3#75	284_seroba	untypable	
+27536_3#75	315_seroba	untypable	
+27536_3#75	332_seroba	untypable	
+27536_3#75	355_seroba	untypable	
+27536_3#75	404_seroba	untypable	
+27536_3#75	455_seroba	untypable	
+27536_3#75	480_seroba	untypable	
+27536_3#75	485_seroba	untypable	
+27536_3#75	513_seroba	untypable	
+27536_3#75	550_seroba	untypable	
+27536_3#75	603_seroba	untypable	
+27536_3#75	606_seroba	untypable	
+27536_3#75	611_seroba	untypable	
+27536_3#75	613_seroba	untypable	
+27536_3#75	63_seroba	untypable	
+27536_3#75	71_seroba	untypable	
+27536_3#75	81_seroba	untypable	
+28049_1#137	82_seroba	06A	
+28157_1#150	10_seroba	19A	
+28157_1#150	20_seroba	23F	
+28157_1#150	82_seroba	06A	contamination
+28157_3#131	130_seroba	04	
+28157_3#131	60_seroba	Swiss_NT	
+28157_1#40	1_seroba	19F	
+27689_3#77	1_seroba	19F	
+27689_3#77	287_seroba	untypable	
+28157_3#16	47_seroba	6E(6B)	
+28048_1#157	1_seroba	19F	
+28048_1#157	26_seroba	untypable	
+28042_1#135	149_seroba	32F	contamination
+28042_1#135	188_seroba	23F	
+27535_1#31	149_seroba	32F	
+27689_3#172	42_seroba	Swiss_NT	
+27689_3#172	47_seroba	6E(6B)	
+28049_1#75	1_seroba	19F	
+27689_4#180	1_seroba	19F	
+28048_1#85	30_seroba	10F	
+28048_1#85	37_seroba	6E(6B)	
+28048_1#85	509_seroba	6E(6B)	
+27958_1#155	48_seroba	15B/15C	contamination
+27958_1#155	615_seroba	untypable	
+27535_1#133	224_seroba	untypable	
+27535_1#133	63_seroba	06C	
+28157_2#166	23_seroba	6E(6B)	
+27463_3#115	63_seroba	06C	
+27463_3#30	82_seroba	06C	
+27535_1#107	172_seroba	20	contamination
+27535_1#107	20_seroba	23F	
+27536_3#65	26_seroba	46	
+27754_1#21	23_seroba	6E(6B)	contamination
+28048_1#52	10_seroba	19A	
+27859_1#106	25_seroba	15C	
+27425_7#38	71_seroba	21	
+27463_3#56	1_seroba	19F	
+27463_3#56	180_seroba	possible 06D	 but wciP gene might not be complete
+27463_3#56	42_seroba	untypable	
+27463_3#56	5_seroba	23A	
+27463_3#56	534_seroba	possible 06D	 but wciP gene might not be complete
+27644_5#179	63_seroba	06C	
+27958_1#22	45_seroba	34	
+27958_1#22	47_seroba	6E(6B)	
+27463_3#144	10_seroba	19A	
+28157_2#23	1_seroba	19F	
+28157_2#23	47_seroba	possible 06E	 but wciP gene might not be completecontamination
+28157_2#23	66_seroba	untypable	
+27644_5#191	87_seroba	28F	contamination
+27535_1#86	294_seroba	untypable	
+27535_1#86	73_seroba	11A	
+27689_1#54	149_seroba	32F	
+27754_1#84	25_seroba	15C	
+27754_1#84	60_seroba	Swiss_NT	contamination
+27958_1#93	173_seroba	35B	contamination
+27958_1#137	25_seroba	15C	
+27463_4#177	123_seroba	37	
+27425_7#70	43_seroba	09V	
+27689_2#78	26_seroba	46	
+27463_3#38	24_seroba	23F	
+27689_2#88	45_seroba	34	
+28042_1#137	1_seroba	19F	
+27689_4#63	378_seroba	untypable	
+27689_4#63	42_seroba	Swiss_NT	contamination
+27689_4#63	9_seroba	14	
+27425_7#136	71_seroba	21	
+27536_3#48	166_seroba	06A	
+28042_1#20	134_seroba	13	
+27535_1#45	1_seroba	19F	
+27535_1#45	264_seroba	untypable	
+28354_1#5	63_seroba	06C	
+27535_1#48	20_seroba	23F	
+27535_1#72	106_seroba	23F	
+27630_2#18	107_seroba	untypable	
+27630_2#18	28_seroba	untypable	
+27630_2#18	315_seroba	untypable	
+27630_2#18	43_seroba	09V	
+27630_2#18	454_seroba	untypable	
+27630_2#18	6_seroba	untypable	
+27630_2#18	71_seroba	untypable	
+27754_1#154	20_seroba	23F	
+27425_7#148	149_seroba	32F	
+27535_1#105	25_seroba	15B/15C	contamination
+27689_2#172	165_seroba	33C	
+27689_2#172	25_seroba	15C	
+27958_1#161	1_seroba	19F	
+27689_2#50	104_seroba	16F	contamination
+27689_1#145	127_seroba	19B	
+27535_1#153	1_seroba	untypable	
+27535_1#153	20_seroba	23F	
+27535_1#153	66_seroba	untypable	
+28157_2#184	69_seroba	15A	
+27644_5#130	10_seroba	19A	
+27630_2#25	37_seroba	6E(6B)	
+27689_4#82	136_seroba	untypable	
+27689_4#82	28_seroba	untypable	
+27689_4#82	401_seroba	untypable	
+27689_4#82	404_seroba	untypable	
+27689_4#82	608_seroba	untypable	
+27689_4#95	25_seroba	15B	
+28354_1#127	28_seroba	14	contamination
+27859_1#83	37_seroba	6E(6B)	
+27859_1#83	63_seroba	06C	
+28049_1#27	1_seroba	19F	
+27644_5#24	127_seroba	13	contamination
+28157_1#124	1_seroba	19F	
+28354_1#1	25_seroba	15B	
+28354_1#1	82_seroba	untypable	
+28354_1#1	87_seroba	untypable	
+28048_1#56	38_seroba	38	contamination
+28042_1#4	1_seroba	untypable	
+28042_1#4	84_seroba	19F	
+28049_1#139	69_seroba	15A	
+27425_7#57	1_seroba	19F	
+27425_7#57	167_seroba	34	
+27425_7#57	71_seroba	21	
+27754_1#106	42_seroba	untypable	
+27754_1#106	48_seroba	15B	
+27754_1#106	615_seroba	untypable	
+28354_1#34	10_seroba	19A	
+28354_1#34	28_seroba	untypable	
+27463_4#20	104_seroba	16F	
+27463_4#20	47_seroba	6E(6A)	
+27630_2#32	342_seroba	6E(6B)	
+27630_2#32	37_seroba	6E(6B)	
+27630_2#32	509_seroba	6E(6B)	
+27630_2#32	87_seroba	untypable	
+27535_1#60	20_seroba	23F	
+27689_4#125	1_seroba	19F	
+27689_4#125	71_seroba	21	
+28157_2#53	69_seroba	15A	
+28157_2#53	71_seroba	21	
+27689_1#2	30_seroba	10B	
+27689_1#2	42_seroba	untypable	
+28157_2#24	1_seroba	19F	
+27689_4#32	30_seroba	10B	
+27689_4#32	407_seroba	untypable	
+27689_4#32	513_seroba	untypable	
+27689_4#32	580_seroba	untypable	
+27644_5#152	106_seroba	23F	
+27644_5#152	118_seroba	untypable	
+27644_5#152	166_seroba	possible 06D	 but wciP gene might not be complete
+27644_5#152	294_seroba	untypable	
+27644_5#152	5_seroba	23F	
+27644_5#152	539_seroba	untypable	
+27425_7#135	20_seroba	23F	
+27425_7#163	28_seroba	14	
+27425_7#163	84_seroba	19F	
+28354_1#14	45_seroba	34	
+28354_1#14	6_seroba	09V	contamination
+27463_3#46	264_seroba	untypable	
+27630_2#157	28_seroba	untypable	
+27630_2#157	30_seroba	10B	
+27630_2#94	37_seroba	6E(6B)	
+27630_2#94	509_seroba	6E(6B)	
+27859_1#123	25_seroba	15B	
+27754_1#151	10_seroba	19A	
+27754_1#151	28_seroba	untypable	
+27535_1#1	1_seroba	19F	
+27535_1#1	397_seroba	untypable	
+27535_1#1	451_seroba	untypable	
+27535_1#1	60_seroba	untypable	
+27463_3#179	28_seroba	untypable	
+27463_3#179	60_seroba	untypable	
+28157_2#7	30_seroba	10B	
+28042_1#134	150_seroba	untypable	
+28042_1#134	47_seroba	6E(6A)	
+27689_1#32	1_seroba	19F	
+27689_1#32	616_seroba	Swiss_NT	contamination
+28157_3#93	10_seroba	19A	
+28157_3#93	150_seroba	serogroup 24	contamination
+27644_5#10	20_seroba	23F	contamination
+27644_5#10	9_seroba	14	
+27463_4#51	107_seroba	18C	
+27958_1#72	1_seroba	19F	
+27689_2#21	106_seroba	23A	
+27689_2#21	63_seroba	06C	
+27535_1#14	1_seroba	19F	
+27463_3#59	263_seroba	6E(6B)	
+27463_3#59	37_seroba	possible 06D	 but wciP gene might not be complete
+27463_3#59	509_seroba	6E(6B)	
+27425_7#36	1_seroba	19F	
+27859_1#155	16_seroba	19F	
+28157_1#147	167_seroba	untypable	
+28157_1#147	2_seroba	untypable	
+28157_1#147	225_seroba	6E(6B)	
+28157_1#147	343_seroba	6E(6B)	
+28157_1#147	384_seroba	untypable	
+28157_1#147	400_seroba	untypable	
+28157_1#147	47_seroba	6E(6B)	
+28157_1#147	482_seroba	6E(6B)	
+28157_1#147	510_seroba	33B	
+28157_1#147	54_seroba	untypable	
+28157_1#147	604_seroba	untypable	
+28157_1#147	620_seroba	33B	
+28157_1#147	9_seroba	14	
+27689_1#78	1_seroba	19F	
+27754_1#160	66_seroba	untypable	
+27754_1#74	107_seroba	18C	
+28157_3#64	30_seroba	10B	
+27859_1#18	20_seroba	23F	
+28354_1#125	1_seroba	19F	
+28354_1#125	66_seroba	untypable	
+27859_1#159	20_seroba	23F	
+27689_3#124	47_seroba	6E(6B)	
+27689_4#136	37_seroba	6E(6B)	
+27689_4#136	42_seroba	Swiss_NT	
+27689_4#136	509_seroba	6E(6B)	
+28049_1#68	1_seroba	19F	
+28049_1#68	10_seroba	07B	
+28049_1#68	552_seroba	untypable	
+27754_1#167	69_seroba	15A	
+28157_2#62	45_seroba	34	
+28157_1#134	25_seroba	15C	
+27536_3#5	26_seroba	46	
+27689_2#132	20_seroba	23F	
+27536_3#167	104_seroba	16F	contamination
+27630_2#133	1_seroba	19F	
+27689_4#10	25_seroba	15B/15C	contamination
+27689_4#10	613_seroba	untypable	
+27463_4#61	87_seroba	33B	
+27535_1#16	1_seroba	19F	
+27535_1#29	20_seroba	23F	
+27535_1#29	37_seroba	6E(6B)	contamination
+27689_2#34	42_seroba	Swiss_NT	
+27689_2#34	9_seroba	14	
+27689_1#102	118_seroba	untypable	
+27689_1#102	37_seroba	6E(6B)	
+28157_1#140	1_seroba	19F	
+28157_1#140	454_seroba	untypable	
+27689_3#50	63_seroba	06C	
+27644_5#167	1_seroba	19F	
+27958_1#164	16_seroba	19F	
+27535_1#130	150_seroba	untypable	
+27535_1#130	206_seroba	untypable	
+27535_1#130	272_seroba	untypable	
+27535_1#130	287_seroba	possible 06D	 but wciP gene might not be complete
+27535_1#130	34_seroba	untypable	
+27535_1#130	373_seroba	untypable	
+27535_1#130	405_seroba	06A	contamination
+27535_1#130	487_seroba	untypable	
+27535_1#130	495_seroba	untypable	
+27535_1#130	507_seroba	untypable	
+27535_1#130	77_seroba	untypable	
+27535_1#130	84_seroba	untypable	
+27535_1#130	88_seroba	untypable	
+27463_3#11	20_seroba	23F	
+28042_1#154	1_seroba	19F	
+28042_1#154	167_seroba	untypable	
+28042_1#154	197_seroba	untypable	
+28354_1#113	1_seroba	19F	
+28354_1#113	25_seroba	15B	
+28157_2#45	1_seroba	19F	
+27754_1#111	66_seroba	untypable	
+28157_1#80	28_seroba	14	
+27859_1#126	1_seroba	19F	
+27859_1#126	287_seroba	untypable	
+27859_1#126	40_seroba	untypable	
+28048_1#65	20_seroba	23F	
+28048_1#129	47_seroba	6E(6B)	
+27536_3#58	1_seroba	19F	contamination
+27536_3#58	26_seroba	46	
+28157_3#170	1_seroba	19F	
+28157_3#170	82_seroba	06A	contamination
+27689_2#150	1_seroba	19F	
+27536_3#52	128_seroba	03	
+27536_3#52	130_seroba	untypable	
+27536_3#52	26_seroba	46	
+27463_3#35	118_seroba	untypable	
+27463_3#35	25_seroba	15B	
+27463_3#35	82_seroba	untypable	
+27689_3#151	47_seroba	6E(6B)	
+27536_3#176	28_seroba	14	contamination
+28157_2#131	20_seroba	23F	
+27630_2#100	1_seroba	19F	
+27689_1#104	107_seroba	18C	
+27689_4#61	40_seroba	22A	contamination
+28354_1#83	122_seroba	10A	
+27958_1#16	187_seroba	35F	
+27689_3#110	1_seroba	19F	
+27689_2#4	1_seroba	19F	contamination
+27859_1#68	87_seroba	33B	
+27644_5#134	47_seroba	6E(6B)	
+27958_1#10	1_seroba	19F	
+28354_1#91	38_seroba	38	contamination
+27754_1#45	63_seroba	06A	
+27859_1#156	149_seroba	28F	
+28042_1#127	28_seroba	untypable	
+27754_1#164	25_seroba	15B/15C	contamination
+29370_2#9	9_seroba	14	contamination
+27535_1#30	37_seroba	6E(6B)	
+27644_5#56	14_seroba	23F	contamination
+27644_5#56	149_seroba	32F	contamination
+27644_5#56	25_seroba	15B	
+27644_5#56	28_seroba	14	
+27859_1#100	47_seroba	possible 06F	 but wciP gene might not be completecontamination
+27859_1#100	69_seroba	15A	
+28042_1#37	1_seroba	19F	
+28042_1#37	167_seroba	untypable	
+27958_1#165	10_seroba	19A	
+27644_5#55	1_seroba	19F	
+28048_1#41	14_seroba	23F	
+27644_5#170	38_seroba	25A	contamination
+27689_4#102	60_seroba	Swiss_NT	
+28157_3#40	71_seroba	21	
+28042_1#18	14_seroba	23F	
+28042_1#18	28_seroba	untypable	
+28157_1#100	130_seroba	04	
+28157_1#100	87_seroba	untypable	
+28354_1#3	10_seroba	untypable	
+28354_1#3	149_seroba	32F	contamination
+28354_1#3	188_seroba	23F	
+27463_3#148	128_seroba	untypable	
+27463_3#148	263_seroba	untypable	
+27463_3#148	318_seroba	21	
+27689_4#96	1_seroba	19F	
+27958_1#54	47_seroba	6E(6B)	
+28042_1#50	87_seroba	33B	
+27463_3#118	42_seroba	Swiss_NT	contamination
+27463_3#118	9_seroba	14	contamination
+28157_2#76	25_seroba	untypable	
+28157_2#76	82_seroba	06A	
+28042_1#32	166_seroba	untypable	
+28042_1#32	20_seroba	23F	
+28049_1#84	23_seroba	06A	
+28049_1#84	30_seroba	10A	
+28049_1#84	45_seroba	34	
+27425_7#120	1_seroba	19F	contamination
+27425_7#120	20_seroba	23F	contamination
+27425_7#120	25_seroba	15B	
+27535_1#184	118_seroba	untypable	
+27535_1#184	154_seroba	35F	
+28049_1#64	37_seroba	6E(6B)	
+28049_1#64	509_seroba	6E(6B)	
+27644_5#37	10_seroba	19A	
+27644_5#37	34_seroba	34	
+27535_1#8	16_seroba	19F	
+28354_1#31	45_seroba	34	
+27859_1#169	104_seroba	16F	contamination
+27859_1#169	42_seroba	untypable	
+28354_1#104	106_seroba	untypable	
+28354_1#104	9_seroba	14	contamination
+28157_2#99	1_seroba	19F	
+27754_1#188	25_seroba	15C	
+27689_1#98	20_seroba	23F	
+27689_1#98	66_seroba	untypable	
+27689_2#36	1_seroba	19F	
+27689_2#36	28_seroba	untypable	
+27463_3#145	48_seroba	15C	
+27463_3#145	615_seroba	untypable	
+28157_2#137	14_seroba	23F	
+28049_1#29	24_seroba	23F	
+28157_2#15	1_seroba	19F	
+28042_1#63	123_seroba	37	contamination
+27689_4#152	106_seroba	23F	
+27689_3#133	123_seroba	37	contamination
+28049_1#58	28_seroba	untypable	
+28049_1#58	293_seroba	untypable	
+28049_1#58	47_seroba	6E(6B)	
+28157_2#8	1_seroba	19F	
+28049_1#54	25_seroba	15B/15C	contamination
+27754_1#77	283_seroba	35C	
+27754_1#77	66_seroba	untypable	
+28049_1#141	91_seroba	40	
+27859_1#184	118_seroba	untypable	
+27859_1#184	154_seroba	35F	
+28048_1#113	120_seroba	06A	
+28048_1#113	151_seroba	untypable	
+28048_1#113	166_seroba	06A	
+28048_1#113	180_seroba	06A	
+28048_1#113	273_seroba	possible 06D	 but wciP gene might not be complete
+28048_1#113	382_seroba	possible 06D	 but wciP gene might not be complete
+28048_1#113	393_seroba	06A	
+28048_1#113	422_seroba	untypable	
+28048_1#113	534_seroba	06A	contamination
+28048_1#113	57_seroba	untypable	
+28157_2#161	1_seroba	19F	
+28157_2#161	38_seroba	25A	contamination
+27958_1#53	25_seroba	15C	
+27689_2#29	47_seroba	6E(6B)	
+28049_1#118	110_seroba	06A	
+28049_1#118	400_seroba	35C	contamination
+27536_3#51	107_seroba	18C	
+27536_3#51	166_seroba	untypable	
+27536_3#51	222_seroba	19B	
+27536_3#51	5_seroba	untypable	
+28157_2#2	1_seroba	19F	
+28157_2#2	611_seroba	untypable	
+28157_2#82	30_seroba	10F	
+27754_1#178	38_seroba	38	contamination
+28157_3#25	138_seroba	09L	contamination
+27689_3#178	26_seroba	untypable	
+27689_3#178	30_seroba	10B	
+28042_1#145	287_seroba	06C	
+27463_3#111	30_seroba	10B	
+27463_3#111	42_seroba	Swiss_NT	contamination
+27644_5#143	25_seroba	15C	
+28157_1#83	45_seroba	34	
+28157_3#112	180_seroba	possible 06D	 but wciP gene might not be complete
+28157_3#112	24_seroba	23F	
+27859_1#111	47_seroba	6E(6B)	
+27689_4#73	110_seroba	06A	
+27958_1#44	47_seroba	6E(6B)	
+27463_4#119	106_seroba	23F	
+27689_4#8	134_seroba	13	
+27425_7#15	25_seroba	15B	
+27425_7#15	617_seroba	untypable	
+27463_4#151	28_seroba	14	
+27463_4#151	34_seroba	34	
+27859_1#186	28_seroba	untypable	
+27425_7#69	20_seroba	23F	
+27958_1#102	110_seroba	06A	
+27630_2#136	20_seroba	23F	
+27630_2#76	45_seroba	34	
+27425_7#14	28_seroba	untypable	
+27644_5#149	104_seroba	16F	contamination
+27644_5#149	82_seroba	untypable	
+28048_1#102	20_seroba	23F	
+28157_1#169	20_seroba	23F	
+28157_1#162	10_seroba	17F	contamination
+27689_1#108	37_seroba	6E(6B)	
+28042_1#110	10_seroba	19A	
+27536_3#112	10_seroba	19A	
+27463_4#147	48_seroba	15B/15C	contamination
+27463_4#147	615_seroba	untypable	
+27630_2#63	73_seroba	11A	
+28157_2#21	1_seroba	19F	
+28157_2#21	174_seroba	19B	contamination
+28157_2#21	454_seroba	untypable	
+27463_4#1	106_seroba	23F	
+27689_1#14	263_seroba	6E(6B)	
+27689_1#14	71_seroba	21	
+27859_1#120	1_seroba	19F	
+27859_1#120	166_seroba	06A	
+27859_1#120	20_seroba	23F	
+27463_4#140	20_seroba	23F	
+27463_4#140	613_seroba	untypable	
+27689_2#128	82_seroba	06C	
+27859_1#142	1_seroba	19F	
+27859_1#142	611_seroba	untypable	
+28354_1#116	293_seroba	10X	
+28157_2#87	1_seroba	19F	
+28157_2#168	10_seroba	untypable	
+28157_2#168	110_seroba	06A	
+28157_2#168	403_seroba	untypable	
+28157_2#168	66_seroba	untypable	
+28048_1#106	37_seroba	6E(6B)	
+27754_1#190	45_seroba	34	
+28049_1#102	42_seroba	Swiss_NT	
+27536_3#158	20_seroba	23F	
+27536_3#158	28_seroba	14	
+28048_1#103	43_seroba	09V	contamination
+27958_1#52	82_seroba	06A	
+27536_3#54	20_seroba	23F	
+27536_3#54	25_seroba	untypable	
+27536_3#54	73_seroba	11A	contamination
+27425_7#167	60_seroba	untypable	
+27425_7#167	73_seroba	11A	
+27754_1#126	10_seroba	17F	contamination
+28048_1#32	110_seroba	06A	
+27689_2#167	16_seroba	19F	
+27689_1#68	20_seroba	23F	
+27689_1#68	60_seroba	Swiss_NT	
+27689_4#155	91_seroba	40	
+28157_2#66	45_seroba	untypable	
+27425_7#165	222_seroba	19B	
+27425_7#165	28_seroba	untypable	
+27958_1#47	104_seroba	16F	contamination
+28048_1#29	28_seroba	14	
+28048_1#29	612_seroba	untypable	
+28157_1#112	60_seroba	Swiss_NT	contamination
+27859_1#173	1_seroba	19F	
+27630_2#92	1_seroba	19F	
+27689_1#139	73_seroba	11A	
+27689_3#188	106_seroba	untypable	
+27689_3#188	16_seroba	19F	
+27689_3#188	214_seroba	untypable	
+27689_3#188	265_seroba	untypable	
+27689_3#188	28_seroba	untypable	
+27689_3#188	605_seroba	untypable	
+27689_4#129	25_seroba	15B	
+28042_1#175	186_seroba	35B	contamination
+28042_1#175	5_seroba	23F	
+28042_1#175	539_seroba	untypable	
+27425_7#32	180_seroba	possible 06F	 but wciP gene might not be completecontamination
+27425_7#32	24_seroba	23F	
+27463_3#150	66_seroba	untypable	
+27425_7#116	158_seroba	16F	contamination
+27425_7#116	25_seroba	15B	
+28157_2#64	14_seroba	23F	
+28048_1#50	20_seroba	23F	
+27689_1#114	9_seroba	14	contamination
+27958_1#123	1_seroba	19F	
+28157_2#20	69_seroba	15A	
+27536_3#31	154_seroba	35F	
+27754_1#138	166_seroba	06A	
+27754_1#138	292_seroba	untypable	
+28049_1#4	20_seroba	23F	
+28049_1#170	38_seroba	38	contamination
+28042_1#138	25_seroba	15C	
+27425_7#49	180_seroba	possible 06D	 but wciP gene might not be complete
+27425_7#49	24_seroba	23F	
+28354_1#37	37_seroba	6E(6B)	
+28354_1#37	87_seroba	untypable	
+27425_7#113	130_seroba	04	
+27535_1#190	63_seroba	06C	
+27425_7#102	10_seroba	07B	
+27958_1#19	69_seroba	15A	
+27463_3#42	28_seroba	untypable	
+27630_2#131	28_seroba	untypable	
+27630_2#131	605_seroba	untypable	
+27630_2#131	63_seroba	untypable	
+28157_1#141	25_seroba	15C	
+27859_1#144	1_seroba	19F	
+27859_1#144	37_seroba	6E(6B)	
+27859_1#41	118_seroba	untypable	
+27644_5#101	1_seroba	19F	
+27754_1#67	28_seroba	14	
+27859_1#121	1_seroba	19F	
+27859_1#121	47_seroba	6E(6B)	
+27859_1#121	60_seroba	Swiss_NT	
+28049_1#96	25_seroba	15C	
+28049_1#96	28_seroba	untypable	
+28042_1#21	47_seroba	6E(6B)	
+28354_1#93	130_seroba	04	contamination
+28049_1#164	20_seroba	23F	
+27425_7#184	1_seroba	19F	
+27425_7#184	9_seroba	14	contamination
+27463_4#184	28_seroba	untypable	
+27958_1#111	25_seroba	15B	
+27689_1#126	1_seroba	19F	
+27630_2#97	28_seroba	untypable	
+27630_2#97	37_seroba	6E(6B)	
+27630_2#97	63_seroba	06C	contamination
+27535_1#53	1_seroba	19F	
+27536_3#40	28_seroba	untypable	
+27536_3#40	66_seroba	untypable	
+28048_1#111	14_seroba	23F	
+27425_7#96	9_seroba	14	contamination
+28157_2#55	16_seroba	19F	
+27535_1#46	87_seroba	6E(6B)	contamination
+27689_2#170	20_seroba	23F	
+27689_1#96	1_seroba	19F	
+27689_1#96	28_seroba	untypable	
+27425_7#65	106_seroba	23F	
+27754_1#50	378_seroba	untypable	
+27754_1#50	9_seroba	14	
+27425_7#185	1_seroba	19F	
+27958_1#41	20_seroba	23F	
+27689_1#165	9_seroba	14	
+28048_1#100	1_seroba	19F	
+27463_3#152	106_seroba	23A	
+27689_1#101	154_seroba	35F	
+27689_1#101	28_seroba	untypable	
+27463_4#141	73_seroba	11A	
+27958_1#117	45_seroba	34	
+28157_2#34	1_seroba	19F	
+27689_4#30	104_seroba	16F	contamination
+27689_4#30	42_seroba	Swiss_NT	contamination
+28049_1#133	110_seroba	06A	
+27425_7#107	16_seroba	19F	
+27463_4#102	20_seroba	23F	
+27536_3#123	1_seroba	19F	
+27536_3#123	43_seroba	09V	
+27958_1#71	25_seroba	15C	
+27425_7#137	134_seroba	untypable	
+27425_7#137	47_seroba	6E(6B)	
+28042_1#121	23_seroba	6E(6B)	
+27689_3#92	16_seroba	19F	
+27689_3#92	40_seroba	22A	contamination
+27689_3#92	82_seroba	untypable	
+28042_1#123	25_seroba	15B/15C	contamination
+27754_1#36	110_seroba	06A	
+27535_1#175	20_seroba	23F	
+28157_3#100	10_seroba	07B	
+28157_3#100	534_seroba	untypable	
+27425_7#90	20_seroba	23F	
+28157_2#49	1_seroba	19F	
+28157_3#104	45_seroba	34	
+27463_4#180	283_seroba	35C	
+28157_1#120	87_seroba	33B	
+27425_7#145	106_seroba	23A	
+27425_7#145	38_seroba	untypable	
+27425_7#145	400_seroba	untypable	
+27463_3#161	25_seroba	15C	
+27463_3#161	73_seroba	untypable	
+28354_1#28	69_seroba	15A	
+27859_1#34	251_seroba	untypable	
+27859_1#34	293_seroba	10X	
+27859_1#34	47_seroba	untypable	
+28157_3#172	69_seroba	15A	
+27463_3#79	1_seroba	19F	
+27463_4#5	130_seroba	04	
+27689_1#72	1_seroba	19F	
+27689_1#72	180_seroba	untypable	
+27425_7#20	9_seroba	14	contamination
+27425_7#92	224_seroba	08	
+27425_7#92	87_seroba	33B	
+27689_2#147	1_seroba	19F	
+27644_5#98	1_seroba	19F	
+27644_5#189	127_seroba	untypable	
+27644_5#189	9_seroba	14	
+27535_1#37	1_seroba	19F	
+27689_1#169	154_seroba	35F	
+28157_1#123	122_seroba	10A	
+28157_1#149	20_seroba	23F	
+27630_2#169	1_seroba	19F	
+27630_2#169	400_seroba	untypable	
+27630_2#169	73_seroba	11A	
+27689_3#127	66_seroba	untypable	
+27630_2#9	25_seroba	15B	
+28157_3#164	69_seroba	15A	
+27536_3#110	1_seroba	19F	
+27536_3#110	25_seroba	15C	
+27536_3#110	47_seroba	6E(6B)	
+27689_2#53	110_seroba	06A	
+27644_5#29	1_seroba	19F	
+27535_1#68	1_seroba	19F	
+27689_4#86	1_seroba	19F	
+27689_2#160	1_seroba	19F	
+27463_4#120	149_seroba	28F	
+27536_3#6	28_seroba	14	
+27754_1#107	47_seroba	6E(6B)	
+27689_3#186	118_seroba	untypable	
+27689_3#186	138_seroba	untypable	
+27689_3#186	214_seroba	untypable	
+27689_3#186	264_seroba	untypable	
+27689_3#186	359_seroba	untypable	
+27689_3#186	363_seroba	untypable	
+27689_3#186	406_seroba	untypable	
+27689_3#186	42_seroba	untypable	
+27689_3#186	48_seroba	untypable	
+27689_3#186	53_seroba	untypable	
+27689_3#186	603_seroba	untypable	
+27689_3#186	611_seroba	untypable	
+27689_3#186	614_seroba	untypable	
+27689_3#186	615_seroba	untypable	
+27689_3#186	66_seroba	untypable	
+27689_3#33	23_seroba	6E(6B)	
+28157_2#68	10_seroba	19A	
+27644_5#128	20_seroba	untypable	
+27644_5#128	30_seroba	10A	
+28048_1#74	28_seroba	14	
+27463_3#97	264_seroba	untypable	
+27425_7#183	150_seroba	untypable	
+27425_7#183	47_seroba	6E(6A)	
+27425_7#40	40_seroba	22A	contamination
+28157_3#77	23_seroba	6E(6B)	
+28354_1#80	1_seroba	19F	
+28354_1#80	38_seroba	38	contamination
+27425_7#66	1_seroba	19F	
+28157_3#7	45_seroba	34	
+27644_5#96	25_seroba	15B/15C	contamination
+27644_5#96	283_seroba	untypable	
+27644_5#96	42_seroba	untypable	
+27689_3#57	1_seroba	19F	
+27689_3#57	167_seroba	untypable	
+27630_2#40	166_seroba	06A	
+27630_2#104	180_seroba	possible 06C	 but wciP gene might not be complete
+27630_2#104	24_seroba	23F	
+27754_1#149	9_seroba	14	contamination
+27463_3#69	1_seroba	19F	
+27859_1#136	1_seroba	19F	
+27536_3#83	28_seroba	untypable	
+27536_3#83	5_seroba	23F	
+27536_3#83	539_seroba	untypable	
+27689_1#179	180_seroba	untypable	
+27689_1#179	24_seroba	23F	
+27754_1#53	1_seroba	19F	
+27536_3#80	128_seroba	03	
+27689_4#174	1_seroba	19F	
+27689_4#174	400_seroba	untypable	
+27689_4#174	63_seroba	06A	contamination
+27958_1#12	37_seroba	6E(6B)	
+27958_1#12	509_seroba	6E(6B)	
+27689_1#85	43_seroba	09V	
+27689_1#85	63_seroba	06A	
+28049_1#115	106_seroba	untypable	
+28049_1#115	127_seroba	13	
+28049_1#115	151_seroba	untypable	
+28049_1#115	247_seroba	untypable	
+28049_1#115	279_seroba	untypable	
+28049_1#115	288_seroba	untypable	
+28049_1#115	339_seroba	untypable	
+28049_1#115	382_seroba	untypable	
+28049_1#115	409_seroba	untypable	
+28049_1#115	5_seroba	untypable	
+28049_1#115	585_seroba	untypable	
+28157_3#32	6_seroba	09V	contamination
+28157_3#32	615_seroba	untypable	
+28042_1#48	28_seroba	untypable	
+28157_2#120	166_seroba	06A	
+27689_2#165	24_seroba	23F	
+28049_1#187	34_seroba	34	
+27859_1#29	20_seroba	23F	
+27859_1#29	37_seroba	6E(6B)	contamination
+27689_1#56	180_seroba	untypable	
+27689_1#56	5_seroba	23A	contamination
+28157_2#170	63_seroba	06C	
+27630_2#176	45_seroba	34	
+27630_2#176	454_seroba	untypable	
+28354_1#107	66_seroba	untypable	
+28354_1#107	69_seroba	15A	
+28157_3#103	25_seroba	15B/15C	contamination
+28354_1#30	179_seroba	untypable	
+28354_1#30	401_seroba	untypable	
+28354_1#30	608_seroba	untypable	
+28354_1#122	30_seroba	10B	
+27689_3#108	1_seroba	19F	
+27689_3#108	69_seroba	15A	
+27689_3#182	1_seroba	19F	
+28157_1#184	1_seroba	19F	
+28042_1#25	179_seroba	untypable	
+28042_1#25	401_seroba	untypable	
+28042_1#25	60_seroba	Swiss_NT	contamination
+28042_1#25	608_seroba	untypable	
+27630_2#148	106_seroba	23B	
+27630_2#148	20_seroba	23F	
+29370_2#13	166_seroba	untypable	
+29370_2#13	279_seroba	untypable	
+29370_2#13	294_seroba	untypable	
+29370_2#13	47_seroba	6E(6B)	
+28157_3#105	110_seroba	possible 06D	 but wciP gene might not be complete
+28157_3#105	23_seroba	6E(6B)	
+28157_3#105	6_seroba	09V	contamination
+28157_3#105	60_seroba	Swiss_NT	
+28048_1#181	28_seroba	untypable	
+27689_2#79	1_seroba	untypable	
+27689_2#79	180_seroba	possible 06D	 but wciP gene might not be completecontamination
+27689_2#79	20_seroba	23F	contamination
+27689_2#79	24_seroba	possible 06D	 but wciP gene might not be complete
+27644_5#111	25_seroba	15C	
+27644_5#111	47_seroba	6E(6B)	
+28042_1#107	45_seroba	34	
+28042_1#64	28_seroba	untypable	
+27689_3#31	1_seroba	19F	
+27689_1#18	1_seroba	19F	
+27689_4#147	1_seroba	19F	
+27630_2#46	45_seroba	34	
+28354_1#117	28_seroba	untypable	
+28354_1#117	9_seroba	14	contamination
+28157_1#139	23_seroba	6E(6B)	
+28042_1#181	28_seroba	14	contamination
+27689_4#41	25_seroba	15B	
+28157_2#160	73_seroba	11A	
+28157_2#160	9_seroba	14	
+28157_1#95	69_seroba	15A	
+27463_3#75	20_seroba	23F	
+27463_3#75	28_seroba	14	
+28157_3#69	1_seroba	19F	
+28042_1#100	25_seroba	15B/15C	contamination
+27536_3#107	1_seroba	19F	
+27536_3#107	611_seroba	untypable	
+27689_1#112	166_seroba	06A	
+27689_1#112	69_seroba	15A	
+27425_7#87	20_seroba	23F	
+27535_1#116	20_seroba	23F	
+27536_3#20	47_seroba	6E(6B)	
+28042_1#144	1_seroba	19F	
+28048_1#124	20_seroba	23F	
+28354_1#103	180_seroba	possible 06D	 but wciP gene might not be complete
+28354_1#103	24_seroba	23F	
+27859_1#88	37_seroba	6E(6B)	
+28042_1#51	1_seroba	19F	
+28042_1#51	28_seroba	untypable	
+27689_4#31	1_seroba	19F	
+28048_1#186	310_seroba	untypable	
+28048_1#186	5_seroba	23F	
+28048_1#186	539_seroba	untypable	
+28157_3#54	16_seroba	19F	
+28157_3#54	45_seroba	34	
+27689_1#59	1_seroba	19F	contamination
+28354_1#109	43_seroba	09V	contamination
+27644_5#82	1_seroba	19F	
+27644_5#82	5_seroba	23A	
+27535_1#15	1_seroba	19F	
+27535_1#15	287_seroba	untypable	
+27535_1#15	40_seroba	untypable	
+27463_4#66	87_seroba	33B	
+27463_4#81	128_seroba	03	
+27958_1#156	1_seroba	19F	
+27689_4#175	151_seroba	23B1	
+27463_3#103	10_seroba	19A	
+27463_3#103	28_seroba	untypable	
+28354_1#92	1_seroba	19F	
+28354_1#92	611_seroba	untypable	
+28354_1#92	66_seroba	untypable	
+27463_3#13	10_seroba	19A	
+27463_3#13	42_seroba	untypable	
+27644_5#148	28_seroba	untypable	
+27859_1#67	1_seroba	19F	
+28157_2#65	1_seroba	19F	
+27630_2#128	1_seroba	19F	
+27958_1#58	20_seroba	23F	
+27958_1#58	28_seroba	14	
+27535_1#27	138_seroba	09L	contamination
+27536_3#183	37_seroba	6E(6B)	
+27689_3#58	1_seroba	19F	
+27689_1#3	106_seroba	23A	contamination
+27689_1#3	9_seroba	14	contamination
+27689_2#8	342_seroba	6E(6B)	
+27689_2#8	37_seroba	6E(6B)	
+27689_2#8	509_seroba	6E(6B)	
+27689_2#8	71_seroba	21	
+27689_2#8	82_seroba	untypable	
+28354_1#111	20_seroba	23F	
+27689_2#175	45_seroba	34	
+27689_3#81	45_seroba	34	
+27463_4#80	42_seroba	Swiss_NT	contamination
+27463_4#80	47_seroba	possible 06E	 but wciP gene might not be complete
+27536_3#135	37_seroba	6E(6B)	
+27425_7#17	1_seroba	19F	
+27958_1#110	1_seroba	19F	
+27425_7#139	47_seroba	6E(6B)	
+28157_3#121	318_seroba	untypable	
+28157_3#121	47_seroba	untypable	
+28042_1#120	1_seroba	19F	
+28042_1#120	60_seroba	untypable	
+28042_1#15	177_seroba	35F	
+27689_4#17	1_seroba	19F	
+27689_3#147	1_seroba	19F	
+27689_4#83	1_seroba	19F	
+27536_3#178	395_seroba	untypable	
+27536_3#178	9_seroba	15A	
+27630_2#44	224_seroba	08	
+27630_2#44	28_seroba	14	
+27859_1#175	177_seroba	35F	
+27754_1#38	1_seroba	19F	
+27463_3#41	10_seroba	19A	
+27859_1#112	166_seroba	06A	
+27859_1#112	534_seroba	06A	
+28048_1#164	1_seroba	19F	
+28048_1#164	26_seroba	untypable	
+28048_1#164	28_seroba	untypable	
+28157_1#63	25_seroba	15B	
+28049_1#87	20_seroba	23F	
+27754_1#83	138_seroba	09L	contamination
+27463_3#55	28_seroba	14	
+28157_1#155	172_seroba	20	contamination
+27463_4#89	47_seroba	6E(6B)	
+27644_5#124	1_seroba	19F	
+27689_3#48	24_seroba	23F	
+27754_1#123	1_seroba	19F	
+27754_1#123	66_seroba	untypable	
+27463_3#157	106_seroba	23F	
+27425_7#153	1_seroba	19F	
+28042_1#112	1_seroba	19F	
+28157_3#115	10_seroba	19A	
+27644_5#163	110_seroba	06A	
+28048_1#138	30_seroba	10F	
+29370_2#16	1_seroba	19F	
+27689_2#122	73_seroba	11A	
+27689_2#122	9_seroba	14	
+27689_1#50	167_seroba	34	
+27689_1#50	9_seroba	14	
+27536_3#182	37_seroba	6E(6B)	
+27689_2#159	1_seroba	19F	
+27535_1#57	177_seroba	35F	
+27463_3#78	63_seroba	06C	
+27754_1#91	66_seroba	untypable	
+27689_1#123	63_seroba	06A	
+27689_3#71	1_seroba	19F	
+28042_1#177	122_seroba	untypable	
+28042_1#177	257_seroba	untypable	
+28042_1#177	400_seroba	35C	
+27958_1#135	23_seroba	6E(6B)	
+27535_1#71	188_seroba	35F	
+28048_1#72	37_seroba	6E(6B)	
+28157_3#42	25_seroba	15C	
+27536_3#126	1_seroba	19F	
+27536_3#126	28_seroba	untypable	
+27536_3#126	47_seroba	6E(6B)	
+27689_4#88	149_seroba	32F	contamination
+27689_4#88	188_seroba	23F	contamination
+27689_4#88	24_seroba	possible 06C	 but wciP gene might not be completecontamination
+28048_1#34	106_seroba	23F	
+27859_1#141	104_seroba	16F	contamination
+27689_2#117	20_seroba	23F	
+28157_1#143	37_seroba	6E(6B)	
+28157_1#143	87_seroba	untypable	
+27536_3#190	28_seroba	untypable	
+27463_4#167	87_seroba	33B	contamination
+27644_5#112	82_seroba	06A	contamination
+27644_5#112	87_seroba	6E(6B)	
+27630_2#122	104_seroba	16F	contamination
+28049_1#47	128_seroba	03	
+27425_7#46	20_seroba	23F	
+27754_1#10	25_seroba	15C	
+27536_3#116	10_seroba	19A	
+28048_1#66	1_seroba	19F	
+28048_1#66	28_seroba	untypable	
+28048_1#46	47_seroba	6E(6B)	
+27425_7#112	10_seroba	19A	contamination
+27425_7#112	138_seroba	07C	
+27425_7#112	144_seroba	07C	
+27425_7#112	197_seroba	19A	
+27425_7#112	327_seroba	07C	
+27425_7#112	381_seroba	07C	
+27425_7#112	39_seroba	07C	
+27425_7#112	593_seroba	07C	
+27425_7#112	602_seroba	07C	
+27425_7#112	69_seroba	07C	
+27425_7#112	72_seroba	07C	
+28157_3#13	69_seroba	15A	
+28049_1#89	30_seroba	10F	
+28157_1#158	1_seroba	19F	
+28157_1#158	28_seroba	untypable	
+28157_1#158	63_seroba	06A	
+28049_1#26	2_seroba	01	contamination
+28049_1#26	45_seroba	34	
+27958_1#23	106_seroba	23A	
+27958_1#23	154_seroba	35F	
+27535_1#39	104_seroba	16F	contamination
+28157_1#62	47_seroba	6E(6B)	
+28049_1#109	47_seroba	untypable	
+27958_1#55	28_seroba	untypable	
+27958_1#55	9_seroba	14	
+27463_4#106	1_seroba	19F	
+28042_1#82	10_seroba	19A	
+28042_1#82	203_seroba	untypable	
+28042_1#82	319_seroba	untypable	
+28042_1#82	57_seroba	31	
+28042_1#82	613_seroba	untypable	
+28042_1#82	66_seroba	untypable	
+28042_1#82	82_seroba	untypable	
+28354_1#72	1_seroba	19F	
+28049_1#80	1_seroba	19F	
+27689_2#182	63_seroba	06C	
+28157_2#173	110_seroba	06A	
+27689_3#55	1_seroba	19F	
+27689_3#55	287_seroba	untypable	
+27689_3#55	40_seroba	untypable	
+27535_1#95	1_seroba	19F	
+27958_1#28	1_seroba	19F	
+27644_5#175	28_seroba	untypable	
+27859_1#177	20_seroba	23F	
+27859_1#177	25_seroba	untypable	
+27859_1#177	28_seroba	untypable	
+27689_2#143	45_seroba	34	
+27859_1#158	20_seroba	23F	
+27535_1#74	1_seroba	19F	
+27425_7#126	1_seroba	19F	
+27754_1#146	71_seroba	21	
+28157_1#31	69_seroba	15A	
+27463_4#113	1_seroba	19F	
+27536_3#2	130_seroba	04	
+27536_3#2	23_seroba	untypable	
+27536_3#2	45_seroba	34	
+27958_1#112	10_seroba	19A	
+28049_1#151	82_seroba	06A	
+28048_1#15	127_seroba	13	contamination
+28048_1#15	71_seroba	untypable	
+27859_1#31	149_seroba	32F	
+28157_1#75	263_seroba	6E(6B)	
+27689_2#90	151_seroba	23B1	contamination
+27689_3#98	69_seroba	15A	
+27644_5#131	117_seroba	untypable	
+27644_5#131	175_seroba	untypable	
+27644_5#131	179_seroba	untypable	
+27644_5#131	192_seroba	untypable	
+27644_5#131	214_seroba	untypable	
+27644_5#131	28_seroba	untypable	
+27644_5#131	340_seroba	untypable	
+27644_5#131	401_seroba	untypable	
+27644_5#131	402_seroba	untypable	
+27644_5#131	608_seroba	untypable	
+27644_5#131	81_seroba	untypable	
+27689_2#116	261_seroba	35B	contamination
+27689_2#158	91_seroba	40	
+27958_1#34	187_seroba	35F	
+27463_4#73	47_seroba	6E(6B)	
+27535_1#152	107_seroba	untypable	
+27535_1#152	315_seroba	untypable	
+27535_1#152	43_seroba	09V	contamination
+27535_1#152	454_seroba	untypable	
+27535_1#152	6_seroba	untypable	
+27463_3#10	173_seroba	35B	contamination
+28042_1#96	283_seroba	35C	
+28042_1#96	60_seroba	Swiss_NT	
+28157_3#130	1_seroba	19F	
+28157_2#118	187_seroba	35F	
+27463_4#6	28_seroba	untypable	
+27463_4#6	40_seroba	22A	contamination
+27689_2#57	42_seroba	Swiss_NT	
+27463_3#66	154_seroba	35F	
+27754_1#81	37_seroba	6E(6B)	contamination
+27754_1#81	509_seroba	6E(6B)	
+27689_4#34	63_seroba	06C	
+28042_1#24	71_seroba	21	
+28048_1#6	1_seroba	19F	
+27535_1#160	20_seroba	23F	
+28157_2#10	1_seroba	19F	
+27630_2#84	20_seroba	23F	
+27463_4#8	158_seroba	16F	
+27463_4#92	106_seroba	23F	
+27463_4#92	165_seroba	33C	
+27644_5#126	16_seroba	19F	
+27644_5#28	42_seroba	untypable	
+27644_5#28	9_seroba	14	contamination
+27536_3#142	1_seroba	19F	
+27536_3#142	186_seroba	35B	contamination
+28048_1#45	28_seroba	untypable	
+28048_1#45	569_seroba	untypable	
+28048_1#45	611_seroba	untypable	
+28048_1#45	69_seroba	15A	
+27689_3#80	1_seroba	19F	
+27689_3#80	30_seroba	10B	contamination
+28049_1#138	203_seroba	35A	
+27754_1#180	37_seroba	6E(6B)	
+28042_1#149	60_seroba	Swiss_NT	
+28157_3#171	25_seroba	15C	
+28042_1#141	30_seroba	10F	
+28042_1#183	63_seroba	06C	contamination
+28042_1#176	47_seroba	6E(6B)	
+27689_1#8	180_seroba	untypable	
+27689_1#8	5_seroba	23A	
+27689_1#8	534_seroba	untypable	
+28354_1#46	248_seroba	untypable	
+28354_1#46	71_seroba	21	
+27689_1#39	151_seroba	23B1	contamination
+27689_1#39	536_seroba	untypable	
+27689_1#39	8_seroba	05	
+28042_1#73	173_seroba	35B	contamination
+28048_1#175	222_seroba	19B	
+28048_1#175	28_seroba	14	contamination
+27689_3#78	118_seroba	untypable	
+27689_3#78	206_seroba	untypable	
+27689_3#78	532_seroba	untypable	
+27689_3#78	613_seroba	untypable	
+27689_2#184	20_seroba	23F	
+27689_2#184	47_seroba	6E(6A)	
+27689_1#20	10_seroba	17F	
+27535_1#22	1_seroba	19F	
+27535_1#141	1_seroba	19F	
+27535_1#141	611_seroba	untypable	
+27463_3#19	130_seroba	04	
+28042_1#87	122_seroba	10A	
+28042_1#81	23_seroba	6E(6B)	
+28157_3#124	1_seroba	19F	
+28157_3#124	28_seroba	14	
+27859_1#96	1_seroba	19F	
+27958_1#140	16_seroba	19F	
+28042_1#26	28_seroba	untypable	
+28042_1#26	91_seroba	40	
+27754_1#82	318_seroba	untypable	
+27754_1#82	47_seroba	6E(6B)	
+27689_1#76	25_seroba	15B	
+27536_3#16	106_seroba	untypable	
+27536_3#16	87_seroba	33B	
+28049_1#34	42_seroba	untypable	
+28049_1#34	5_seroba	23F	
+28049_1#34	539_seroba	untypable	
+28049_1#34	60_seroba	untypable	
+27689_3#74	28_seroba	untypable	
+27689_3#74	30_seroba	10B	
+27644_5#108	151_seroba	23B1	contamination
+27644_5#108	8_seroba	05	
+28157_1#6	9_seroba	14	contamination
+28354_1#15	28_seroba	14	contamination
+28049_1#16	1_seroba	19F	
+28049_1#16	25_seroba	15C	contamination
+27630_2#57	1_seroba	19F	
+27630_2#57	6_seroba	untypable	
+27630_2#62	134_seroba	13	
+27689_4#98	110_seroba	06A	
+27689_4#98	28_seroba	untypable	
+28157_3#148	1_seroba	19F	
+28157_3#148	82_seroba	06A	
+28354_1#73	215_seroba	untypable	
+28354_1#73	37_seroba	6E(6B)	
+27630_2#53	1_seroba	19F	
+27463_4#103	45_seroba	34	
+27536_3#94	1_seroba	19F	
+27536_3#94	20_seroba	23F	
+27536_3#94	42_seroba	untypable	
+27958_1#181	1_seroba	19F	
+28157_2#38	16_seroba	19F	
+27463_3#106	45_seroba	34	
+27754_1#18	87_seroba	28F	contamination
+28049_1#48	10_seroba	19A	
+27689_4#33	26_seroba	46	
+27689_4#33	42_seroba	Swiss_NT	
+27689_4#33	87_seroba	33B	
+27536_3#161	130_seroba	04	
+27958_1#145	57_seroba	31	
+27536_3#96	24_seroba	23F	
+27536_3#96	47_seroba	6E(6B)	
+27644_5#110	1_seroba	19F	
+27958_1#57	106_seroba	untypable	
+27958_1#57	20_seroba	23F	
+27958_1#57	214_seroba	untypable	
+27536_3#162	134_seroba	13	
+27536_3#162	40_seroba	22A	
+27958_1#138	1_seroba	19F	
+27463_3#141	24_seroba	23F	
+28157_3#140	1_seroba	19F	
+27689_4#156	107_seroba	18C	
+27689_4#156	66_seroba	untypable	
+27463_3#138	158_seroba	16F	
+27689_3#154	1_seroba	19F	contamination
+28354_1#128	1_seroba	19F	
+28354_1#128	25_seroba	15C	
+27689_3#76	138_seroba	09L	contamination
+28157_2#124	1_seroba	19F	contamination
+28157_1#170	127_seroba	13	
+27536_3#97	30_seroba	untypable	
+27536_3#97	402_seroba	untypable	
+27536_3#97	42_seroba	untypable	
+28042_1#13	14_seroba	23F	
+28157_1#126	167_seroba	34	
+28157_1#153	10_seroba	19A	
+27463_4#43	28_seroba	14	
+27535_1#70	110_seroba	06A	
+27463_3#183	66_seroba	untypable	
+28157_3#189	1_seroba	19F	
+28157_3#73	180_seroba	untypable	
+28157_3#73	5_seroba	23A	
+27535_1#154	1_seroba	19F	
+27535_1#154	611_seroba	untypable	
+28157_3#184	20_seroba	23F	
+27463_4#165	130_seroba	04	
+27536_3#184	127_seroba	untypable	
+27536_3#184	37_seroba	6E(6B)	
+27536_3#184	509_seroba	6E(6B)	
+27536_3#184	53_seroba	untypable	
+27536_3#184	549_seroba	6E(6B)	
+27536_3#184	84_seroba	untypable	
+27425_7#4	20_seroba	23F	
+27535_1#93	128_seroba	03	
+27535_1#93	28_seroba	untypable	
+27689_1#172	66_seroba	untypable	
+28157_3#46	318_seroba	untypable	
+28157_3#46	47_seroba	6E(6B)	
+27536_3#164	10_seroba	19A	
+27536_3#164	110_seroba	06A	
+28049_1#116	20_seroba	23F	
+28048_1#125	248_seroba	untypable	
+28048_1#125	3_seroba	33F	
+27754_1#66	28_seroba	14	
+28354_1#85	10_seroba	07B	
+28354_1#85	60_seroba	Swiss_NT	
+27463_3#166	28_seroba	untypable	
+27425_7#190	1_seroba	19F	
+28354_1#120	10_seroba	19A	
+28049_1#33	1_seroba	19F	
+28049_1#33	122_seroba	untypable	
+28049_1#150	20_seroba	23F	
+28049_1#150	25_seroba	15C	
+27689_2#155	9_seroba	14	
+28157_1#103	138_seroba	09L	contamination
+27689_4#100	91_seroba	40	
+28049_1#70	20_seroba	23F	
+28157_3#132	47_seroba	6E(6B)	
+28048_1#191	16_seroba	19F	
+27644_5#73	1_seroba	19F	
+27644_5#73	47_seroba	6E(6B)	
+27644_5#73	9_seroba	14	
+27689_1#16	47_seroba	6E(6B)	
+27689_3#143	63_seroba	06C	
+27754_1#51	60_seroba	Swiss_NT	
+27958_1#108	1_seroba	19F	
+27958_1#108	20_seroba	untypable	
+27425_7#98	10_seroba	19A	
+27689_4#108	48_seroba	15B	
+27689_4#108	615_seroba	untypable	
+28157_3#177	1_seroba	19F	
+27754_1#44	20_seroba	23F	
+27689_4#148	45_seroba	untypable	
+27689_4#148	66_seroba	untypable	
+27689_4#148	9_seroba	untypable	
+27535_1#115	69_seroba	15A	
+27689_1#11	60_seroba	Swiss_NT	contamination
+28048_1#64	118_seroba	untypable	
+27536_3#91	215_seroba	22F	contamination
+27536_3#91	28_seroba	untypable	
+27859_1#172	118_seroba	untypable	
+27859_1#172	211_seroba	untypable	
+27859_1#172	225_seroba	untypable	
+27859_1#172	247_seroba	untypable	
+27859_1#172	406_seroba	untypable	
+27859_1#172	53_seroba	untypable	
+27859_1#172	603_seroba	untypable	
+27859_1#172	606_seroba	untypable	
+27859_1#172	608_seroba	untypable	
+27859_1#172	611_seroba	untypable	
+27859_1#172	614_seroba	untypable	
+27859_1#172	616_seroba	untypable	
+28157_1#130	150_seroba	untypable	
+28157_1#130	47_seroba	6E(6A)	
+27958_1#4	60_seroba	untypable	
+27958_1#4	71_seroba	21	
+27754_1#112	9_seroba	14	
+27630_2#158	25_seroba	15B	
+27689_4#101	151_seroba	23B1	
+27689_4#101	63_seroba	06A	
+27754_1#76	172_seroba	20	contamination
+27644_5#74	1_seroba	19F	
+27958_1#25	106_seroba	23F	
+27958_1#25	138_seroba	untypable	
+27958_1#25	179_seroba	untypable	
+27958_1#25	180_seroba	possible 06D	 but wciP gene might not be complete
+27958_1#25	24_seroba	23F	
+27958_1#25	28_seroba	untypable	
+27958_1#25	382_seroba	possible 06D	 but wciP gene might not be complete
+27958_1#25	534_seroba	possible 06D	 but wciP gene might not be complete
+27463_3#63	73_seroba	11A	
+27536_3#25	45_seroba	34	
+27536_3#133	28_seroba	14	contamination
+28049_1#94	123_seroba	37	
+27463_3#121	165_seroba	33C	
+27958_1#13	71_seroba	21	
+28157_1#64	10_seroba	19A	
+27689_3#22	118_seroba	untypable	
+27689_3#22	138_seroba	untypable	
+27689_3#22	214_seroba	untypable	
+27689_3#22	264_seroba	untypable	
+27689_3#22	359_seroba	untypable	
+27689_3#22	363_seroba	untypable	
+27689_3#22	406_seroba	untypable	
+27689_3#22	42_seroba	untypable	
+27689_3#22	48_seroba	untypable	
+27689_3#22	53_seroba	untypable	
+27689_3#22	603_seroba	untypable	
+27689_3#22	611_seroba	untypable	
+27689_3#22	614_seroba	untypable	
+27689_3#22	615_seroba	untypable	
+27689_3#22	66_seroba	untypable	
+28042_1#159	1_seroba	19F	contamination
+28042_1#159	10_seroba	19A	
+28042_1#159	60_seroba	untypable	
+28157_3#9	174_seroba	19B	
+27425_7#115	20_seroba	23F	
+27630_2#106	30_seroba	10B	contamination
+27630_2#106	42_seroba	untypable	
+28048_1#77	69_seroba	15A	
+28049_1#88	1_seroba	19F	
+28049_1#88	47_seroba	6E(6B)	
+28157_2#156	130_seroba	04	
+28157_2#156	60_seroba	Swiss_NT	contamination
+27535_1#172	25_seroba	15B	
+28049_1#192	1_seroba	19F	
+27689_2#5	25_seroba	15C	
+28157_1#110	16_seroba	untypable	
+28157_1#110	20_seroba	23F	
+28157_1#110	539_seroba	untypable	
+27536_3#187	203_seroba	35A	
+27536_3#187	28_seroba	14	contamination
+28049_1#51	47_seroba	6E(6B)	
+28049_1#51	66_seroba	untypable	
+28157_2#179	1_seroba	19F	
+27644_5#93	128_seroba	03	
+27630_2#165	134_seroba	13	
+27630_2#165	42_seroba	Swiss_NT	contamination
+29370_2#11	9_seroba	14	
+28048_1#189	25_seroba	15B	
+27689_4#13	10_seroba	19A	
+27689_4#13	63_seroba	06C	
+27689_4#13	84_seroba	19F	
+27859_1#4	45_seroba	34	
+27463_4#178	265_seroba	untypable	
+27689_3#170	1_seroba	19F	
+27644_5#90	1_seroba	19F	
+27689_4#65	1_seroba	19F	
+27958_1#40	1_seroba	19F	
+27689_2#124	40_seroba	22A	contamination
+27463_4#75	20_seroba	23F	
+27535_1#110	20_seroba	23F	
+27535_1#110	28_seroba	untypable	
+27535_1#13	24_seroba	23F	
+27535_1#13	45_seroba	34	
+27535_1#13	47_seroba	6E(6B)	contamination
+27463_4#188	66_seroba	untypable	
+28157_2#134	69_seroba	15A	
+28157_3#126	1_seroba	19F	
+28157_3#126	186_seroba	35B	contamination
+28157_3#126	37_seroba	6E(6B)	
+27958_1#129	1_seroba	19F	
+27958_1#129	20_seroba	23F	
+27958_1#129	37_seroba	6E(6B)	contamination
+27958_1#129	66_seroba	untypable	
+27689_1#97	1_seroba	19F	
+27644_5#12	1_seroba	19F	
+27859_1#15	1_seroba	19F	
+27535_1#157	20_seroba	23F	
+27689_3#122	107_seroba	18C	
+27689_3#122	167_seroba	34	
+27689_3#122	28_seroba	untypable	
+27859_1#143	30_seroba	10B	
+27689_2#48	154_seroba	35F	
+27689_2#48	2_seroba	01	contamination
+27536_3#105	110_seroba	06A	
+27536_3#105	28_seroba	untypable	
+27689_4#25	1_seroba	19F	contamination
+27689_4#25	20_seroba	23F	
+27689_4#170	1_seroba	19F	
+27689_4#107	47_seroba	6E(6B)	
+27630_2#38	6_seroba	09V	
+27630_2#38	615_seroba	untypable	
+27689_4#164	1_seroba	19F	
+27689_4#164	20_seroba	23F	
+27689_1#26	37_seroba	6E(6B)	
+28157_1#113	180_seroba	06A	
+27536_3#79	20_seroba	23F	
+27463_3#32	28_seroba	14	
+27859_1#50	73_seroba	11A	
+28042_1#42	28_seroba	14	contamination
+27689_4#72	150_seroba	serogroup 24	contamination
+27689_4#72	63_seroba	06C	
+28042_1#115	28_seroba	14	
+27958_1#91	47_seroba	6E(6B)	
+27463_3#52	37_seroba	6E(6B)	
+28042_1#188	20_seroba	23F	
+28157_3#51	1_seroba	19F	
+27958_1#18	186_seroba	35B	contamination
+27958_1#18	20_seroba	untypable	
+28157_3#179	82_seroba	06A	
+28157_3#99	174_seroba	19B	
+28157_3#99	23_seroba	06A	
+28049_1#168	10_seroba	19A	
+28049_1#168	127_seroba	13	
+27689_4#141	110_seroba	06A	
+27689_4#141	28_seroba	untypable	
+27754_1#68	28_seroba	14	
+27958_1#172	107_seroba	untypable	
+27958_1#172	215_seroba	22F	contamination
+27958_1#172	248_seroba	untypable	
+27958_1#172	9_seroba	14	
+27958_1#122	319_seroba	untypable	
+27958_1#122	323_seroba	untypable	
+27958_1#122	49_seroba	17F	contamination
+27958_1#122	61_seroba	untypable	
+27958_1#122	63_seroba	untypable	
+28157_2#52	10_seroba	19A	
+27859_1#108	172_seroba	20	contamination
+27859_1#108	20_seroba	23F	
+27535_1#91	1_seroba	19F	
+27535_1#91	87_seroba	33B	
+27689_1#17	60_seroba	Swiss_NT	
+27644_5#103	28_seroba	untypable	
+27859_1#122	25_seroba	15C	
+27689_3#96	20_seroba	23F	
+27689_3#96	47_seroba	6E(6B)	
+27958_1#127	134_seroba	13	
+27958_1#127	66_seroba	untypable	
+27644_5#113	1_seroba	19F	
+28049_1#167	14_seroba	23F	
+28049_1#167	28_seroba	untypable	
+27754_1#189	87_seroba	33B	
+27425_7#89	154_seroba	35F	
+27535_1#98	47_seroba	6E(6B)	
+27535_1#98	69_seroba	15A	
+27536_3#53	20_seroba	23F	
+27536_3#53	317_seroba	48	contamination
+28042_1#157	28_seroba	14	
+27463_4#42	28_seroba	14	
+27689_3#28	25_seroba	15B	
+27689_3#28	82_seroba	untypable	
+27535_1#6	45_seroba	34	
+27536_3#101	45_seroba	34	
+28042_1#57	150_seroba	serogroup 24	contamination
+27463_4#118	47_seroba	6E(6B)	
+28157_2#4	1_seroba	19F	
+27689_2#43	323_seroba	untypable	
+27689_2#43	49_seroba	17F	contamination
+27689_2#43	61_seroba	untypable	
+27689_2#43	63_seroba	untypable	
+27536_3#108	107_seroba	18C	
+27536_3#108	60_seroba	Swiss_NT	contamination
+27644_5#154	40_seroba	22A	
+27859_1#17	1_seroba	19A	
+27859_1#17	127_seroba	untypable	
+27859_1#17	144_seroba	untypable	
+27859_1#17	166_seroba	untypable	
+27859_1#17	205_seroba	untypable	
+27859_1#17	225_seroba	untypable	
+27859_1#17	264_seroba	untypable	
+27859_1#17	339_seroba	untypable	
+27859_1#17	373_seroba	untypable	
+27859_1#17	84_seroba	19A	
+27859_1#17	91_seroba	untypable	
+28157_1#35	20_seroba	23F	
+28157_1#35	37_seroba	untypable	
+27425_7#130	1_seroba	19F	
+27425_7#9	40_seroba	22A	
+27425_7#9	87_seroba	33B	
+27463_3#64	253_seroba	03	
+27689_3#11	20_seroba	23F	
+27463_4#52	166_seroba	untypable	
+27463_4#52	20_seroba	23F	
+27463_3#81	215_seroba	22F	contamination
+27463_3#81	42_seroba	untypable	
+27754_1#161	1_seroba	19F	
+27644_5#7	87_seroba	33B	
+27644_5#43	1_seroba	19F	
+27644_5#43	82_seroba	untypable	
+27535_1#41	118_seroba	untypable	
+28049_1#49	9_seroba	14	
+27463_4#85	42_seroba	untypable	
+27463_4#85	87_seroba	untypable	
+27425_7#79	10_seroba	19A	
+27425_7#79	20_seroba	23F	
+27958_1#56	104_seroba	16F	contamination
+27958_1#56	42_seroba	untypable	
+27463_3#104	1_seroba	19F	
+28157_3#129	1_seroba	19F	
+28157_3#129	319_seroba	untypable	
+28157_3#129	47_seroba	6E(6B)	contamination
+27689_2#169	1_seroba	19F	
+27689_3#41	188_seroba	35F	
+27536_3#117	20_seroba	23F	
+28049_1#25	10_seroba	19A	contamination
+28049_1#25	28_seroba	untypable	
+28049_1#25	42_seroba	untypable	
+28049_1#25	494_seroba	untypable	
+28049_1#25	618_seroba	untypable	
+28157_1#180	84_seroba	19F	
+27689_4#6	118_seroba	46	
+27689_3#148	225_seroba	untypable	
+27689_3#148	40_seroba	13	
+27689_3#148	485_seroba	13	
+27689_3#148	495_seroba	13	contamination
+27689_3#148	67_seroba	untypable	
+27463_3#44	87_seroba	33B	
+28354_1#61	20_seroba	23F	
+27425_7#55	10_seroba	19A	
+27644_5#119	20_seroba	23F	
+28157_2#56	1_seroba	19F	
+27689_2#56	197_seroba	untypable	
+27689_2#56	323_seroba	untypable	
+27689_2#56	49_seroba	17F	
+27689_2#56	61_seroba	untypable	
+27463_4#134	28_seroba	14	
+27535_1#126	1_seroba	19F	
+27535_1#126	287_seroba	untypable	
+27535_1#126	40_seroba	untypable	
+27630_2#37	263_seroba	6E(6B)	
+27630_2#37	45_seroba	34	
+28157_3#38	45_seroba	34	
+28157_3#38	6_seroba	09V	contamination
+28157_3#38	615_seroba	untypable	
+28042_1#6	38_seroba	38	
+28042_1#6	87_seroba	33B	
+27859_1#89	215_seroba	untypable	
+27859_1#89	42_seroba	untypable	
+27859_1#89	82_seroba	06C	
+27536_3#87	151_seroba	23B1	
+27463_4#25	20_seroba	23F	
+27536_3#13	1_seroba	19F	contamination
+27536_3#13	174_seroba	19B	contamination
+27536_3#111	10_seroba	19A	
+28048_1#40	405_seroba	06A	
+27689_3#152	47_seroba	6E(6B)	
+27425_7#11	110_seroba	untypable	
+27425_7#11	47_seroba	6E(6B)	
+27425_7#106	69_seroba	15A	
+27689_3#32	37_seroba	6E(6B)	
+28157_3#53	82_seroba	06A	
+28049_1#95	63_seroba	06C	
+28157_3#190	20_seroba	23F	contamination
+28157_3#190	38_seroba	25A	contamination
+28157_3#190	63_seroba	06C	
+27425_7#31	47_seroba	6E(6B)	
+28157_2#107	1_seroba	19F	
+28157_2#107	167_seroba	untypable	
+27425_7#168	106_seroba	23A	
+27425_7#168	187_seroba	35F	
+27425_7#182	9_seroba	14	
+27536_3#35	47_seroba	6E(6B)	
+28157_2#102	1_seroba	19F	
+27689_2#46	71_seroba	21	
+27689_1#116	1_seroba	19F	
+27689_2#11	25_seroba	15B/15C	contamination
+28049_1#41	32_seroba	07F	contamination
+27689_3#72	69_seroba	15A	
+27463_3#22	106_seroba	23A	
+27689_4#90	1_seroba	19F	
+27644_5#114	1_seroba	19F	
+27689_4#106	1_seroba	19F	
+27535_1#134	47_seroba	6E(6B)	
+27689_1#132	42_seroba	Swiss_NT	
+27689_4#64	187_seroba	untypable	
+27689_4#64	25_seroba	15B	
+28157_1#176	28_seroba	untypable	
+28157_1#176	60_seroba	Swiss_NT	contamination
+27535_1#123	25_seroba	15B	
+27689_3#42	149_seroba	28F	
+28048_1#31	106_seroba	23F	
+27689_1#109	1_seroba	19F	
+27689_1#109	167_seroba	untypable	
+28042_1#29	28_seroba	untypable	
+27425_7#72	23_seroba	6E(6B)	
+27425_7#72	71_seroba	21	
+27689_2#67	20_seroba	23F	
+27425_7#191	1_seroba	19F	
+27425_7#191	69_seroba	15A	
+28354_1#21	122_seroba	10A	
+27644_5#137	137_seroba	09N	contamination
+27644_5#137	2_seroba	01	contamination
+27958_1#190	134_seroba	13	
+28048_1#70	28_seroba	untypable	
+28048_1#70	569_seroba	untypable	
+28048_1#70	611_seroba	untypable	
+28048_1#70	615_seroba	untypable	
+28048_1#70	69_seroba	15A	
+27644_5#91	20_seroba	23F	
+27425_7#43	63_seroba	06C	
+27425_7#43	9_seroba	14	
+28157_1#160	151_seroba	23B1	contamination
+28157_1#160	34_seroba	34	
+27425_7#84	87_seroba	33B	
+28049_1#156	28_seroba	14	contamination
+27958_1#152	25_seroba	15B	
+27536_3#129	1_seroba	19F	
+28048_1#53	28_seroba	untypable	
+27644_5#81	1_seroba	19F	
+27644_5#81	26_seroba	12F	
+28049_1#155	1_seroba	19F	
+28049_1#155	283_seroba	untypable	
+27689_4#57	28_seroba	untypable	
+27689_4#57	5_seroba	23F	
+27689_4#57	539_seroba	untypable	
+27630_2#186	47_seroba	6E(6B)	
+27958_1#192	1_seroba	19F	
+28048_1#112	166_seroba	06A	
+27689_1#122	28_seroba	14	
+27754_1#61	165_seroba	33C	
+28354_1#25	1_seroba	19F	
+27535_1#136	20_seroba	23F	
+28157_3#48	10_seroba	17F	contamination
+28157_3#48	48_seroba	15B	
+28157_3#48	60_seroba	Swiss_NT	contamination
+28157_3#48	615_seroba	untypable	
+27644_5#102	24_seroba	23F	
+28042_1#168	287_seroba	06C	
+28042_1#168	48_seroba	15C	
+28042_1#168	615_seroba	untypable	
+27463_4#164	30_seroba	10B	contamination
+27463_4#164	73_seroba	11A	
+27463_4#128	150_seroba	serogroup 24	contamination
+27463_4#128	28_seroba	untypable	
+27463_4#128	71_seroba	21	
+27958_1#170	1_seroba	19F	
+27958_1#170	611_seroba	untypable	
+28049_1#120	63_seroba	06C	
+27536_3#92	30_seroba	10B	
+27536_3#68	458_seroba	17F	contamination
+27536_3#68	69_seroba	untypable	
+28042_1#190	47_seroba	6E(6B)	
+27630_2#95	30_seroba	10B	
+27536_3#56	37_seroba	6E(6B)	
+27536_3#151	106_seroba	23F	
+27644_5#187	28_seroba	untypable	
+27644_5#187	38_seroba	38	contamination
+27644_5#187	63_seroba	06C	
+27689_3#13	20_seroba	23F	
+28354_1#50	47_seroba	6E(6B)	
+27644_5#50	107_seroba	untypable	
+27644_5#50	20_seroba	23F	contamination
+27644_5#50	37_seroba	6E(6B)	
+27644_5#50	549_seroba	6E(6B)	
+27644_5#50	9_seroba	14	contamination
+27754_1#33	66_seroba	untypable	
+28157_3#114	20_seroba	23F	
+28048_1#91	25_seroba	15C	
+27689_2#20	149_seroba	28F	
+27689_2#20	494_seroba	untypable	
+27689_2#20	82_seroba	untypable	
+27958_1#61	30_seroba	10B	
+27958_1#61	513_seroba	untypable	
+27958_1#61	580_seroba	untypable	
+27689_3#185	166_seroba	06A	
+27859_1#7	16_seroba	19F	
+27689_3#66	1_seroba	19F	
+28157_2#72	6_seroba	09V	contamination
+28157_2#72	615_seroba	untypable	
+27644_5#5	16_seroba	19F	
+27689_2#97	166_seroba	06A	
+27689_2#97	224_seroba	08	
+27535_1#104	28_seroba	14	contamination
+27859_1#30	37_seroba	6E(6B)	
+28354_1#84	1_seroba	19F	
+27644_5#115	1_seroba	19F	
+27644_5#115	106_seroba	23A	
+27644_5#115	66_seroba	untypable	
+27689_3#1	20_seroba	23F	
+27536_3#159	28_seroba	untypable	
+28354_1#112	127_seroba	13	contamination
+28354_1#112	25_seroba	15B/15C	contamination
+28354_1#112	502_seroba	untypable	
+28048_1#105	25_seroba	15B/15C	contamination
+27689_3#60	122_seroba	10A	
+28157_2#98	263_seroba	6E(6B)	
+27630_2#78	106_seroba	23A	
+28048_1#38	63_seroba	06C	
+28042_1#169	87_seroba	33B	
+27630_2#59	1_seroba	19F	
+27425_7#59	28_seroba	14	
+27644_5#51	1_seroba	19F	
+27463_4#132	47_seroba	6E(6B)	
+28354_1#97	20_seroba	23F	
+28354_1#97	28_seroba	untypable	
+28049_1#131	172_seroba	20	
+27644_5#33	122_seroba	10A	
+27689_4#165	47_seroba	6E(6B)	
+28157_3#65	1_seroba	19F	
+28157_2#6	5_seroba	23F	
+28157_2#6	539_seroba	untypable	
+27425_7#161	10_seroba	19A	
+27958_1#32	20_seroba	23F	
+27958_1#32	38_seroba	38	contamination
+27630_2#120	1_seroba	19F	
+28157_1#34	28_seroba	14	
+27689_4#40	47_seroba	6E(6B)	
+28042_1#88	28_seroba	untypable	
+28042_1#88	310_seroba	untypable	
+28042_1#88	5_seroba	23F	
+28042_1#88	539_seroba	untypable	
+28049_1#85	45_seroba	34	
+27958_1#30	1_seroba	19F	
+27754_1#108	10_seroba	19A	
+27630_2#42	20_seroba	23F	
+27630_2#42	28_seroba	untypable	
+27630_2#110	172_seroba	20	
+28157_3#95	1_seroba	19F	
+27689_3#14	1_seroba	19F	
+28157_3#125	1_seroba	19F	
+28157_3#125	134_seroba	13	contamination
+27754_1#155	20_seroba	23F	
+27958_1#39	10_seroba	19A	
+27463_4#154	180_seroba	untypable	
+27463_4#154	20_seroba	23F	
+27463_4#154	24_seroba	untypable	
+27859_1#137	137_seroba	09N	contamination
+27859_1#137	138_seroba	09L	contamination
+27859_1#137	174_seroba	untypable	
+27859_1#137	185_seroba	untypable	
+27859_1#137	187_seroba	untypable	
+27859_1#137	319_seroba	untypable	
+27859_1#137	544_seroba	untypable	
+27859_1#137	559_seroba	untypable	
+27859_1#137	63_seroba	untypable	
+27689_2#1	180_seroba	possible 06D	 but wciP gene might not be complete
+27689_2#1	24_seroba	23F	
+27689_1#113	28_seroba	14	contamination
+27689_1#113	63_seroba	06C	
+27689_3#120	20_seroba	23F	
+27958_1#9	20_seroba	23F	
+27689_4#119	1_seroba	19F	
+27689_4#119	400_seroba	untypable	
+27754_1#26	47_seroba	6E(6B)	
+27859_1#94	128_seroba	03	
+27859_1#94	28_seroba	untypable	
+28157_2#37	1_seroba	19F	
+28157_2#37	611_seroba	untypable	
+28048_1#57	173_seroba	35B	contamination
+28048_1#57	181_seroba	untypable	
+28048_1#57	327_seroba	untypable	
+28048_1#57	374_seroba	untypable	
+28048_1#57	465_seroba	untypable	
+28048_1#57	486_seroba	untypable	
+28157_1#60	38_seroba	38	contamination
+28042_1#16	10_seroba	19A	
+27958_1#103	1_seroba	19F	
+28157_3#1	107_seroba	18C	
+28157_3#1	134_seroba	13	
+28157_2#5	1_seroba	19F	
+27754_1#158	20_seroba	23F	
+27463_3#87	47_seroba	6E(6B)	
+27689_3#102	28_seroba	untypable	
+28157_2#109	1_seroba	19F	
+28157_2#109	454_seroba	untypable	
+28157_2#125	23_seroba	6E(6B)	
+28354_1#131	28_seroba	untypable	
+28354_1#131	71_seroba	21	
+28157_2#171	1_seroba	19F	
+27644_5#14	69_seroba	15A	
+27689_1#22	10_seroba	19A	
+27644_5#182	1_seroba	19F	
+27463_3#176	45_seroba	34	
+28049_1#93	82_seroba	06A	
+28048_1#150	28_seroba	14	
+27689_3#136	134_seroba	13	contamination
+27859_1#20	95_seroba	18A	contamination
+27859_1#152	1_seroba	19F	
+27536_3#84	166_seroba	06A	
+27536_3#128	30_seroba	10F	
+28048_1#90	37_seroba	6E(6B)	
+27689_3#183	1_seroba	19F	
+27630_2#152	1_seroba	19F	
+27630_2#152	42_seroba	Swiss_NT	contamination
+27630_2#153	1_seroba	19F	
+27689_2#94	104_seroba	16F	contamination
+28157_3#82	14_seroba	23F	
+27958_1#125	63_seroba	06C	
+27536_3#36	1_seroba	19F	
+28157_3#185	166_seroba	untypable	
+28157_3#185	554_seroba	untypable	
+28157_3#185	8_seroba	05	
+27463_3#4	1_seroba	19F	
+28157_3#183	1_seroba	19F	
+28157_2#43	1_seroba	19F	
+28157_2#43	30_seroba	10A	contamination
+27689_1#55	1_seroba	19F	
+28157_3#15	1_seroba	19F	
+28157_3#15	122_seroba	10A	
+28157_3#15	454_seroba	untypable	
+27689_3#126	1_seroba	19F	
+27689_3#126	42_seroba	Swiss_NT	
+27463_3#164	73_seroba	11E	
+27689_2#192	37_seroba	6E(6B)	contamination
+28157_1#74	47_seroba	6E(6B)	
+27536_3#141	28_seroba	14	
+27689_3#144	151_seroba	23B1	contamination
+27689_2#30	130_seroba	04	
+28157_1#133	1_seroba	19F	
+27463_4#189	47_seroba	6E(6B)	
+27425_7#173	28_seroba	untypable	
+27425_7#173	82_seroba	06A	
+27689_2#77	28_seroba	14	
+27535_1#17	20_seroba	23F	
+27754_1#137	187_seroba	35F	
+28049_1#180	118_seroba	untypable	
+28049_1#180	20_seroba	23F	
+28049_1#180	206_seroba	untypable	
+28049_1#180	532_seroba	untypable	
+28049_1#180	613_seroba	untypable	
+27536_3#163	1_seroba	19F	
+27630_2#91	1_seroba	19F	
+27689_4#85	180_seroba	possible 06D	 but wciP gene might not be complete
+27689_4#85	24_seroba	23F	
+27536_3#72	203_seroba	35A	
+28354_1#102	63_seroba	06C	
+27425_7#121	20_seroba	23F	
+28157_3#50	106_seroba	serogroup 24	contamination
+28042_1#10	186_seroba	35B	contamination
+28157_3#58	319_seroba	39X	contamination
+28157_3#58	60_seroba	untypable	
+28157_3#153	20_seroba	23F	
+27689_3#114	28_seroba	untypable	
+27463_4#13	130_seroba	04	contamination
+27754_1#162	63_seroba	06A	
+27689_2#96	536_seroba	untypable	
+27689_2#96	8_seroba	05	
+27859_1#164	28_seroba	untypable	
+27859_1#164	48_seroba	15C	
+27859_1#164	615_seroba	untypable	
+27859_1#23	32_seroba	07F	contamination
+28157_3#87	87_seroba	33B	
+27463_3#17	118_seroba	untypable	
+27463_3#17	138_seroba	untypable	
+27463_3#17	167_seroba	untypable	
+27463_3#17	339_seroba	untypable	
+27463_3#17	48_seroba	untypable	
+27463_3#17	484_seroba	untypable	
+27463_3#17	605_seroba	untypable	
+27463_3#17	612_seroba	untypable	
+27463_3#17	615_seroba	untypable	
+27463_3#17	81_seroba	untypable	
+27463_3#18	215_seroba	untypable	
+27463_3#18	28_seroba	14	
+27463_3#18	37_seroba	6E(6B)	
+27754_1#133	9_seroba	14	contamination
+28157_3#67	158_seroba	16F	
+27463_4#104	149_seroba	32F	
+28157_3#107	165_seroba	untypable	
+28157_3#107	23_seroba	6E(6B)	
+28157_3#107	42_seroba	Swiss_NT	contamination
+28048_1#80	28_seroba	untypable	
+28048_1#80	63_seroba	06C	
+27689_1#84	149_seroba	28F	
+28048_1#89	45_seroba	34	
+28354_1#126	28_seroba	untypable	
+27463_3#27	25_seroba	15B	
+27463_3#27	317_seroba	48	contamination
+28354_1#51	37_seroba	6E(6B)	
+28157_2#144	1_seroba	19F	
+27644_5#80	215_seroba	22F	contamination
+27644_5#80	42_seroba	untypable	
+28157_2#13	1_seroba	19F	
+27535_1#173	10_seroba	19A	
+27644_5#30	40_seroba	22A	contamination
+27859_1#36	45_seroba	34	
+27463_3#47	154_seroba	35F	
+27463_3#47	42_seroba	Swiss_NT	contamination
+28157_1#117	43_seroba	09V	contamination
+27689_1#67	40_seroba	22A	contamination
+28157_1#7	1_seroba	19A	contamination
+28157_1#7	10_seroba	19A	
+28157_1#7	9_seroba	14	
+27689_3#62	42_seroba	Swiss_NT	contamination
+27689_3#62	9_seroba	14	
+28048_1#131	20_seroba	23F	
+27463_3#20	1_seroba	19F	
+27463_3#20	28_seroba	14	
+28042_1#129	28_seroba	14	contamination
+27644_5#185	38_seroba	38	contamination
+27644_5#185	45_seroba	34	contamination
+27859_1#103	28_seroba	14	contamination
+27958_1#128	45_seroba	34	
+27689_2#189	30_seroba	10B	
+27536_3#70	20_seroba	23F	
+27644_5#177	87_seroba	33B	
+27630_2#119	106_seroba	untypable	
+27630_2#119	118_seroba	untypable	
+27630_2#119	148_seroba	untypable	
+27630_2#119	2_seroba	untypable	
+27630_2#119	214_seroba	untypable	
+27630_2#119	247_seroba	untypable	
+27630_2#119	398_seroba	untypable	
+27630_2#119	404_seroba	untypable	
+27630_2#119	405_seroba	untypable	
+27630_2#119	406_seroba	untypable	
+27630_2#119	490_seroba	untypable	
+27630_2#119	532_seroba	untypable	
+27630_2#119	550_seroba	untypable	
+27630_2#119	603_seroba	untypable	
+27630_2#119	606_seroba	untypable	
+27630_2#119	79_seroba	untypable	
+27630_2#119	81_seroba	untypable	
+27859_1#87	180_seroba	06A	
+27859_1#150	282_seroba	untypable	
+27859_1#150	45_seroba	untypable	
+27859_1#150	502_seroba	untypable	
+27859_1#150	6_seroba	09V	contamination
+27859_1#150	615_seroba	untypable	
+27630_2#54	28_seroba	untypable	
+27754_1#129	20_seroba	23F	
+28042_1#161	87_seroba	33B	
+28049_1#160	1_seroba	19F	
+28049_1#160	167_seroba	untypable	
+28049_1#160	173_seroba	35B	
+28042_1#109	26_seroba	46	contamination
+28042_1#109	48_seroba	15B	
+28042_1#109	615_seroba	untypable	
+27536_3#44	1_seroba	coverage too low	
+27536_3#44	28_seroba	coverage too low	
+27463_3#9	34_seroba	34	
+28157_1#128	20_seroba	23F	
+28157_1#128	28_seroba	untypable	
+27630_2#132	502_seroba	untypable	
+27630_2#132	6_seroba	09V	contamination
+27630_2#132	615_seroba	untypable	
+28157_3#60	24_seroba	23F	
+27958_1#65	9_seroba	14	contamination
+28048_1#96	47_seroba	6E(6B)	
+27689_1#93	26_seroba	46	
+27535_1#73	30_seroba	10B	
+27535_1#103	215_seroba	22F	contamination
+28049_1#126	47_seroba	6E(6B)	
+28042_1#101	69_seroba	15A	
+27644_5#27	150_seroba	serogroup 24	contamination
+27644_5#27	63_seroba	06C	
+27689_1#73	244_seroba	06C	
+27689_1#73	292_seroba	untypable	
+27535_1#101	1_seroba	19F	contamination
+27463_4#148	45_seroba	34	
+27958_1#20	104_seroba	16F	contamination
+27689_4#21	20_seroba	23F	
+27689_4#21	26_seroba	46	contamination
+28354_1#100	1_seroba	19F	
+28354_1#100	47_seroba	6E(6B)	
+28354_1#52	10_seroba	07B	
+27859_1#60	20_seroba	23F	
+27754_1#127	1_seroba	19F	
+27754_1#127	400_seroba	untypable	
+27535_1#177	20_seroba	23F	
+27535_1#177	25_seroba	untypable	
+27535_1#177	28_seroba	untypable	
+28157_3#30	1_seroba	19F	
+27463_3#162	174_seroba	19B	
+27463_3#162	73_seroba	11A	
+27754_1#90	20_seroba	23F	
+27689_1#36	20_seroba	untypable	
+27689_1#36	30_seroba	10A	
+28157_3#143	63_seroba	06C	
+27859_1#188	63_seroba	06A	
+27689_1#182	37_seroba	6E(6B)	
+28354_1#95	69_seroba	15A	
+28157_1#92	9_seroba	14	
+27630_2#49	283_seroba	35C	
+27754_1#6	38_seroba	38	contamination
+27859_1#40	1_seroba	19F	
+28157_1#165	47_seroba	6E(6B)	
+27859_1#6	28_seroba	untypable	
+27859_1#6	40_seroba	22A	contamination
+27859_1#6	401_seroba	untypable	
+27859_1#6	608_seroba	untypable	
+27859_1#6	81_seroba	untypable	
+27630_2#1	20_seroba	23F	
+27689_3#131	110_seroba	06A	
+28048_1#68	20_seroba	23F	
+28157_3#118	1_seroba	19F	
+28157_3#118	69_seroba	15A	
+27859_1#130	150_seroba	untypable	
+27859_1#130	206_seroba	untypable	
+27859_1#130	272_seroba	untypable	
+27859_1#130	287_seroba	possible 06D	 but wciP gene might not be complete
+27859_1#130	34_seroba	untypable	
+27859_1#130	373_seroba	untypable	
+27859_1#130	405_seroba	06A	
+27859_1#130	487_seroba	untypable	
+27859_1#130	495_seroba	untypable	
+27859_1#130	507_seroba	untypable	
+27859_1#130	77_seroba	untypable	
+27859_1#130	84_seroba	untypable	
+27859_1#130	88_seroba	untypable	
+28157_2#162	1_seroba	19F	
+28157_2#162	134_seroba	13	
+27536_3#150	25_seroba	15C	
+27535_1#163	28_seroba	untypable	
+27535_1#163	48_seroba	15C	
+27535_1#163	615_seroba	untypable	
+28157_2#95	180_seroba	06A	
+28157_3#173	1_seroba	19F	
+28157_2#105	1_seroba	19F	
+27463_3#112	149_seroba	32F	
+27754_1#139	127_seroba	13	
+27754_1#139	20_seroba	23F	
+27754_1#139	60_seroba	untypable	
+27463_4#57	42_seroba	untypable	
+27463_4#57	73_seroba	11A	
+27754_1#142	1_seroba	19F	
+27630_2#101	73_seroba	11A	
+27536_3#74	1_seroba	19F	
+27536_3#74	87_seroba	33B	
+27463_4#11	107_seroba	18C	
+27463_4#11	282_seroba	untypable	
+27463_4#11	374_seroba	13	
+27463_4#11	495_seroba	13	
+27463_4#11	508_seroba	13	
+27463_4#11	565_seroba	18A	contamination
+27463_4#11	91_seroba	untypable	
+27536_3#57	154_seroba	35F	
+28157_1#38	63_seroba	06A	
+27689_2#102	1_seroba	19F	
+27689_4#130	20_seroba	23F	
+28048_1#169	151_seroba	23B1	contamination
+28048_1#169	28_seroba	untypable	
+27689_2#37	69_seroba	15A	
+28157_1#106	25_seroba	15B	
+28157_1#106	60_seroba	Swiss_NT	contamination
+27689_2#40	47_seroba	6E(6B)	
+27630_2#72	28_seroba	14	
+28049_1#132	10_seroba	19A	
+28049_1#132	28_seroba	untypable	
+27463_4#37	28_seroba	14	
+27754_1#80	405_seroba	06A	
+27425_7#99	25_seroba	15C	
+27425_7#99	37_seroba	6E(6B)	
+27754_1#124	28_seroba	14	contamination
+27463_4#54	203_seroba	35A	
+27689_2#100	222_seroba	untypable	
+27689_2#100	25_seroba	15B	
+27689_2#100	294_seroba	untypable	
+28157_2#46	28_seroba	14	contamination
+27689_2#41	45_seroba	34	
+27689_4#92	23_seroba	6E(6B)	
+28042_1#164	47_seroba	6E(6B)	
+27754_1#150	20_seroba	23F	contamination
+28049_1#79	173_seroba	35B	contamination
+28049_1#79	494_seroba	untypable	
+27859_1#147	1_seroba	19F	
+27859_1#147	151_seroba	23B1	
+28157_1#49	25_seroba	15C	
+28157_1#49	47_seroba	possible 06E	 but wciP gene might not be complete
+27463_3#16	25_seroba	15B/15C	contamination
+27463_3#16	502_seroba	untypable	
+27463_4#27	149_seroba	28F	
+27463_4#27	494_seroba	untypable	
+27463_4#27	82_seroba	untypable	
+27463_3#37	9_seroba	14	
+27689_4#80	1_seroba	19F	
+27689_1#110	166_seroba	possible 06D	 but wciP gene might not be complete
+27689_1#110	172_seroba	20	contamination
+27689_1#110	180_seroba	untypable	
+27689_1#110	5_seroba	23A	
+28042_1#35	28_seroba	14	contamination
+27689_1#74	1_seroba	19F	
+28049_1#74	23_seroba	6E(6B)	
+27689_1#189	9_seroba	14	
+28157_3#71	23_seroba	6E(6B)	
+28042_1#155	1_seroba	19F	
+28042_1#155	73_seroba	11A	
+28157_3#187	23_seroba	06A	
+27535_1#144	30_seroba	10B	
+27689_2#108	20_seroba	23F	
+28157_3#175	25_seroba	15B/15C	contamination
+27463_4#153	37_seroba	6E(6B)	
+27689_1#177	87_seroba	33B	
+27644_5#47	20_seroba	23F	
+27644_5#47	28_seroba	untypable	
+28042_1#38	9_seroba	14	
+28042_1#75	25_seroba	15B	
+27425_7#83	1_seroba	19F	
+27425_7#83	63_seroba	06C	
+28157_2#130	47_seroba	6E(6B)	
+27536_3#189	37_seroba	6E(6B)	
+27536_3#189	42_seroba	Swiss_NT	contamination
+27536_3#189	66_seroba	untypable	
+27425_7#48	42_seroba	untypable	
+28157_1#116	1_seroba	19F	
+28157_1#116	106_seroba	23F	
+28157_1#116	180_seroba	possible 06D	 but wciP gene might not be complete
+28157_1#116	24_seroba	23F	
+28157_1#116	382_seroba	possible 06D	 but wciP gene might not be complete
+28157_1#116	534_seroba	possible 06C	 but wciP gene might not be completecontamination
+28048_1#173	20_seroba	23F	
+28048_1#173	23_seroba	6E(6B)	
+27689_4#74	28_seroba	untypable	
+27689_4#74	34_seroba	34	
+27958_1#100	1_seroba	19F	
+27958_1#100	20_seroba	23F	
+27536_3#160	42_seroba	Swiss_NT	
+27536_3#160	47_seroba	untypable	
+27754_1#117	63_seroba	06C	
+28157_1#108	25_seroba	15B	
+28354_1#60	107_seroba	18C	
+27536_3#177	63_seroba	06C	
+28157_3#35	166_seroba	untypable	
+28157_3#35	57_seroba	31	
+28157_3#35	82_seroba	untypable	
+28157_2#191	14_seroba	23F	
+28157_1#171	187_seroba	35F	
+27689_2#103	73_seroba	11A	
+27689_4#143	14_seroba	23F	contamination
+27689_4#7	40_seroba	22A	contamination
+27958_1#163	48_seroba	untypable	
+27958_1#163	615_seroba	untypable	
+28157_3#2	42_seroba	Swiss_NT	contamination
+28157_3#2	82_seroba	06A	
+28157_2#117	1_seroba	19F	
+27689_3#39	1_seroba	19F	
+27463_3#86	2_seroba	01	contamination
+27463_3#86	28_seroba	14	
+28157_3#128	1_seroba	19F	
+28048_1#26	1_seroba	19F	
+28048_1#26	264_seroba	untypable	
+27689_3#105	10_seroba	17F	contamination
+28049_1#22	138_seroba	09L	contamination
+28049_1#22	20_seroba	23F	
+28049_1#22	25_seroba	15B	
+27644_5#20	48_seroba	untypable	
+27644_5#20	615_seroba	untypable	
+27536_3#168	127_seroba	13	
+27536_3#168	265_seroba	untypable	
+28157_2#115	1_seroba	19F	
+28157_3#88	1_seroba	19F	
+27536_3#121	1_seroba	19F	contamination
+27536_3#121	174_seroba	19B	contamination
+27689_2#138	2_seroba	01	contamination
+27754_1#121	1_seroba	19F	
+27754_1#121	20_seroba	23F	
+27536_3#73	1_seroba	19F	
+27536_3#73	26_seroba	untypable	
+27536_3#73	82_seroba	untypable	
+28354_1#114	28_seroba	untypable	
+28354_1#114	71_seroba	21	
+27754_1#72	20_seroba	23F	
+27536_3#102	110_seroba	06A	
+27536_3#102	282_seroba	possible 06D	 but wciP gene might not be complete
+27536_3#102	319_seroba	untypable	
+27536_3#102	443_seroba	untypable	
+27536_3#102	82_seroba	06A	
+27425_7#73	20_seroba	23F	
+27425_7#73	28_seroba	14	
+27536_3#175	225_seroba	untypable	
+27536_3#175	28_seroba	14	contamination
+27536_3#175	42_seroba	Swiss_NT	
+27536_3#175	605_seroba	untypable	
+28042_1#53	1_seroba	19F	
+28042_1#53	107_seroba	18C	
+28042_1#53	45_seroba	untypable	
+27463_3#23	28_seroba	untypable	
+27535_1#83	1_seroba	19F	
+27535_1#83	287_seroba	untypable	
+27535_1#83	40_seroba	untypable	
+28157_3#6	25_seroba	15C	
+27859_1#114	197_seroba	untypable	
+27859_1#114	37_seroba	6E(6B)	
+27859_1#114	509_seroba	6E(6B)	
+27689_2#177	28_seroba	14	
+27958_1#188	20_seroba	23F	
+27958_1#188	45_seroba	34	
+27958_1#188	47_seroba	6E(6A)	contamination
+27644_5#135	320_seroba	13	
+28157_2#35	1_seroba	19F	
+27958_1#17	122_seroba	10A	
+28157_2#25	28_seroba	untypable	
+27425_7#105	82_seroba	06A	
+27689_1#24	9_seroba	14	
+27535_1#117	24_seroba	23F	
+27535_1#117	47_seroba	6E(6B)	
+27689_2#87	1_seroba	19F	
+27536_3#169	158_seroba	16F	
+27859_1#163	154_seroba	35F	
+27689_3#160	118_seroba	untypable	
+27689_3#160	20_seroba	23F	
+27689_3#160	613_seroba	untypable	
+27958_1#87	106_seroba	23F	contamination
+27958_1#68	1_seroba	19F	
+27958_1#68	405_seroba	06A	contamination
+27689_3#54	173_seroba	35B	contamination
+27463_3#134	118_seroba	untypable	
+27463_3#134	149_seroba	32F	
+27463_3#134	166_seroba	untypable	
+27463_3#134	607_seroba	38	contamination
+27958_1#49	187_seroba	35F	
+27689_3#36	28_seroba	14	contamination
+28049_1#42	25_seroba	15B	
+27425_7#159	10_seroba	19A	
+27425_7#159	203_seroba	35A	
+28157_1#87	10_seroba	19A	
+27859_1#92	1_seroba	19F	
+27859_1#92	87_seroba	33B	
+27859_1#3	130_seroba	04	
+27689_4#145	20_seroba	23F	
+27689_4#145	69_seroba	15A	
+27754_1#1	20_seroba	23F	
+27689_3#141	14_seroba	23F	
+27535_1#5	28_seroba	untypable	
+27535_1#5	40_seroba	22A	contamination
+27535_1#5	401_seroba	untypable	
+27535_1#5	608_seroba	untypable	
+27535_1#5	81_seroba	untypable	
+27644_5#83	20_seroba	23F	
+27689_2#16	20_seroba	23F	
+27463_4#160	20_seroba	23F	
+27463_4#160	28_seroba	untypable	
+27463_4#32	167_seroba	34	
+27630_2#135	151_seroba	23B1	
+28157_3#21	134_seroba	13	
+27689_3#113	42_seroba	Swiss_NT	contamination
+27689_3#113	69_seroba	15A	
+27958_1#189	1_seroba	19F	
+28653_1#2	28_seroba	untypable	
+28157_2#51	38_seroba	38	contamination
+28048_1#43	167_seroba	34	
+27689_1#63	91_seroba	40	
+28049_1#28	134_seroba	13	
+28049_1#28	180_seroba	untypable	
+28049_1#28	534_seroba	untypable	
+28157_1#97	110_seroba	06A	
+28157_1#97	20_seroba	23F	
+28157_1#97	618_seroba	untypable	
+27535_1#165	165_seroba	33C	
+27689_2#80	20_seroba	23F	
+27535_1#75	214_seroba	untypable	
+27425_7#23	166_seroba	untypable	
+27425_7#23	452_seroba	untypable	
+27425_7#23	554_seroba	untypable	
+27425_7#23	580_seroba	untypable	
+27425_7#23	8_seroba	05	
+27689_1#141	9_seroba	14	
+28049_1#23	149_seroba	28F	
+28354_1#57	1_seroba	19F	
+27859_1#90	28_seroba	untypable	
+27535_1#12	45_seroba	34	
+28048_1#160	180_seroba	06A	
+28157_2#172	5_seroba	23F	
+28157_2#172	539_seroba	untypable	
+27535_1#19	95_seroba	18A	contamination
+28049_1#18	82_seroba	06A	
+28049_1#135	20_seroba	23F	
+27689_1#152	9_seroba	14	contamination
+27630_2#77	1_seroba	19F	
+27536_3#122	30_seroba	10F	
+27463_4#77	1_seroba	19F	
+27463_4#77	180_seroba	untypable	
+27644_5#88	1_seroba	19F	
+28048_1#27	107_seroba	untypable	
+28048_1#27	138_seroba	untypable	
+28048_1#27	215_seroba	untypable	
+28048_1#27	37_seroba	6E(6B)	
+27630_2#88	28_seroba	14	
+27630_2#88	60_seroba	untypable	
+27630_2#88	66_seroba	untypable	
+27958_1#95	245_seroba	45	contamination
+27958_1#95	42_seroba	untypable	
+27425_7#45	24_seroba	23F	
+27689_3#119	20_seroba	23F	
+27958_1#107	23_seroba	6E(6B)	
+27644_5#139	1_seroba	19F	
+27630_2#147	224_seroba	08	
+27689_4#179	1_seroba	19F	
+27689_4#179	118_seroba	untypable	
+27689_4#179	28_seroba	untypable	
+27689_3#99	1_seroba	19F	
+27689_3#99	37_seroba	6E(6B)	
+28157_1#84	28_seroba	14	
+28157_1#41	162_seroba	04	
+28157_1#41	293_seroba	untypable	
+28157_1#41	38_seroba	38	contamination
+28157_1#25	16_seroba	19F	
+28157_1#25	45_seroba	34	
+27535_1#119	12_seroba	03	
+28157_2#186	107_seroba	18C	
+28157_2#186	73_seroba	11A	
+27463_3#125	1_seroba	19F	
+27463_3#125	2_seroba	01	contamination
+27689_2#123	25_seroba	15C	
+28042_1#46	63_seroba	06C	
+27689_4#93	1_seroba	19F	
+28354_1#47	1_seroba	19F	
+27689_3#191	1_seroba	19F	
+27689_3#191	28_seroba	untypable	
+27689_3#191	5_seroba	23A	
+27754_1#157	118_seroba	untypable	
+27754_1#157	28_seroba	untypable	
+27689_4#39	134_seroba	13	
+27689_4#39	28_seroba	14	
+27630_2#140	2_seroba	01	contamination
+27630_2#140	45_seroba	34	
+27630_2#113	28_seroba	untypable	
+27630_2#113	359_seroba	untypable	
+28157_2#154	1_seroba	19F	contamination
+27689_1#138	25_seroba	15B	
+27689_2#186	45_seroba	34	
+27425_7#151	342_seroba	6E(6B)	
+27425_7#151	37_seroba	possible 06E	 but wciP gene might not be complete
+27425_7#151	509_seroba	6E(6B)	
+27535_1#26	30_seroba	10B	
+27536_3#100	23_seroba	6E(6B)	
+27536_3#100	25_seroba	15B	
+28157_1#9	10_seroba	19A	
+27463_3#45	130_seroba	untypable	
+27463_3#45	293_seroba	untypable	
+27463_3#45	38_seroba	38	contamination
+27463_4#124	28_seroba	untypable	
+27463_4#124	45_seroba	34	
+28354_1#68	30_seroba	10B	
+28354_1#68	580_seroba	untypable	
+27536_3#66	1_seroba	19F	contamination
+27536_3#66	165_seroba	33C	
+27536_3#66	63_seroba	06C	contamination
+27689_2#2	26_seroba	46	
+28049_1#81	1_seroba	19F	
+27630_2#50	66_seroba	untypable	
+27463_4#30	20_seroba	23F	contamination
+27463_4#15	127_seroba	13	contamination
+27754_1#16	25_seroba	15B	
+27535_1#23	106_seroba	23F	
+28157_2#88	1_seroba	19F	
+27689_1#10	20_seroba	23F	
+27689_1#10	25_seroba	15B/15C	contamination
+27754_1#120	25_seroba	15B	
+27754_1#20	1_seroba	19F	
+27754_1#20	287_seroba	untypable	
+27463_4#146	69_seroba	15A	
+28049_1#157	20_seroba	23F	
+27425_7#164	82_seroba	06A	
+28048_1#39	66_seroba	untypable	
+27463_3#187	173_seroba	35B	contamination
+27630_2#183	45_seroba	34	
+28049_1#121	1_seroba	19F	
+28157_3#101	47_seroba	6E(6B)	
+27536_3#120	107_seroba	18C	
+27689_2#115	107_seroba	18C	
+28042_1#28	222_seroba	19B	
+28042_1#28	71_seroba	21	
+28048_1#67	106_seroba	untypable	
+28048_1#67	20_seroba	23F	
+28048_1#67	214_seroba	untypable	
+28157_2#106	1_seroba	19F	
+28157_2#106	66_seroba	untypable	
+27859_1#24	106_seroba	23F	
+27689_1#105	1_seroba	19F	contamination
+27689_1#105	82_seroba	06A	
+28157_3#162	110_seroba	06A	
+27644_5#79	10_seroba	19A	
+27644_5#79	57_seroba	31	contamination
+27859_1#37	1_seroba	19F	
+28157_1#105	10_seroba	17F	contamination
+28157_1#105	20_seroba	23F	
+27463_3#40	1_seroba	19F	
+27463_3#40	345_seroba	untypable	
+27463_3#40	48_seroba	untypable	
+27463_3#40	615_seroba	untypable	
+27463_3#40	66_seroba	untypable	
+27689_4#186	138_seroba	09L	contamination
+28157_2#174	118_seroba	untypable	
+28157_2#174	134_seroba	13	
+28157_2#174	138_seroba	untypable	
+28157_2#174	214_seroba	untypable	
+28157_2#174	404_seroba	untypable	
+28157_2#174	406_seroba	untypable	
+28157_2#174	490_seroba	untypable	
+28157_2#174	550_seroba	untypable	
+28157_2#174	603_seroba	untypable	
+28157_2#174	606_seroba	untypable	
+28157_2#174	81_seroba	untypable	
+28157_2#174	91_seroba	untypable	
+28042_1#5	63_seroba	06C	
+27463_4#14	1_seroba	19F	
+27463_4#14	203_seroba	35A	
+27463_4#14	28_seroba	14	contamination
+27754_1#23	40_seroba	22A	
+27754_1#23	66_seroba	untypable	
+28157_3#133	1_seroba	19F	
+27630_2#64	104_seroba	16F	contamination
+28157_2#80	187_seroba	35F	
+27535_1#109	30_seroba	10B	
+27754_1#22	91_seroba	40	
+27859_1#74	30_seroba	10B	
+28157_2#97	20_seroba	23F	
+27689_3#106	57_seroba	31	
+27425_7#54	1_seroba	19F	
+28157_1#163	47_seroba	6E(6B)	
+27689_2#76	45_seroba	34	
+27535_1#85	1_seroba	19F	
+27535_1#85	397_seroba	untypable	
+27535_1#85	451_seroba	untypable	
+27859_1#48	20_seroba	23F	
+28157_2#158	10_seroba	07B	
+27754_1#119	28_seroba	untypable	
+27754_1#119	71_seroba	21	
+27689_4#150	30_seroba	10F	
+27644_5#109	25_seroba	15B/15C	contamination
+27644_5#109	87_seroba	33B	
+27463_3#136	10_seroba	19A	
+27463_3#136	2_seroba	01	contamination
+27535_1#124	20_seroba	23F	
+27535_1#124	37_seroba	6E(6B)	contamination
+28354_1#53	166_seroba	06A	
+28354_1#53	42_seroba	untypable	
+27536_3#114	71_seroba	21	
+27689_2#181	245_seroba	45	contamination
+27644_5#160	172_seroba	20	contamination
+27644_5#160	42_seroba	Swiss_NT	contamination
+27644_5#160	47_seroba	6E(6B)	
+28157_1#67	151_seroba	23B1	contamination
+27689_3#24	1_seroba	19F	
+27689_3#35	149_seroba	32F	
+27689_3#35	188_seroba	35F	
+28157_2#86	1_seroba	19F	
+28157_3#119	10_seroba	19A	
+27463_4#111	261_seroba	35B	contamination
+27689_4#161	38_seroba	38	contamination
+27689_4#161	66_seroba	untypable	
+28048_1#17	37_seroba	6E(6B)	
+28048_1#190	1_seroba	19F	contamination
+28048_1#190	66_seroba	untypable	
+27463_4#96	25_seroba	15B	
+27463_4#96	28_seroba	untypable	
+27536_3#124	1_seroba	19F	
+27536_3#124	400_seroba	untypable	
+27425_7#166	9_seroba	14	
+27958_1#26	47_seroba	6E(6B)	
+27859_1#124	20_seroba	23F	
+27859_1#124	37_seroba	6E(6B)	contamination
+28042_1#192	25_seroba	15B/15C	contamination
+28042_1#192	28_seroba	untypable	
+27754_1#152	123_seroba	37	
+27754_1#152	45_seroba	34	
+28157_3#182	23_seroba	06A	
+28354_1#24	69_seroba	15A	
+27859_1#125	127_seroba	13	contamination
+28157_2#61	69_seroba	15A	
+28157_3#43	1_seroba	19F	
+28157_3#43	534_seroba	untypable	
+28157_2#16	9_seroba	14	contamination
+28157_3#29	174_seroba	19B	
+27754_1#96	20_seroba	23F	
+28049_1#6	20_seroba	23F	
+27463_3#165	127_seroba	13	contamination
+27463_3#165	134_seroba	13	
+28157_1#66	69_seroba	15A	
+28157_3#139	25_seroba	15C	
+27689_2#12	118_seroba	untypable	
+27689_2#12	149_seroba	32F	
+28157_1#11	9_seroba	14	
+28048_1#170	47_seroba	6E(6B)	
+27689_4#51	47_seroba	6E(6B)	
+27689_3#161	1_seroba	19F	
+27689_3#161	28_seroba	untypable	
+27689_3#49	257_seroba	25F	contamination
+28042_1#119	28_seroba	14	
+27958_1#147	1_seroba	19F	
+27958_1#147	47_seroba	untypable	
+28048_1#14	20_seroba	23F	
+27689_3#125	1_seroba	19F	
+27644_5#58	14_seroba	23F	
+27644_5#58	25_seroba	15B	
+27644_5#58	28_seroba	14	
+27536_3#24	1_seroba	19F	
+27536_3#24	611_seroba	untypable	
+28157_2#92	1_seroba	19F	
+28157_2#92	110_seroba	06A	
+28157_2#70	60_seroba	Swiss_NT	
+28157_2#70	69_seroba	15A	
+28157_3#158	45_seroba	34	
+27536_3#174	87_seroba	33B	
+27535_1#112	166_seroba	06A	
+27535_1#112	534_seroba	06A	
+27859_1#180	10_seroba	19A	
+27859_1#135	20_seroba	23F	
+27958_1#132	1_seroba	19F	
+27859_1#148	47_seroba	6E(6B)	
+27463_3#8	82_seroba	06A	
+27754_1#128	45_seroba	34	
+27754_1#128	47_seroba	6E(6B)	
+27754_1#128	66_seroba	untypable	
+28157_2#30	1_seroba	19F	
+28157_2#30	28_seroba	untypable	
+28157_1#121	224_seroba	08	
+28157_1#121	28_seroba	14	
+28157_1#121	9_seroba	14	
+27535_1#10	1_seroba	19F	
+28157_2#157	1_seroba	19F	
+28157_2#48	16_seroba	19F	
+27859_1#179	294_seroba	18F	contamination
+27859_1#179	63_seroba	06C	
+27535_1#158	1_seroba	19F	
+28354_1#8	47_seroba	6E(6B)	
+27754_1#31	1_seroba	19F	
+27689_4#159	1_seroba	19F	
+27463_3#67	20_seroba	untypable	
+27463_3#67	30_seroba	10A	
+27644_5#9	130_seroba	untypable	
+27644_5#9	6_seroba	09V	contamination
+28354_1#41	166_seroba	untypable	
+28354_1#41	452_seroba	untypable	
+28354_1#41	554_seroba	untypable	
+28354_1#41	580_seroba	untypable	
+28354_1#41	8_seroba	05	
+28048_1#158	10_seroba	19A	
+28048_1#158	28_seroba	untypable	
+28157_3#154	10_seroba	17F	contamination
+27859_1#170	149_seroba	untypable	
+27859_1#170	20_seroba	23F	
+28042_1#180	128_seroba	03	
+28049_1#82	20_seroba	23F	
+27859_1#99	25_seroba	15B	
+28048_1#152	137_seroba	09N	contamination
+28048_1#152	248_seroba	15B	
+28048_1#152	48_seroba	15C	
+27463_4#16	63_seroba	06A	
+27425_7#123	110_seroba	untypable	
+27425_7#123	47_seroba	6E(6B)	
+27689_3#123	104_seroba	16F	contamination
+27689_4#78	138_seroba	09L	contamination
+27689_4#78	28_seroba	untypable	
+27463_3#96	42_seroba	untypable	
+28048_1#162	287_seroba	06C	
+27644_5#192	1_seroba	19F	
+27644_5#192	180_seroba	untypable	
+27859_1#27	1_seroba	19F	
+27859_1#27	37_seroba	6E(6B)	
+28042_1#93	1_seroba	19F	
+28048_1#136	1_seroba	19F	
+28048_1#136	28_seroba	untypable	
+27689_2#107	47_seroba	6E(6B)	
+27630_2#90	45_seroba	34	
+27536_3#69	106_seroba	23F	contamination
+27536_3#69	138_seroba	untypable	
+27536_3#69	180_seroba	possible 06D	 but wciP gene might not be complete
+27536_3#69	24_seroba	23F	
+27536_3#69	382_seroba	untypable	
+27536_3#69	534_seroba	possible 06D	 but wciP gene might not be complete
+27536_3#69	602_seroba	untypable	
+27536_3#69	87_seroba	untypable	
+28049_1#177	1_seroba	19F	
+28049_1#177	28_seroba	untypable	
+27754_1#170	45_seroba	34	
+28049_1#8	60_seroba	Swiss_NT	contamination
+28049_1#8	69_seroba	15A	
+27644_5#178	283_seroba	35A/35C/42	contamination
+27644_5#178	66_seroba	untypable	
+27859_1#185	63_seroba	06C	
+27536_3#9	10_seroba	19A	
+27689_2#162	118_seroba	untypable	
+27689_2#162	138_seroba	untypable	
+27689_2#162	214_seroba	untypable	
+27689_2#162	264_seroba	untypable	
+27689_2#162	359_seroba	untypable	
+27689_2#162	363_seroba	untypable	
+27689_2#162	406_seroba	untypable	
+27689_2#162	42_seroba	untypable	
+27689_2#162	48_seroba	untypable	
+27689_2#162	53_seroba	untypable	
+27689_2#162	603_seroba	untypable	
+27689_2#162	611_seroba	untypable	
+27689_2#162	614_seroba	untypable	
+27689_2#162	615_seroba	untypable	
+27689_2#162	66_seroba	untypable	
+27630_2#74	24_seroba	23F	
+28049_1#171	172_seroba	20	
+28049_1#171	63_seroba	06C	
+27630_2#143	20_seroba	23F	
+27754_1#43	20_seroba	23F	
+27535_1#186	28_seroba	untypable	
+27536_3#132	26_seroba	46	contamination
+27425_7#25	10_seroba	19A	
+27689_3#34	16_seroba	19F	
+28354_1#94	23_seroba	06A	
+27425_7#155	20_seroba	23F	
+27425_7#155	42_seroba	Swiss_NT	
+27425_7#155	60_seroba	Swiss_NT	
+27463_3#140	40_seroba	22A	contamination
+27689_4#89	10_seroba	19A	
+27689_4#89	245_seroba	45	contamination
+27689_4#89	66_seroba	untypable	
+27689_4#89	71_seroba	21	
+28157_2#75	28_seroba	untypable	
+28157_1#22	106_seroba	23F	
+27535_1#162	28_seroba	14	
+27535_1#171	118_seroba	untypable	
+27535_1#171	211_seroba	untypable	
+27535_1#171	225_seroba	untypable	
+27535_1#171	247_seroba	untypable	
+27535_1#171	406_seroba	untypable	
+27535_1#171	53_seroba	untypable	
+27535_1#171	603_seroba	untypable	
+27535_1#171	606_seroba	untypable	
+27535_1#171	608_seroba	untypable	
+27535_1#171	611_seroba	untypable	
+27535_1#171	614_seroba	untypable	
+27535_1#171	616_seroba	untypable	
+27425_7#158	28_seroba	14	
+28048_1#93	30_seroba	10F	
+27859_1#151	107_seroba	untypable	
+27859_1#151	315_seroba	untypable	
+27859_1#151	43_seroba	09V	contamination
+27859_1#151	454_seroba	untypable	
+27859_1#151	6_seroba	untypable	
+28042_1#173	28_seroba	untypable	
+27644_5#123	20_seroba	23F	
+27644_5#123	42_seroba	Swiss_NT	contamination
+27425_7#63	1_seroba	19F	contamination
+27425_7#63	107_seroba	18C	
+28354_1#96	263_seroba	untypable	
+28354_1#96	34_seroba	untypable	
+28354_1#96	393_seroba	untypable	
+28354_1#96	48_seroba	15C	
+28354_1#96	615_seroba	untypable	
+28157_3#144	149_seroba	28F	
+28157_3#116	5_seroba	23A	
+28157_3#116	63_seroba	06C	
+28354_1#16	166_seroba	06A	
+28354_1#16	28_seroba	untypable	
+28354_1#16	42_seroba	untypable	
+28354_1#16	494_seroba	untypable	
+27463_3#107	73_seroba	11A	
+27644_5#1	118_seroba	untypable	
+27644_5#1	611_seroba	untypable	
+28042_1#151	1_seroba	untypable	
+28042_1#151	84_seroba	19F	
+28157_2#188	1_seroba	19F	
+28157_2#188	45_seroba	34	
+27463_3#126	20_seroba	23F	
+28048_1#87	25_seroba	15B	
+27859_1#161	28_seroba	14	
+28157_1#36	180_seroba	possible 06D	 but wciP gene might not be complete
+28157_1#36	382_seroba	06C	
+28157_1#36	609_seroba	untypable	
+28157_1#36	63_seroba	06C	
+28157_1#36	82_seroba	06C	contamination
+28157_2#22	130_seroba	untypable	
+28157_2#22	16_seroba	19F	
+27644_5#48	16_seroba	19F	
+27463_3#21	180_seroba	untypable	
+27463_3#21	5_seroba	23A	
+27463_3#21	534_seroba	untypable	
+27958_1#142	1_seroba	19F	
+28157_2#69	166_seroba	possible 06D	 but wciP gene might not be complete
+28157_2#69	5_seroba	23A	
+28157_2#93	1_seroba	19F	
+28157_2#93	319_seroba	untypable	
+28049_1#161	1_seroba	19F	
+28049_1#90	73_seroba	11A	
+27425_7#100	293_seroba	10X	contamination
+27425_7#100	45_seroba	34	
+28157_1#152	28_seroba	14	
+27689_4#58	1_seroba	19F	
+27689_4#58	401_seroba	untypable	
+27689_4#58	611_seroba	untypable	
+28048_1#25	25_seroba	15B	
+27689_2#111	1_seroba	19F	
+28048_1#161	47_seroba	6E(6B)	
+27463_3#171	25_seroba	15B	
+27463_3#171	608_seroba	untypable	
+27689_2#119	26_seroba	12F	
+27689_1#151	149_seroba	28F	
+27463_3#43	1_seroba	19F	
+28157_2#127	1_seroba	19F	
+27958_1#64	1_seroba	19F	
+28042_1#166	20_seroba	23F	
+27463_4#186	66_seroba	untypable	
+27463_4#186	91_seroba	40	
+27644_5#164	20_seroba	23F	
+27644_5#164	211_seroba	Swiss_NT	
+27644_5#164	28_seroba	untypable	
+27644_5#164	42_seroba	Swiss_NT	contamination
+27644_5#164	60_seroba	Swiss_NT	
+28157_3#149	45_seroba	34	
+28157_3#149	63_seroba	06A	
+28157_3#156	180_seroba	06A	contamination
+28049_1#113	28_seroba	untypable	
+28049_1#113	73_seroba	11A	
+28354_1#90	87_seroba	33B	
+27630_2#10	127_seroba	13	contamination
+27425_7#29	134_seroba	13	
+27644_5#116	1_seroba	19F	
+27644_5#116	30_seroba	10A	contamination
+27644_5#116	47_seroba	6E(6B)	
+27689_3#181	1_seroba	19F	
+28049_1#183	82_seroba	06A	
+28048_1#4	20_seroba	23F	
+27535_1#54	1_seroba	19F	
+27536_3#59	69_seroba	15A	
+28157_2#111	82_seroba	06A	
+27630_2#7	28_seroba	untypable	
+27754_1#88	104_seroba	16F	contamination
+27754_1#88	30_seroba	10B	
+27644_5#53	20_seroba	23F	
+27644_5#53	87_seroba	33B	
+27644_5#59	20_seroba	23F	
+27689_1#117	20_seroba	23F	
+27689_1#117	28_seroba	untypable	
+28042_1#140	1_seroba	19F	
+28042_1#140	38_seroba	38	contamination
+27535_1#38	1_seroba	19F	
+27535_1#38	60_seroba	Swiss_NT	contamination
+27535_1#38	82_seroba	06C	
+27689_3#85	42_seroba	Swiss_NT	contamination
+27689_3#85	45_seroba	34	
+28049_1#117	20_seroba	23F	
+28049_1#117	87_seroba	33B	
+28157_2#164	166_seroba	06A	
+27859_1#49	37_seroba	6E(6B)	
+27644_5#158	40_seroba	13	
+27644_5#158	495_seroba	13	
+27644_5#158	559_seroba	untypable	
+27644_5#158	67_seroba	untypable	
+27644_5#158	71_seroba	untypable	
+27689_4#79	60_seroba	Swiss_NT	contamination
+28042_1#106	57_seroba	31	
+27754_1#59	20_seroba	23F	
+27644_5#44	25_seroba	15B/15C	contamination
+28157_2#39	20_seroba	23F	
+28157_2#39	9_seroba	untypable	
+28048_1#137	107_seroba	18B	
+28048_1#137	25_seroba	15C	
+28048_1#137	28_seroba	14	
+27425_7#18	127_seroba	19B	
+27630_2#149	1_seroba	19F	
+27630_2#149	138_seroba	09L	contamination
+27536_3#7	1_seroba	19F	
+27689_2#101	180_seroba	06A	
+27536_3#3	149_seroba	28F	
+27754_1#184	20_seroba	23F	
+27754_1#184	42_seroba	untypable	
+27689_3#104	20_seroba	23F	
+27689_4#128	28_seroba	14	
+27958_1#171	1_seroba	untypable	
+27958_1#171	110_seroba	untypable	
+27958_1#171	14_seroba	23F	
+27689_2#120	151_seroba	23B1	contamination
+28157_1#81	48_seroba	15C	
+28157_1#81	615_seroba	untypable	
+27689_1#7	106_seroba	untypable	
+27689_1#7	16_seroba	19F	
+27958_1#94	47_seroba	6E(6B)	
+27958_1#38	82_seroba	06A	
+28157_3#79	42_seroba	untypable	
+27689_1#178	91_seroba	serogroup 24	contamination
+27644_5#46	138_seroba	09L	contamination
+27689_1#185	24_seroba	23F	
+28049_1#104	42_seroba	untypable	
+28049_1#166	287_seroba	06C	
+27535_1#79	10_seroba	19A	
+28157_1#144	45_seroba	34	
+28157_2#150	1_seroba	19F	
+27536_3#148	1_seroba	19F	
+28157_1#107	1_seroba	untypable	
+28157_1#107	282_seroba	untypable	
+28157_1#107	45_seroba	35F	
+27463_3#91	9_seroba	14	
+27689_4#46	130_seroba	untypable	
+27689_4#46	6_seroba	09V	
+27463_4#35	40_seroba	22A	
+27859_1#5	45_seroba	34	
+28157_2#3	47_seroba	6E(6B)	
+27754_1#115	106_seroba	23A	
+27754_1#115	28_seroba	14	
+28157_2#100	28_seroba	untypable	
+28157_2#100	63_seroba	06C	
+27689_2#125	150_seroba	serogroup 24	contamination
+27689_2#125	165_seroba	33C	
+27754_1#171	9_seroba	14	contamination
+28354_1#65	149_seroba	28F	
+28354_1#65	91_seroba	40	
+28048_1#155	69_seroba	15A	
+27535_1#176	177_seroba	35F	
+27630_2#182	1_seroba	19F	
+28049_1#144	1_seroba	19F	
+28049_1#144	28_seroba	untypable	
+28157_2#183	1_seroba	19F	
+27425_7#10	45_seroba	34	
+27425_7#10	60_seroba	Swiss_NT	
+27958_1#92	28_seroba	14	
+27689_1#66	30_seroba	10B	
+27536_3#157	40_seroba	22A	contamination
+28157_1#98	106_seroba	23A	
+28157_1#98	400_seroba	untypable	
+27425_7#117	20_seroba	23F	
+27425_7#117	42_seroba	Swiss_NT	contamination
+28157_2#175	45_seroba	34	
+28157_3#96	10_seroba	19A	
+28157_3#110	45_seroba	34	
+27689_1#13	42_seroba	Swiss_NT	
+27689_1#13	9_seroba	14	
+27463_3#89	149_seroba	28F	contamination
+27463_3#127	128_seroba	03	
+27463_3#92	40_seroba	22A	contamination
+27958_1#46	177_seroba	35F	
+28042_1#184	28_seroba	14	
+27859_1#166	165_seroba	33C	
+28157_2#108	25_seroba	15B	
+27644_5#75	130_seroba	04	
+27958_1#143	71_seroba	21	
+27463_3#50	20_seroba	23F	
+28157_3#123	1_seroba	19F	
+27689_2#185	42_seroba	untypable	
+27689_2#185	45_seroba	34	
+27644_5#60	14_seroba	23F	
+27644_5#60	28_seroba	untypable	
+27425_7#3	28_seroba	untypable	
+27425_7#3	71_seroba	21	
+27536_3#165	1_seroba	19A	
+27536_3#165	106_seroba	untypable	
+27536_3#165	144_seroba	untypable	
+27536_3#165	150_seroba	untypable	
+27536_3#165	151_seroba	untypable	
+27536_3#165	162_seroba	untypable	
+27536_3#165	188_seroba	untypable	
+27536_3#165	189_seroba	untypable	
+27536_3#165	20_seroba	untypable	
+27536_3#165	264_seroba	untypable	
+27536_3#165	320_seroba	untypable	
+27536_3#165	339_seroba	untypable	
+27536_3#165	461_seroba	19A	
+27536_3#165	84_seroba	19A	
+27958_1#21	25_seroba	15B/15C	contamination
+27536_3#34	38_seroba	untypable	
+27536_3#34	66_seroba	untypable	
+27536_3#63	10_seroba	19A	
+28042_1#49	71_seroba	21	
+27463_3#12	45_seroba	34	
+28157_1#27	166_seroba	untypable	
+28157_1#27	38_seroba	38	contamination
+28157_1#27	481_seroba	untypable	
+28157_1#27	554_seroba	untypable	
+28157_2#81	10_seroba	19A	
+27689_3#87	1_seroba	19F	
+28048_1#13	134_seroba	13	
+27754_1#71	165_seroba	33C	
+27535_1#127	66_seroba	untypable	
+28354_1#12	47_seroba	6E(6B)	
+28354_1#12	554_seroba	untypable	
+28354_1#12	8_seroba	05	
+27535_1#94	1_seroba	19F	
+27535_1#94	451_seroba	untypable	
+27689_4#133	1_seroba	19F	
+27644_5#69	38_seroba	38	contamination
+27644_5#69	66_seroba	untypable	
+27536_3#50	47_seroba	6E(6B)	
+27536_3#50	66_seroba	untypable	
+27644_5#6	82_seroba	06A	
+27644_5#22	40_seroba	22A	contamination
+27536_3#139	16_seroba	19F	
+27536_3#139	48_seroba	15C	
+27536_3#139	615_seroba	untypable	
+28157_3#94	23_seroba	6E(6B)	
+28157_3#94	60_seroba	Swiss_NT	contamination
+27644_5#107	134_seroba	13	contamination
+28157_2#58	1_seroba	19F	
+27644_5#99	20_seroba	23F	
+28042_1#167	63_seroba	06C	
+27958_1#74	1_seroba	19F	contamination
+27859_1#54	1_seroba	19F	
+27689_2#70	118_seroba	untypable	
+27689_2#70	214_seroba	untypable	
+27689_2#70	6_seroba	09V	contamination
+28157_3#59	130_seroba	04	
+28157_3#59	63_seroba	06C	
+27958_1#173	1_seroba	19F	
+27463_4#46	203_seroba	35A	
+28157_3#23	127_seroba	13	
+27754_1#185	45_seroba	34	
+27535_1#150	28_seroba	untypable	
+27535_1#150	63_seroba	06C	
+27425_7#160	69_seroba	15A	
+27425_7#186	28_seroba	14	
+27630_2#69	20_seroba	23F	
+27630_2#24	95_seroba	18A	contamination
+27644_5#38	1_seroba	19F	contamination
+27644_5#161	122_seroba	10A	
+27689_1#27	25_seroba	15B	
+28042_1#52	107_seroba	18C	
+28042_1#52	28_seroba	14	
+27463_4#40	203_seroba	35A	
+27630_2#56	180_seroba	untypable	
+27630_2#56	5_seroba	23A	
+28354_1#88	45_seroba	34	
+28354_1#42	28_seroba	14	
+27463_4#67	118_seroba	untypable	
+27425_7#141	20_seroba	23F	
+27689_3#189	25_seroba	15B	
+27463_4#18	28_seroba	14	contamination
+28157_2#169	138_seroba	09L	contamination
+27425_7#122	1_seroba	19F	
+27425_7#122	20_seroba	23F	
+27425_7#122	25_seroba	15B	
+27425_7#122	28_seroba	14	
+28048_1#78	1_seroba	19F	
+28048_1#78	248_seroba	untypable	
+28048_1#78	71_seroba	21	contamination
+27689_1#40	1_seroba	19F	
+27463_3#146	149_seroba	28F	
+27689_4#24	104_seroba	16F	contamination
+27689_4#24	130_seroba	04	
+27689_2#32	180_seroba	06A	
+27689_2#32	9_seroba	14	
+28157_1#89	606_seroba	untypable	
+28157_1#89	63_seroba	06A	
+27689_4#137	10_seroba	17F	contamination
+28157_2#9	25_seroba	15B	
+27644_5#62	25_seroba	15C	contamination
+27630_2#14	166_seroba	untypable	
+27630_2#14	5_seroba	23A	
+27425_7#42	172_seroba	20	contamination
+28354_1#32	20_seroba	23F	
+28354_1#32	28_seroba	untypable	
+27535_1#189	1_seroba	untypable	
+27535_1#189	248_seroba	untypable	
+27535_1#189	3_seroba	33F	
+28042_1#153	73_seroba	11A	
+28049_1#9	28_seroba	untypable	
+28042_1#2	251_seroba	untypable	
+28042_1#2	28_seroba	14	
+28042_1#2	293_seroba	10X	
+28042_1#2	401_seroba	untypable	
+28042_1#2	608_seroba	untypable	
+28354_1#59	20_seroba	23F	
+28354_1#59	28_seroba	14	
+28354_1#59	84_seroba	untypable	
+28049_1#108	20_seroba	23F	
+28157_2#113	1_seroba	19F	
+27536_3#192	87_seroba	6E(6B)	
+27754_1#140	107_seroba	untypable	
+27754_1#140	166_seroba	untypable	
+27754_1#140	43_seroba	09V	
+27754_1#140	559_seroba	untypable	
+27754_1#140	63_seroba	untypable	
+27754_1#140	82_seroba	untypable	
+27463_4#162	127_seroba	13	
+28157_1#167	28_seroba	untypable	
+28157_1#167	71_seroba	21	
+27463_4#99	28_seroba	14	contamination
+27689_3#177	110_seroba	06A	
+27689_4#49	25_seroba	15B/15C	contamination
+28049_1#186	82_seroba	06A	
+27425_7#56	1_seroba	19F	
+27689_3#59	1_seroba	19F	
+28157_1#69	28_seroba	14	
+27689_1#180	26_seroba	46	contamination
+27463_3#132	128_seroba	03	
+27535_1#65	107_seroba	18C	
+27754_1#11	20_seroba	23F	
+27689_4#67	14_seroba	23F	
+27535_1#11	106_seroba	23F	
+27535_1#11	222_seroba	19B	
+27689_3#168	1_seroba	19F	
+28049_1#163	25_seroba	15C	
+27425_7#27	69_seroba	15A	
+28157_2#74	14_seroba	23F	
+28049_1#146	203_seroba	untypable	
+28049_1#146	565_seroba	18F	contamination
+27958_1#27	1_seroba	19F	
+27958_1#27	63_seroba	06A	
+27630_2#185	1_seroba	19F	
+27630_2#185	6_seroba	untypable	
+27859_1#138	1_seroba	19F	
+28042_1#165	47_seroba	possible 06E	 but wciP gene might not be complete
+28042_1#165	73_seroba	11A	
+27535_1#122	25_seroba	15C	
+27535_1#178	20_seroba	23F	
+27535_1#178	69_seroba	15A	
+27689_4#160	106_seroba	23F	
+27689_4#160	138_seroba	untypable	
+27689_4#160	180_seroba	possible 06D	 but wciP gene might not be complete
+27689_4#160	24_seroba	23F	
+27689_4#160	382_seroba	untypable	
+27689_4#160	534_seroba	possible 06C	 but wciP gene might not be complete
+27463_3#135	73_seroba	11A	
+27463_4#157	57_seroba	31	
+27958_1#62	187_seroba	35F	
+27644_5#162	38_seroba	38	contamination
+27463_3#186	30_seroba	10F	
+27463_3#186	42_seroba	Swiss_NT	
+27689_2#44	123_seroba	37	
+27754_1#48	1_seroba	19F	contamination
+27463_4#123	1_seroba	19F	
+27536_3#166	1_seroba	untypable	
+27536_3#166	110_seroba	06A	
+27536_3#166	43_seroba	09V	contamination
+27536_3#166	60_seroba	untypable	
+27535_1#92	28_seroba	14	
+28354_1#119	47_seroba	6E(6B)	
+27425_7#50	60_seroba	Swiss_NT	
+28354_1#101	5_seroba	23F	
+28354_1#101	539_seroba	untypable	
+27859_1#110	20_seroba	23F	
+27689_3#187	20_seroba	23F	
+27425_7#8	20_seroba	23F	
+28157_1#16	28_seroba	untypable	
+28157_1#16	47_seroba	6E(6B)	
+27859_1#28	138_seroba	09L	contamination
+27689_4#66	14_seroba	23F	contamination
+27425_7#19	87_seroba	33B	
+27689_3#52	1_seroba	19F	
+27535_1#9	20_seroba	23F	contamination
+27535_1#9	63_seroba	06C	
+27859_1#25	30_seroba	10B	
+27644_5#65	203_seroba	35A	
+27425_7#110	203_seroba	35A	
+28157_2#148	1_seroba	19F	
+27535_1#67	87_seroba	33B	
+27630_2#11	263_seroba	untypable	
+27630_2#11	318_seroba	21	
+27689_4#105	130_seroba	04	
+27689_4#105	45_seroba	34	
+27536_3#137	1_seroba	19F	
+27536_3#137	400_seroba	untypable	
+27536_3#181	20_seroba	23F	
+28354_1#129	20_seroba	untypable	
+28354_1#129	30_seroba	10A	
+27644_5#145	69_seroba	15A	
+28157_3#37	28_seroba	14	
+28157_3#37	345_seroba	untypable	
+28157_3#37	84_seroba	untypable	
+27425_7#129	150_seroba	untypable	
+27425_7#129	287_seroba	possible 06D	 but wciP gene might not be complete
+27425_7#129	34_seroba	untypable	
+27425_7#129	373_seroba	untypable	
+27425_7#129	405_seroba	06A	
+27425_7#129	47_seroba	6E(6A)	contamination
+27425_7#129	487_seroba	untypable	
+27425_7#129	495_seroba	untypable	
+27425_7#129	507_seroba	untypable	
+27425_7#129	77_seroba	possible 06E	 but wciP gene might not be complete
+27425_7#129	84_seroba	untypable	
+27425_7#129	88_seroba	untypable	
+27958_1#76	1_seroba	19F	
+27958_1#76	28_seroba	untypable	
+28157_3#3	150_seroba	serogroup 24	contamination
+28157_3#3	16_seroba	19F	
+27425_7#1	9_seroba	14	
+27689_4#68	20_seroba	23F	
+27463_3#181	150_seroba	serogroup 24	contamination
+27463_3#181	42_seroba	Swiss_NT	contamination
+27463_3#181	66_seroba	untypable	
+27689_3#158	1_seroba	19F	
+27644_5#77	110_seroba	untypable	
+27644_5#77	137_seroba	09N	contamination
+27644_5#77	294_seroba	untypable	
+27754_1#135	1_seroba	19F	
+27754_1#135	167_seroba	untypable	
+27859_1#153	1_seroba	19F	
+27859_1#153	611_seroba	untypable	
+27689_1#25	150_seroba	serogroup 24	contamination
+27644_5#127	106_seroba	untypable	
+27644_5#127	127_seroba	untypable	
+27644_5#127	20_seroba	23F	
+27644_5#127	214_seroba	untypable	
+27644_5#127	28_seroba	untypable	
+27644_5#127	402_seroba	untypable	
+27536_3#61	42_seroba	untypable	
+27536_3#61	47_seroba	6E(6B)	
+27689_2#129	565_seroba	18F	
+27689_2#129	71_seroba	21	
+27689_2#59	10_seroba	19A	
+28157_3#57	5_seroba	23A	
+28157_3#57	63_seroba	06C	
+27536_3#76	28_seroba	14	
+27859_1#134	224_seroba	untypable	
+27859_1#134	63_seroba	06C	
+27754_1#103	106_seroba	untypable	
+27754_1#103	20_seroba	23F	
+27754_1#103	214_seroba	untypable	
+27535_1#18	1_seroba	19A	
+27535_1#18	127_seroba	untypable	
+27535_1#18	144_seroba	untypable	
+27535_1#18	166_seroba	untypable	
+27535_1#18	205_seroba	untypable	
+27535_1#18	225_seroba	untypable	
+27535_1#18	264_seroba	untypable	
+27535_1#18	339_seroba	untypable	
+27535_1#18	373_seroba	untypable	
+27535_1#18	84_seroba	19A	
+27535_1#18	91_seroba	untypable	
+28049_1#73	28_seroba	untypable	
+28354_1#55	28_seroba	untypable	
+28354_1#55	82_seroba	06C	
+27630_2#175	130_seroba	untypable	
+27630_2#175	6_seroba	09V	contamination
+27463_3#70	222_seroba	19B	
+28042_1#126	10_seroba	19A	
+28042_1#126	138_seroba	09L	contamination
+28157_3#5	30_seroba	10B	
+27958_1#160	1_seroba	19F	
+27859_1#14	24_seroba	23F	
+27859_1#14	45_seroba	34	
+27859_1#14	47_seroba	6E(6B)	contamination
+28049_1#142	16_seroba	19F	
+28049_1#142	45_seroba	34	
+27754_1#46	47_seroba	6E(6B)	
+27958_1#184	1_seroba	19F	
+27689_2#142	2_seroba	01	contamination
+27689_2#142	9_seroba	14	
+27425_7#26	20_seroba	23F	
+27536_3#42	57_seroba	31	contamination
+28048_1#69	47_seroba	6E(6B)	
+28048_1#127	25_seroba	15C	
+27644_5#166	127_seroba	13	
+27644_5#166	42_seroba	Swiss_NT	contamination
+28157_3#136	47_seroba	6E(6B)	
+27463_4#3	20_seroba	23F	
+27958_1#70	25_seroba	15B	
+27958_1#70	28_seroba	14	contamination
+28048_1#154	179_seroba	untypable	
+28048_1#154	401_seroba	untypable	
+28048_1#154	608_seroba	untypable	
+27859_1#57	177_seroba	35F	
+28354_1#13	63_seroba	06C	
+28157_2#152	20_seroba	23F	
+28157_2#152	28_seroba	14	
+27689_4#103	20_seroba	23F	
+27689_3#56	42_seroba	Swiss_NT	
+27689_3#56	47_seroba	6E(6B)	
+27689_4#153	166_seroba	untypable	
+27689_4#153	554_seroba	untypable	
+27689_4#153	8_seroba	05	
+27689_1#129	47_seroba	6E(6B)	
+27463_3#83	63_seroba	06C	
+28042_1#189	20_seroba	23F	
+28157_3#159	180_seroba	possible 06F	 but wciP gene might not be complete
+28157_3#159	24_seroba	23F	
+28048_1#166	63_seroba	06C	
+28048_1#166	73_seroba	11A	
+28049_1#15	20_seroba	23F	
+27463_4#142	172_seroba	20	contamination
+27463_4#142	20_seroba	23F	
+27859_1#127	66_seroba	untypable	
+28048_1#167	224_seroba	08	
+28048_1#167	345_seroba	untypable	
+28048_1#167	45_seroba	34	
+27754_1#143	87_seroba	33B	
+27644_5#95	10_seroba	17F	
+27644_5#95	45_seroba	untypable	
+28049_1#130	14_seroba	23F	
+28049_1#130	28_seroba	untypable	
+27689_1#159	20_seroba	23F	
+27463_4#24	10_seroba	19A	
+28042_1#89	261_seroba	35B	contamination
+28042_1#89	60_seroba	Swiss_NT	contamination
+27859_1#131	166_seroba	06A	
+27689_4#38	1_seroba	19F	
+27425_7#13	107_seroba	18C	
+27425_7#13	42_seroba	Swiss_NT	
+27536_3#136	28_seroba	14	contamination
+27536_3#136	8_seroba	05	
+28157_1#132	20_seroba	23F	
+27859_1#95	47_seroba	6E(6A)	
+27859_1#95	66_seroba	untypable	
+27689_2#35	1_seroba	19F	
+28049_1#20	180_seroba	06A	
+28354_1#124	294_seroba	18F	contamination
+27536_3#18	6_seroba	09V	
+27536_3#18	615_seroba	untypable	
+28048_1#30	130_seroba	untypable	
+28048_1#30	16_seroba	19F	
+27535_1#143	1_seroba	19F	
+27535_1#143	37_seroba	6E(6B)	
+27536_3#85	1_seroba	19F	
+27536_3#85	42_seroba	untypable	
+27689_2#135	63_seroba	06A	contamination
+28048_1#149	402_seroba	untypable	
+28048_1#149	45_seroba	34	
+27463_4#110	20_seroba	23F	
+27689_4#176	5_seroba	23F	
+27689_4#176	539_seroba	untypable	
+27689_1#190	1_seroba	19F	
+28157_1#148	1_seroba	19F	
+27535_1#66	149_seroba	28F	contamination
+27535_1#66	165_seroba	33C	
+27535_1#66	20_seroba	23F	
+28049_1#176	25_seroba	15B/15C	contamination
+28049_1#176	282_seroba	untypable	
+28049_1#176	502_seroba	untypable	
+28157_1#56	45_seroba	34	
+28157_1#56	9_seroba	14	contamination
+27958_1#120	28_seroba	untypable	
+27958_1#120	310_seroba	untypable	
+27958_1#120	5_seroba	23F	
+27958_1#120	539_seroba	untypable	
+27535_1#151	1_seroba	19F	
+27689_1#88	1_seroba	19F	
+28354_1#74	48_seroba	15B/15C	contamination
+28354_1#74	615_seroba	untypable	
+28048_1#185	172_seroba	20	contamination
+28048_1#185	60_seroba	Swiss_NT	contamination
+27859_1#9	1_seroba	19F	
+27535_1#100	25_seroba	15B	
+27425_7#82	172_seroba	20	contamination
+27689_4#37	1_seroba	19F	
+27689_3#3	106_seroba	untypable	
+27689_3#3	319_seroba	39X	contamination
+27689_2#157	37_seroba	6E(6B)	
+27689_2#157	509_seroba	6E(6B)	
+28157_1#129	45_seroba	34	
+27859_1#128	130_seroba	untypable	
+27859_1#128	6_seroba	09V	contamination
+28157_1#157	73_seroba	11A	
+28049_1#76	25_seroba	15B	
+28157_1#77	1_seroba	19F	
+28157_1#77	14_seroba	23F	
+27630_2#187	1_seroba	19F	
+28157_2#163	1_seroba	19F	
+28157_2#163	30_seroba	10B	contamination
+28157_2#163	454_seroba	untypable	
+27754_1#54	20_seroba	23F	
+27535_1#180	10_seroba	19A	
+27689_1#134	107_seroba	18C	
+27425_7#80	45_seroba	34	
+27644_5#171	20_seroba	23F	
+27754_1#62	251_seroba	untypable	
+27754_1#62	400_seroba	untypable	
+27754_1#62	69_seroba	15A	
+27958_1#60	106_seroba	23A	
+27958_1#166	28_seroba	untypable	
+27630_2#125	1_seroba	19F	
+27630_2#125	6_seroba	untypable	
+27536_3#46	283_seroba	35C	
+27859_1#59	40_seroba	22A	contamination
+28157_1#114	25_seroba	15B/15C	contamination
+27689_2#114	118_seroba	alternative_aliB_NT	
+27689_4#97	107_seroba	18C	
+28042_1#158	28_seroba	14	
+27689_1#12	174_seroba	19B	contamination
+27689_1#12	257_seroba	untypable	
+27689_1#12	259_seroba	untypable	
+27689_1#12	282_seroba	untypable	
+27689_1#12	374_seroba	13	
+27689_1#12	495_seroba	13	
+27689_1#12	508_seroba	13	
+27689_1#12	565_seroba	untypable	
+27689_1#12	91_seroba	19B	contamination
+27425_7#75	1_seroba	19F	
+27689_3#30	180_seroba	06A	
+27630_2#36	42_seroba	untypable	
+27463_3#90	28_seroba	14	contamination
+28048_1#35	20_seroba	23F	
+28048_1#35	47_seroba	6E(6B)	
+27536_3#143	45_seroba	34	
+28042_1#160	25_seroba	15B	
+27689_2#171	165_seroba	33C	
+27958_1#113	110_seroba	06A	
+27689_3#90	25_seroba	15C	
+27536_3#33	73_seroba	11A	
+28354_1#132	128_seroba	03	
+28049_1#35	172_seroba	20	
+28049_1#35	28_seroba	untypable	
+28354_1#4	47_seroba	6E(6B)	
+28157_2#155	24_seroba	23F	
+28157_1#59	166_seroba	06A	
+28157_1#59	28_seroba	untypable	
+28157_1#59	47_seroba	6E(6B)	
+28042_1#66	154_seroba	35F	
+28157_3#145	45_seroba	34	
+28049_1#123	38_seroba	38	
+28049_1#44	25_seroba	15B	
+28049_1#44	60_seroba	Swiss_NT	contamination
+27689_1#188	45_seroba	34	
+27754_1#49	107_seroba	18C	
+27754_1#49	28_seroba	untypable	
+27754_1#49	37_seroba	6E(6B)	
+27958_1#31	69_seroba	15A	
+27958_1#31	87_seroba	33B	
+27630_2#75	1_seroba	19F	
+27754_1#118	37_seroba	6E(6B)	
+27754_1#118	48_seroba	15C	
+27754_1#118	615_seroba	untypable	
+28157_3#28	25_seroba	15B	
+27689_2#156	404_seroba	untypable	
+27689_4#109	20_seroba	23F	
+27859_1#80	10_seroba	19A	
+27859_1#69	110_seroba	06A	
+27689_3#84	26_seroba	46	
+27754_1#58	47_seroba	6E(6B)	
+27463_4#86	400_seroba	35C	
+27463_4#86	562_seroba	35C	
+27958_1#118	261_seroba	35B	contamination
+27644_5#190	20_seroba	23F	
+27630_2#98	323_seroba	untypable	
+27630_2#98	49_seroba	17F	
+27630_2#98	61_seroba	untypable	
+27630_2#98	63_seroba	untypable	
+27463_3#95	37_seroba	6E(6B)	contamination
+27754_1#176	20_seroba	23F	
+28049_1#36	10_seroba	19A	
+28049_1#36	9_seroba	14	
+27689_3#176	151_seroba	23B1	contamination
+27425_7#187	9_seroba	14	
+27958_1#175	1_seroba	19F	
+27689_1#181	130_seroba	04	
+27689_1#181	16_seroba	19F	
+27689_2#63	48_seroba	15B	
+27689_2#63	615_seroba	untypable	
+27463_4#69	1_seroba	19F	
+27463_4#69	172_seroba	untypable	
+27463_4#69	220_seroba	untypable	
+27463_4#69	241_seroba	untypable	
+27463_4#69	28_seroba	untypable	
+27463_4#69	294_seroba	untypable	
+27463_4#69	299_seroba	untypable	
+27463_4#69	319_seroba	39X	
+27463_4#69	394_seroba	untypable	
+27463_4#69	420_seroba	untypable	
+27463_4#69	481_seroba	untypable	
+27463_4#69	59_seroba	untypable	
+27536_3#64	28_seroba	14	contamination
+27644_5#84	165_seroba	33C	
+27644_5#4	6_seroba	09V	contamination
+27644_5#4	615_seroba	untypable	
+27958_1#86	20_seroba	23F	contamination
+27958_1#86	25_seroba	15C	
+28157_1#48	69_seroba	15A	
+27425_7#33	1_seroba	19F	
+27425_7#33	28_seroba	untypable	
+27463_3#25	9_seroba	14	contamination
+27859_1#35	20_seroba	23F	
+28157_2#103	1_seroba	19F	
+28157_1#179	310_seroba	untypable	
+28157_1#179	5_seroba	23F	
+28157_1#179	539_seroba	untypable	
+27689_4#138	1_seroba	19F	
+27689_4#138	20_seroba	23F	
+27689_4#138	28_seroba	untypable	
+27958_1#37	1_seroba	19F	contamination
+27958_1#37	71_seroba	21	contamination
+27463_3#76	42_seroba	Swiss_NT	
+28042_1#156	25_seroba	15C	
+28157_3#52	248_seroba	untypable	
+28157_3#52	71_seroba	21	
+27689_1#53	34_seroba	34	
+27689_1#53	45_seroba	34	
+27958_1#14	1_seroba	19F	
+27958_1#14	150_seroba	serogroup 24	contamination
+27958_1#14	45_seroba	34	
+28157_2#60	24_seroba	23F	
+28042_1#72	134_seroba	13	
+27425_7#93	73_seroba	11A	
+27425_7#93	9_seroba	14	
+27536_3#22	9_seroba	14	
+28354_1#39	9_seroba	14	
+27536_3#173	20_seroba	23F	contamination
+27463_4#152	2_seroba	01	contamination
+27463_4#152	9_seroba	14	
+27689_4#87	1_seroba	19F	
+27689_4#87	106_seroba	untypable	
+27689_4#87	215_seroba	22F	contamination
+27689_4#87	616_seroba	Swiss_NT	contamination
+27689_4#121	47_seroba	6E(6B)	
+28042_1#77	167_seroba	34	
+27463_3#185	37_seroba	6E(6B)	
+27463_3#185	42_seroba	Swiss_NT	
+27535_1#187	20_seroba	23F	
+28049_1#103	1_seroba	19F	
+28049_1#103	25_seroba	15B	
+27535_1#28	1_seroba	19F	
+27535_1#28	37_seroba	6E(6B)	
+27425_7#156	23_seroba	6E(6B)	
+27689_2#131	287_seroba	untypable	
+27689_2#131	42_seroba	Swiss_NT	contamination
+27689_2#131	424_seroba	untypable	
+27689_2#131	513_seroba	untypable	
+27689_2#131	60_seroba	Swiss_NT	
+28157_3#127	37_seroba	6E(6B)	
+28157_3#127	509_seroba	6E(6B)	
+28354_1#118	20_seroba	23F	
+27689_4#99	16_seroba	19F	
+28157_2#167	1_seroba	19F	
+28049_1#140	1_seroba	19F	
+28653_1#3	20_seroba	23F	
+28653_1#3	66_seroba	untypable	
+27689_1#125	187_seroba	35F	
+28354_1#77	42_seroba	untypable	
+28354_1#77	60_seroba	untypable	
+27644_5#16	1_seroba	19F	
+27644_5#16	215_seroba	22F	contamination
+27689_3#153	458_seroba	17F	contamination
+27689_3#153	69_seroba	untypable	
+27536_3#127	63_seroba	06C	
+27630_2#79	45_seroba	34	
+27689_2#61	166_seroba	possible 06D	 but wciP gene might not be complete
+27689_2#61	180_seroba	untypable	
+27689_2#61	40_seroba	13	contamination
+27689_2#61	5_seroba	23A	
+28048_1#95	25_seroba	15C	
+27689_1#35	60_seroba	Swiss_NT	contamination
+28157_3#180	23_seroba	6E(6B)	
+27536_3#14	20_seroba	23F	
+27536_3#14	47_seroba	6E(6B)	
+28354_1#99	25_seroba	15B	
+28354_1#99	82_seroba	untypable	
+28354_1#99	87_seroba	untypable	
+27536_3#153	1_seroba	19F	
+28157_1#85	1_seroba	19F	
+28157_1#85	45_seroba	34	
+27689_1#103	106_seroba	23F	
+27689_1#103	138_seroba	untypable	
+27689_1#103	180_seroba	possible 06F	 but wciP gene might not be completecontamination
+27689_1#103	24_seroba	23F	
+27689_1#103	382_seroba	untypable	
+27689_1#103	534_seroba	possible 06D	 but wciP gene might not be complete
+27689_1#103	602_seroba	untypable	
+27689_1#103	87_seroba	untypable	
+27689_4#45	20_seroba	23F	
+27689_4#110	149_seroba	28F	
+27689_4#110	42_seroba	Swiss_NT	contamination
+27689_4#110	618_seroba	untypable	
+28157_2#140	1_seroba	19F	
+28157_2#140	118_seroba	untypable	
+28157_2#140	28_seroba	untypable	
+28157_3#62	30_seroba	10B	
+28157_2#79	1_seroba	19F	
+28157_2#79	534_seroba	untypable	
+27689_4#167	1_seroba	19F	
+27689_4#167	110_seroba	06A	
+27689_4#167	66_seroba	untypable	
+27535_1#3	45_seroba	34	
+28048_1#144	188_seroba	32F	contamination
+27463_4#181	95_seroba	18A	contamination
+27958_1#69	1_seroba	19F	
+27958_1#69	28_seroba	untypable	
+27958_1#69	42_seroba	Swiss_NT	contamination
+27859_1#109	30_seroba	10B	
+28048_1#153	1_seroba	19F	
+28157_2#78	14_seroba	23F	
+28157_2#78	82_seroba	06A	
+27463_4#101	28_seroba	14	
+27689_4#69	134_seroba	13	
+27689_4#69	42_seroba	Swiss_NT	contamination
+27463_3#68	128_seroba	03	
+27463_3#68	180_seroba	06A	
+27689_1#69	1_seroba	19F	
+27536_3#113	1_seroba	untypable	
+27536_3#113	28_seroba	untypable	
+27536_3#113	294_seroba	18F	
+27536_3#113	32_seroba	07F	contamination
+28157_2#50	82_seroba	06A	
+27535_1#4	130_seroba	04	
+27859_1#39	104_seroba	16F	contamination
+27425_7#118	20_seroba	23F	
+27425_7#118	25_seroba	15B	
+28049_1#134	1_seroba	19F	
+28049_1#134	28_seroba	untypable	
+27463_4#62	10_seroba	19A	
+27463_4#62	20_seroba	23F	contamination
+27463_4#62	42_seroba	untypable	
+28157_3#14	180_seroba	possible 06D	 but wciP gene might not be complete
+28157_3#14	24_seroba	23F	
+28157_3#14	292_seroba	untypable	
+27859_1#45	1_seroba	19F	
+28042_1#43	25_seroba	15B	
+28042_1#43	401_seroba	untypable	
+28042_1#43	608_seroba	untypable	
+27859_1#22	1_seroba	19F	
+27536_3#93	38_seroba	38	contamination
+28157_3#20	23_seroba	6E(6B)	
+28049_1#112	193_seroba	23F	
+28049_1#112	343_seroba	untypable	
+28049_1#112	5_seroba	23A	
+28049_1#112	530_seroba	untypable	
+28049_1#112	539_seroba	untypable	
+27463_3#100	42_seroba	untypable	
+28157_1#146	26_seroba	46	
+28042_1#114	37_seroba	6E(6B)	
+28157_2#187	23_seroba	6E(6B)	
+27689_4#185	30_seroba	10B	
+27463_4#107	60_seroba	untypable	
+27463_4#107	66_seroba	untypable	
+27463_4#63	173_seroba	35B	contamination
+27463_4#63	60_seroba	Swiss_NT	contamination
+27958_1#3	69_seroba	15A	
+28042_1#14	138_seroba	09L	contamination
+28042_1#14	84_seroba	19F	
+27689_1#43	149_seroba	28F	
+27689_1#43	174_seroba	19B	
+27689_1#43	87_seroba	33B	
+28157_3#27	28_seroba	untypable	
+28157_3#27	82_seroba	06A	
+27689_2#33	154_seroba	35F	
+27536_3#81	1_seroba	19F	
+27754_1#12	186_seroba	35B	contamination
+28042_1#70	20_seroba	23F	
+27754_1#87	20_seroba	23F	
+28157_1#50	20_seroba	23F	
+28157_3#72	122_seroba	10A	
+27689_3#118	151_seroba	23B1	contamination
+27463_3#133	42_seroba	untypable	
+27463_3#133	81_seroba	Swiss_NT	contamination
+27958_1#79	1_seroba	19F	
+27644_5#180	127_seroba	19B	
+27644_5#180	5_seroba	23F	
+27958_1#124	1_seroba	19F	
+27958_1#124	106_seroba	23F	
+27958_1#124	180_seroba	possible 06D	 but wciP gene might not be completecontamination
+27958_1#124	24_seroba	23F	
+27958_1#124	382_seroba	untypable	
+27958_1#124	393_seroba	possible 06D	 but wciP gene might not be completecontamination
+27958_1#124	534_seroba	possible 06D	 but wciP gene might not be completecontamination
+28048_1#86	1_seroba	untypable	
+28048_1#86	14_seroba	23F	
+28048_1#86	28_seroba	untypable	
+27630_2#21	25_seroba	15B	
+27630_2#21	359_seroba	Swiss_NT	contamination
+28042_1#103	10_seroba	19A	
+28042_1#103	66_seroba	untypable	
+27535_1#106	69_seroba	15A	
+28042_1#147	28_seroba	14	
+27536_3#38	87_seroba	33B	
+27754_1#27	87_seroba	33B	
+28354_1#64	1_seroba	19F	
+28354_1#64	122_seroba	10A	
+28049_1#110	1_seroba	19F	
+28049_1#110	37_seroba	6E(6B)	
+28048_1#126	1_seroba	19F	
+28048_1#126	167_seroba	untypable	
+28157_3#55	87_seroba	6E(6B)	
+28049_1#61	25_seroba	15B	
+27958_1#121	10_seroba	19A	
+28157_3#33	186_seroba	untypable	
+28157_3#33	2_seroba	01	contamination
+28157_3#33	63_seroba	untypable	
+28354_1#11	10_seroba	19A	
+27535_1#179	294_seroba	18F	contamination
+27535_1#179	63_seroba	06C	
+27958_1#51	287_seroba	06C	
+27535_1#62	28_seroba	14	contamination
+27463_4#175	28_seroba	untypable	
+27463_4#175	30_seroba	10B	
+28157_3#109	1_seroba	19F	
+28157_3#109	283_seroba	untypable	
+27535_1#148	1_seroba	19F	
+27535_1#148	151_seroba	23B1	
+27425_7#77	6_seroba	09V	contamination
+27425_7#77	615_seroba	untypable	
+28354_1#89	10_seroba	17F	
+27689_2#72	20_seroba	23F	
+27689_4#126	47_seroba	6E(6B)	
+27644_5#122	1_seroba	19F	
+27644_5#122	30_seroba	10A	contamination
+27644_5#122	47_seroba	6E(6B)	
+27463_4#83	28_seroba	untypable	
+27463_4#83	71_seroba	21	
+28157_3#176	48_seroba	15B	
+28157_3#176	615_seroba	untypable	
+27644_5#3	28_seroba	14	
+27689_1#41	107_seroba	18C	
+27689_1#41	324_seroba	untypable	
+27689_1#41	45_seroba	35F	
+27689_1#41	495_seroba	13	
+27689_1#41	91_seroba	untypable	
+27535_1#146	180_seroba	possible 06C	 but wciP gene might not be complete
+27535_1#146	24_seroba	23F	
+28049_1#122	118_seroba	untypable	
+28049_1#122	206_seroba	untypable	
+28049_1#122	532_seroba	untypable	
+28049_1#122	60_seroba	untypable	
+28049_1#122	613_seroba	untypable	
+27689_1#34	82_seroba	06A	
+27958_1#80	1_seroba	19F	
+27535_1#111	47_seroba	6E(6B)	
+27859_1#47	130_seroba	untypable	
+27859_1#47	6_seroba	09V	contamination
+27644_5#18	1_seroba	19F	
+28157_1#94	173_seroba	35B	contamination
+27689_2#118	1_seroba	19F	
+27689_3#167	263_seroba	6E(6B)	
+27689_3#167	66_seroba	untypable	
+27644_5#78	1_seroba	19F	
+27859_1#76	214_seroba	untypable	
+27958_1#183	154_seroba	35F	
+27958_1#183	26_seroba	46	
+28157_1#43	224_seroba	untypable	
+28157_1#43	47_seroba	6E(6B)	
+28157_2#142	1_seroba	19F	
+27536_3#17	158_seroba	16F	
+27536_3#23	359_seroba	Swiss_NT	
+27536_3#23	42_seroba	Swiss_NT	contamination
+27689_3#89	32_seroba	07F	contamination
+28042_1#86	25_seroba	15B	
+27859_1#168	172_seroba	20	contamination
+27859_1#168	20_seroba	23F	
+28048_1#76	20_seroba	23F	
+28042_1#98	38_seroba	38	contamination
+27463_3#143	47_seroba	6E(6B)	
+27958_1#191	1_seroba	19F	
+28157_3#31	1_seroba	19F	
+28157_3#31	319_seroba	untypable	
+27630_2#66	28_seroba	14	
+27630_2#3	166_seroba	untypable	
+27630_2#3	294_seroba	untypable	
+27630_2#3	47_seroba	6E(6B)	
+28157_3#41	23_seroba	6E(6B)	
+27689_2#104	104_seroba	16F	contamination
+27630_2#26	1_seroba	19F	
+27630_2#26	180_seroba	untypable	
+27630_2#156	20_seroba	23F	
+27630_2#156	47_seroba	6E(6A)	
+28157_2#31	180_seroba	06A	
+27463_4#126	20_seroba	23F	
+28354_1#106	45_seroba	34	
+27463_3#109	149_seroba	28F	
+27463_3#109	66_seroba	untypable	
+27630_2#13	25_seroba	15C	
+27630_2#13	28_seroba	untypable	
+27536_3#186	47_seroba	6E(6B)	
+27859_1#154	1_seroba	untypable	
+27859_1#154	20_seroba	23F	
+27859_1#154	66_seroba	untypable	
+27689_4#111	1_seroba	19F	
+27689_4#111	45_seroba	34	
+28049_1#1	45_seroba	34	
+27754_1#98	180_seroba	untypable	
+27754_1#98	24_seroba	23F	
+27689_1#49	73_seroba	11A	
+27630_2#181	26_seroba	46	
+27630_2#181	28_seroba	untypable	
+27689_2#15	42_seroba	untypable	
+27689_3#149	1_seroba	19F	
+27689_3#149	87_seroba	33B	contamination
+28049_1#55	1_seroba	19F	contamination
+28049_1#55	20_seroba	23F	
+28049_1#55	66_seroba	untypable	
+27689_2#22	42_seroba	Swiss_NT	contamination
+28157_1#183	151_seroba	untypable	
+28157_1#183	9_seroba	14	
+27859_1#10	20_seroba	23F	contamination
+27859_1#10	63_seroba	06C	
+27689_3#135	257_seroba	25F	contamination
+27689_3#135	28_seroba	untypable	
+27689_2#112	104_seroba	16F	contamination
+27689_2#112	28_seroba	untypable	
+27689_2#112	359_seroba	Swiss_NT	
+27630_2#127	25_seroba	15B/15C	contamination
+28049_1#148	130_seroba	04	
+28049_1#148	42_seroba	Swiss_NT	
+28157_3#68	28_seroba	untypable	
+28157_3#68	47_seroba	6E(6B)	
+27463_3#54	20_seroba	23F	
+27536_3#188	102_seroba	23F	contamination
+27536_3#188	106_seroba	23F	contamination
+27536_3#188	113_seroba	23F	contamination
+27536_3#188	120_seroba	possible 06F	 but wciP gene might not be completecontamination
+27536_3#188	127_seroba	untypable	
+27536_3#188	176_seroba	23F	contamination
+27536_3#188	225_seroba	untypable	
+27536_3#188	467_seroba	untypable	
+27958_1#178	25_seroba	15B	
+27630_2#8	167_seroba	34	
+27689_4#42	458_seroba	17F	
+27689_4#42	69_seroba	untypable	
+27958_1#8	45_seroba	34	
+28157_3#17	9_seroba	14	contamination
+27630_2#23	20_seroba	23F	
+27535_1#118	28_seroba	14	
+27859_1#63	30_seroba	untypable	
+27859_1#63	402_seroba	untypable	
+27859_1#63	42_seroba	untypable	
+28048_1#73	20_seroba	23F	
+27689_1#107	1_seroba	19F	
+27630_2#150	30_seroba	10B	contamination
+27630_2#150	42_seroba	untypable	
+27754_1#2	66_seroba	untypable	
+27754_1#2	9_seroba	14	contamination
+27689_2#154	1_seroba	19F	
+27689_3#83	1_seroba	19F	
+28157_1#14	110_seroba	06A	
+28157_1#14	23_seroba	6E(6B)	
+27644_5#125	1_seroba	19F	
+27644_5#125	66_seroba	untypable	
+27689_2#126	150_seroba	serogroup 24	contamination
+27689_2#126	565_seroba	18F	
+27689_2#126	71_seroba	21	
+27689_1#111	138_seroba	09L	contamination
+27689_1#111	20_seroba	23F	
+27535_1#40	1_seroba	19F	
+27689_4#183	104_seroba	16F	
+27689_4#183	26_seroba	12F	
+28157_1#111	110_seroba	untypable	
+28157_1#111	47_seroba	6E(6B)	
+28354_1#71	1_seroba	19F	
+28354_1#71	167_seroba	untypable	
+28354_1#71	215_seroba	untypable	
+28354_1#71	342_seroba	6E(6B)	
+28354_1#71	37_seroba	6E(6B)	
+27463_3#36	26_seroba	46	contamination
+27859_1#171	25_seroba	15B	
+28157_2#101	25_seroba	15B/15C	contamination
+27754_1#177	404_seroba	untypable	
+28354_1#62	87_seroba	6E(6B)	
+27689_4#4	127_seroba	13	
+27689_4#4	138_seroba	09L	contamination
+27689_4#4	28_seroba	untypable	
+28157_1#15	1_seroba	19F	
+27644_5#133	23_seroba	6E(6B)	
+28157_3#86	1_seroba	19F	
+27630_2#124	127_seroba	13	
+27754_1#24	1_seroba	19F	
+27754_1#24	66_seroba	untypable	
+28354_1#86	25_seroba	15B	
+27689_4#113	130_seroba	untypable	
+27689_4#113	6_seroba	09V	contamination
+27689_3#45	166_seroba	untypable	
+27689_3#45	495_seroba	untypable	
+27689_3#45	5_seroba	23A	
+28048_1#82	1_seroba	19F	
+28048_1#82	167_seroba	untypable	
+27689_1#91	1_seroba	19F	
+27689_1#91	60_seroba	Swiss_NT	contamination
+28157_2#71	1_seroba	19F	
+27689_1#60	1_seroba	19F	
+27689_1#60	30_seroba	10B	contamination
+27689_1#60	5_seroba	23A	
+27689_1#60	60_seroba	Swiss_NT	contamination
+27644_5#42	1_seroba	19F	
+28354_1#27	45_seroba	34	
+28049_1#165	45_seroba	34	
+28049_1#19	1_seroba	19F	
+28049_1#19	166_seroba	06A	
+28049_1#19	28_seroba	untypable	
+27958_1#168	47_seroba	6E(6B)	
+27463_4#84	57_seroba	31	
+27536_3#171	47_seroba	6E(6B)	
+27535_1#32	87_seroba	6E(6B)	
+27689_4#169	154_seroba	35F	
+28048_1#128	5_seroba	23F	
+28048_1#128	539_seroba	untypable	
+27689_1#136	149_seroba	32F	
+27689_1#135	405_seroba	06A	
+27689_1#61	186_seroba	35B	contamination
+27689_3#157	47_seroba	6E(6B)	
+27754_1#32	107_seroba	18C	
+27754_1#32	215_seroba	22F	contamination
+28049_1#77	20_seroba	23F	
+27425_7#150	342_seroba	6E(6B)	
+27425_7#150	37_seroba	6E(6B)	
+27425_7#150	509_seroba	6E(6B)	contamination
+27630_2#172	48_seroba	15B	
+27630_2#172	615_seroba	untypable	
+28042_1#19	28_seroba	14	
+27689_3#159	24_seroba	23F	
+27463_4#136	37_seroba	6E(6B)	
+27463_4#136	509_seroba	6E(6B)	
+27644_5#176	10_seroba	19A	
+28157_3#155	28_seroba	untypable	
+28157_3#155	82_seroba	06A	
+27644_5#150	283_seroba	35C	
+27644_5#150	42_seroba	untypable	
+27689_4#14	110_seroba	06A	
+27689_4#14	20_seroba	23F	contamination
+27958_1#50	130_seroba	untypable	
+27958_1#50	16_seroba	19F	
+27859_1#104	215_seroba	22F	contamination
+28157_1#96	138_seroba	09L	contamination
+28042_1#182	1_seroba	19F	contamination
+28042_1#182	47_seroba	6E(6B)	
+28042_1#182	9_seroba	14	
+28157_2#1	110_seroba	06A	
+28157_2#1	180_seroba	06A	
+28157_2#1	534_seroba	06A	
+28157_2#1	73_seroba	11A	contamination
+28157_1#164	1_seroba	19F	
+27689_4#172	28_seroba	14	contamination
+27630_2#160	118_seroba	untypable	
+27630_2#160	16_seroba	19F	
+27630_2#160	40_seroba	22A	contamination
+28048_1#122	28_seroba	untypable	
+28048_1#122	310_seroba	untypable	
+28048_1#122	5_seroba	23F	
+28048_1#122	539_seroba	untypable	
+28157_1#26	23_seroba	06A	
+28049_1#71	23_seroba	6E(6B)	
+27754_1#57	167_seroba	34	
+27754_1#57	87_seroba	33B	
+27535_1#96	47_seroba	6E(6A)	
+27535_1#96	66_seroba	untypable	
+28354_1#18	20_seroba	23F	
+28048_1#133	38_seroba	38	contamination
+27535_1#34	251_seroba	untypable	
+27535_1#34	293_seroba	10X	
+27535_1#34	47_seroba	untypable	
+28042_1#39	10_seroba	19A	
+27425_7#37	60_seroba	Swiss_NT	contamination
+28042_1#80	1_seroba	19F	
+28042_1#80	28_seroba	untypable	
+27463_4#31	1_seroba	19F	
+27535_1#142	104_seroba	16F	
+27958_1#158	1_seroba	19F	
+27958_1#158	30_seroba	10B	
+27958_1#158	513_seroba	untypable	
+28157_1#45	10_seroba	07B	
+27644_5#172	166_seroba	06A	
+27689_4#36	110_seroba	06A	
+27689_4#36	180_seroba	06A	
+27689_4#36	534_seroba	06A	
+28048_1#44	10_seroba	19A	
+28048_1#44	42_seroba	untypable	
+28049_1#57	45_seroba	34	
+27630_2#171	25_seroba	15B	
+27425_7#81	20_seroba	23F	
+27958_1#75	10_seroba	19A	
+27958_1#75	63_seroba	06C	
+27425_7#152	1_seroba	19F	
+27425_7#152	215_seroba	untypable	
+27425_7#152	37_seroba	6E(6B)	
+27689_2#127	6_seroba	09V	contamination
+27689_2#127	615_seroba	untypable	
+28157_1#86	20_seroba	23F	
+28048_1#58	28_seroba	14	
+27644_5#159	263_seroba	6E(6B)	
+27644_5#159	42_seroba	Swiss_NT	contamination
+28048_1#108	60_seroba	untypable	
+28048_1#108	66_seroba	untypable	
+27535_1#169	149_seroba	untypable	
+27535_1#169	20_seroba	23F	
+27630_2#170	187_seroba	untypable	
+27630_2#170	34_seroba	34	
+27536_3#21	25_seroba	15B	
+28042_1#44	20_seroba	23F	
+28042_1#44	25_seroba	untypable	
+27425_7#51	127_seroba	13	contamination
+28157_3#85	47_seroba	6E(6B)	
+27754_1#116	23_seroba	6E(6B)	
+27536_3#43	20_seroba	23F	
+28049_1#128	154_seroba	35F	
+28049_1#128	28_seroba	untypable	
+27425_7#108	20_seroba	23F	
+28157_1#145	10_seroba	19A	
+28354_1#43	1_seroba	19F	
+28354_1#43	42_seroba	untypable	
+27689_3#25	20_seroba	23F	
+27689_2#26	45_seroba	34	
+27689_2#168	1_seroba	19F	
+28157_2#119	82_seroba	06A	
+28048_1#48	47_seroba	6E(6B)	
+27425_7#71	134_seroba	13	
+27425_7#71	42_seroba	Swiss_NT	contamination
+27689_1#79	138_seroba	09L	contamination
+27689_1#100	1_seroba	19F	
+28157_3#166	23_seroba	06A	
+27958_1#185	20_seroba	23F	
+28157_1#156	63_seroba	06C	
+28157_2#129	10_seroba	19A	
+27689_4#22	151_seroba	23B1	
+27463_4#36	37_seroba	6E(6B)	
+27859_1#102	1_seroba	19F	contamination
+27644_5#39	20_seroba	23F	
+27536_3#145	1_seroba	19F	
+28048_1#60	127_seroba	13	contamination
+27425_7#109	38_seroba	38	contamination
+27536_3#26	166_seroba	06A	
+27463_4#156	149_seroba	28F	
+28157_3#63	1_seroba	19F	
+28157_3#63	28_seroba	14	
+28157_2#44	1_seroba	19F	
+27463_4#48	73_seroba	11A	
+28048_1#7	20_seroba	23F	
+27535_1#36	45_seroba	34	
+27630_2#115	318_seroba	21	
+27463_4#163	158_seroba	16F	
+27463_4#163	42_seroba	untypable	
+28157_3#11	107_seroba	18C	
+28157_3#11	73_seroba	11A	
+27425_7#103	20_seroba	23F	
+27958_1#167	251_seroba	untypable	
+27958_1#167	293_seroba	10X	
+27958_1#66	172_seroba	20	contamination
+27958_1#15	40_seroba	22A	
+27958_1#15	73_seroba	11A	
+27689_3#155	28_seroba	untypable	
+27859_1#118	28_seroba	14	
+27859_1#12	106_seroba	23F	
+27859_1#12	222_seroba	19B	contamination
+27425_7#147	107_seroba	18C	
+27689_2#83	91_seroba	40	
+27958_1#119	118_seroba	untypable	
+27958_1#119	166_seroba	possible 06D	 but wciP gene might not be complete
+27958_1#119	294_seroba	untypable	
+27958_1#119	5_seroba	23F	
+27958_1#119	539_seroba	untypable	
+27535_1#137	1_seroba	19F	
+28157_1#136	1_seroba	19F	
+28157_3#12	138_seroba	09L	contamination
+27689_1#80	490_seroba	untypable	
+27689_1#80	9_seroba	14	contamination
+27536_3#77	71_seroba	21	
+27536_3#149	25_seroba	15C	
+27536_3#149	28_seroba	14	
+27536_3#149	66_seroba	untypable	
+27689_4#154	150_seroba	untypable	
+27689_4#154	47_seroba	6E(6A)	
+27463_4#64	149_seroba	28F	
+27644_5#61	48_seroba	15B/15C	contamination
+27644_5#61	615_seroba	untypable	
+27754_1#132	30_seroba	10B	
+28042_1#152	1_seroba	19F	contamination
+27536_3#95	20_seroba	23F	
+27535_1#155	149_seroba	28F	
+27754_1#55	20_seroba	23F	
+27859_1#105	69_seroba	15A	
+27535_1#42	45_seroba	34	
+27535_1#42	613_seroba	untypable	
+27630_2#52	1_seroba	19F	
+28048_1#174	165_seroba	33C	
+28157_2#89	25_seroba	15B/15C	contamination
+27689_4#181	30_seroba	10F	
+28049_1#114	25_seroba	15C	
+28049_1#114	320_seroba	13	
+27536_3#170	63_seroba	06A	
+28048_1#172	73_seroba	11A	
+27536_3#82	28_seroba	14	contamination
+27536_3#82	42_seroba	Swiss_NT	contamination
+27536_3#82	605_seroba	untypable	
+27535_1#167	172_seroba	20	contamination
+27535_1#167	20_seroba	23F	
+27425_7#44	107_seroba	18C	
+27425_7#44	20_seroba	23F	contamination
+27425_7#44	28_seroba	14	contamination
+27425_7#44	47_seroba	untypable	
+27689_2#51	1_seroba	19F	
+27425_7#34	25_seroba	15B	
+27630_2#12	104_seroba	16F	contamination
+27535_1#99	47_seroba	untypable	
+27535_1#99	69_seroba	15A	
+28157_2#146	28_seroba	14	
+27425_7#176	63_seroba	06C	
+27425_7#176	73_seroba	11A	
+28049_1#60	1_seroba	19F	
+28049_1#60	28_seroba	untypable	
+28354_1#17	130_seroba	04	
+28354_1#17	87_seroba	untypable	
+27630_2#184	1_seroba	19F	
+27689_3#145	28_seroba	untypable	
+27644_5#68	23_seroba	6E(6B)	
+27958_1#130	10_seroba	19A	
+27958_1#130	38_seroba	untypable	
+27463_4#21	28_seroba	14	
+28354_1#123	1_seroba	19F	
+28354_1#123	38_seroba	38	contamination
+27689_4#162	110_seroba	06A	
+27689_4#162	28_seroba	untypable	
+27689_4#162	60_seroba	Swiss_NT	
+28049_1#185	118_seroba	untypable	
+28049_1#185	214_seroba	untypable	
+28049_1#185	28_seroba	untypable	
+28049_1#185	406_seroba	untypable	
+28049_1#185	611_seroba	untypable	
+27644_5#157	104_seroba	16F	contamination
+28049_1#124	20_seroba	23F	
+27630_2#60	47_seroba	6E(6B)	
+28049_1#7	16_seroba	19F	
+27425_7#172	20_seroba	23F	
+28157_1#57	138_seroba	09L	contamination
+28048_1#11	20_seroba	23F	
+27754_1#47	69_seroba	15A	
+27754_1#35	323_seroba	untypable	
+27754_1#35	49_seroba	17F	contamination
+27754_1#35	61_seroba	untypable	
+28048_1#177	28_seroba	14	contamination
+28049_1#173	23_seroba	6E(6B)	
+27689_2#18	517_seroba	untypable	
+27689_2#18	9_seroba	14	contamination
+27463_3#24	118_seroba	untypable	
+27689_2#65	47_seroba	6E(6B)	
+27535_1#21	1_seroba	19F	
+28042_1#40	9_seroba	14	
+28042_1#143	73_seroba	11A	
+27425_7#138	9_seroba	14	
+27689_4#62	25_seroba	15B/15C	contamination
+27689_4#62	28_seroba	14	
+27689_4#62	42_seroba	untypable	
+27463_3#99	87_seroba	33B	
+28157_1#13	47_seroba	6E(6B)	
+28157_3#181	173_seroba	35B	contamination
+27463_3#170	60_seroba	Swiss_NT	
+27535_1#188	63_seroba	06A	
+27536_3#134	1_seroba	19F	
+27536_3#134	20_seroba	23F	
+28049_1#38	47_seroba	6E(6B)	contamination
+27958_1#84	106_seroba	23A	
+27958_1#84	47_seroba	6E(6B)	
+27425_7#157	166_seroba	06A	
+27630_2#86	167_seroba	34	
+27859_1#62	28_seroba	14	
+27425_7#125	345_seroba	untypable	
+27425_7#125	38_seroba	untypable	
+27425_7#125	609_seroba	untypable	
+27425_7#125	614_seroba	untypable	
+27425_7#125	84_seroba	untypable	
+28354_1#82	28_seroba	untypable	
+28354_1#82	43_seroba	09V	contamination
+27689_3#69	20_seroba	23F	
+27689_3#162	28_seroba	untypable	
+27689_3#162	47_seroba	6E(6B)	
+27689_4#47	25_seroba	15B/15C	contamination
+27463_4#93	172_seroba	20	contamination
+27689_3#75	134_seroba	13	
+28042_1#139	47_seroba	6E(6B)	
+28157_2#36	25_seroba	15C	
+28157_2#128	25_seroba	15B/15C	contamination
+27689_2#98	1_seroba	19F	
+27958_1#78	23_seroba	6E(6B)	
+27958_1#157	23_seroba	6E(6B)	
+27958_1#157	30_seroba	10B	
+28157_2#192	158_seroba	16F	contamination
+28157_2#192	53_seroba	19A	
+27958_1#148	1_seroba	19F	
+28049_1#189	37_seroba	6E(6B)	
+28049_1#189	69_seroba	15A	
+28157_2#182	10_seroba	19A	
+27535_1#84	37_seroba	6E(6B)	
+27535_1#84	63_seroba	06C	
+28157_2#122	14_seroba	23F	
+28049_1#147	107_seroba	18C	
+28157_2#73	23_seroba	6E(6B)	
+27958_1#136	158_seroba	16F	contamination
+27958_1#136	251_seroba	untypable	
+27958_1#136	293_seroba	10X	
+27754_1#65	25_seroba	15B	
+27630_2#108	1_seroba	19F	
+27689_1#44	71_seroba	21	
+27689_4#139	1_seroba	19F	
+27689_4#139	400_seroba	untypable	
+27463_3#190	150_seroba	serogroup 24	contamination
+27463_4#34	149_seroba	32F	
+27463_4#7	42_seroba	Swiss_NT	contamination
+27463_4#7	9_seroba	14	contamination
+28354_1#98	6_seroba	09V	contamination
+28354_1#98	615_seroba	untypable	
+27463_3#154	73_seroba	11A	
+28049_1#91	23_seroba	6E(6B)	
+28049_1#66	14_seroba	23F	
+28049_1#66	28_seroba	untypable	
+28049_1#66	293_seroba	10X	
+28049_1#66	82_seroba	06A	
+27630_2#29	28_seroba	untypable	
+27754_1#92	48_seroba	15B	
+27754_1#92	615_seroba	untypable	
+27689_2#110	137_seroba	09N	contamination
+27689_2#110	20_seroba	untypable	
+27689_2#110	87_seroba	33B	
+27463_3#93	60_seroba	Swiss_NT	contamination
+27425_7#119	20_seroba	23F	
+27425_7#119	28_seroba	untypable	
+27630_2#2	1_seroba	19F	
+28049_1#175	28_seroba	14	
+28049_1#175	66_seroba	untypable	
+27689_4#60	1_seroba	19F	
+27689_4#60	20_seroba	23F	contamination
+27689_4#60	66_seroba	untypable	
+27859_1#176	20_seroba	23F	
+28354_1#29	134_seroba	13	
+28354_1#29	30_seroba	10B	
+27463_3#105	180_seroba	possible 06D	 but wciP gene might not be complete
+27463_3#105	24_seroba	23F	
+27859_1#73	1_seroba	19F	
+27463_3#94	66_seroba	untypable	
+27463_3#94	9_seroba	14	contamination
+28157_2#26	110_seroba	06A	
+27630_2#82	166_seroba	untypable	
+27630_2#82	294_seroba	untypable	
+27630_2#82	47_seroba	6E(6B)	
+27536_3#41	1_seroba	19F	
+27536_3#41	110_seroba	06A	
+27425_7#95	10_seroba	19A	
+28157_2#33	293_seroba	10X	
+27689_3#137	1_seroba	19F	
+27689_3#26	1_seroba	19F	
+27689_3#26	203_seroba	35A	
+27859_1#190	63_seroba	06C	
+28048_1#21	20_seroba	23F	
+27689_2#149	8_seroba	05	
+28042_1#124	28_seroba	14	
+27630_2#116	20_seroba	23F	
+27630_2#43	20_seroba	23F	
+28049_1#37	25_seroba	15C	
+28049_1#37	28_seroba	14	
+27463_3#58	73_seroba	11A	
+27958_1#82	42_seroba	untypable	
+27958_1#82	9_seroba	14	
+28157_1#23	5_seroba	23F	
+28157_1#23	539_seroba	untypable	
+28157_2#180	130_seroba	untypable	
+28157_2#180	16_seroba	19F	
+28048_1#20	91_seroba	40	
+27689_1#163	118_seroba	untypable	
+27689_1#163	20_seroba	23F	
+27689_1#163	613_seroba	untypable	
+27689_1#155	1_seroba	19F	
+27958_1#182	104_seroba	16F	
+27644_5#120	203_seroba	35A	
+27689_3#156	37_seroba	6E(6B)	
+27425_7#7	37_seroba	6E(6B)	
+28354_1#110	10_seroba	07B	
+28354_1#110	180_seroba	untypable	
+28354_1#110	534_seroba	untypable	
+27630_2#129	1_seroba	19F	
+27644_5#41	28_seroba	14	
+27859_1#53	1_seroba	19F	
+27463_4#76	30_seroba	10B	
+27958_1#180	25_seroba	15C	
+27535_1#135	1_seroba	19F	
+27425_7#111	1_seroba	19F	
+27644_5#169	16_seroba	19F	
+28049_1#158	166_seroba	untypable	
+28049_1#158	180_seroba	untypable	
+28049_1#158	336_seroba	untypable	
+28049_1#158	340_seroba	untypable	
+28049_1#158	554_seroba	untypable	
+28049_1#158	73_seroba	11A	
+28049_1#158	8_seroba	05	
+28157_3#44	87_seroba	6E(6B)	
+27689_2#52	45_seroba	34	contamination
+28157_1#52	10_seroba	19A	
+28157_1#52	82_seroba	06A	contamination
+27689_2#191	1_seroba	19F	
+27689_2#191	287_seroba	untypable	
+27689_2#191	40_seroba	untypable	
+27425_7#39	180_seroba	untypable	
+27425_7#39	5_seroba	23A	
+27644_5#183	20_seroba	23F	
+27689_3#68	20_seroba	23F	
+27689_3#68	214_seroba	untypable	
+27689_3#68	28_seroba	untypable	
+27689_3#68	42_seroba	untypable	
+27463_4#174	1_seroba	19F	
+27463_3#174	87_seroba	33B	
+27463_3#73	73_seroba	11A	
+27463_3#57	173_seroba	35B	contamination
+27463_3#57	71_seroba	21	
+27463_3#158	130_seroba	04	
+27644_5#181	118_seroba	untypable	
+27644_5#181	613_seroba	untypable	
+27463_3#175	25_seroba	15B	
+27644_5#121	130_seroba	04	
+28157_3#75	149_seroba	32F	contamination
+28157_3#75	188_seroba	23F	
+27689_1#148	9_seroba	14	
+28157_3#120	10_seroba	19A	
+27463_3#6	172_seroba	20	contamination
+28048_1#51	28_seroba	untypable	
+27425_7#58	20_seroba	23F	
+27425_7#128	1_seroba	19F	
+27425_7#128	10_seroba	19A	
+27689_1#95	63_seroba	06C	
+27689_4#168	263_seroba	6E(6B)	
+28048_1#187	25_seroba	15B	
+27958_1#11	16_seroba	19F	
+27463_3#28	1_seroba	19F	
+27463_3#28	28_seroba	14	contamination
+27536_3#146	1_seroba	19F	
+27689_4#9	1_seroba	19F	
+27630_2#81	28_seroba	untypable	
+27689_2#84	180_seroba	untypable	
+27689_2#84	5_seroba	23A	
+27689_2#174	45_seroba	34	
+27689_1#75	9_seroba	14	
+28049_1#32	28_seroba	untypable	
+28049_1#14	10_seroba	19A	
+27535_1#121	1_seroba	19F	
+27535_1#121	47_seroba	6E(6B)	
+27535_1#121	60_seroba	Swiss_NT	
+27463_4#97	1_seroba	19F	
+27463_4#97	28_seroba	untypable	
+27463_3#2	25_seroba	15B	
+28049_1#188	20_seroba	23F	
+27689_4#70	107_seroba	untypable	
+27689_4#70	245_seroba	45	contamination
+27689_4#70	43_seroba	09V	contamination
+27689_4#70	454_seroba	untypable	
+28157_2#77	23_seroba	6E(6B)	
+27536_3#109	1_seroba	19F	
+27689_1#167	30_seroba	10F	
+28157_2#47	1_seroba	19F	
+28157_2#47	9_seroba	14	
+28157_2#121	122_seroba	10A	
+27535_1#89	28_seroba	untypable	
+28354_1#54	87_seroba	33B	
+27689_2#163	203_seroba	35A	
+27689_3#166	69_seroba	15A	
+28157_2#85	319_seroba	39X	
+28042_1#97	28_seroba	untypable	
+28042_1#97	48_seroba	15C	
+28042_1#97	615_seroba	untypable	
+27958_1#146	45_seroba	34	
+27630_2#144	63_seroba	06C	
+27630_2#144	66_seroba	untypable	
+27754_1#60	47_seroba	6E(6B)	
+27535_1#170	104_seroba	16F	contamination
+27535_1#170	42_seroba	untypable	
+28048_1#132	23_seroba	6E(6B)	
+27689_1#166	180_seroba	possible 06D	 but wciP gene might not be complete
+27689_1#166	24_seroba	23F	
+28157_3#80	5_seroba	23A	
+28157_3#80	539_seroba	untypable	
+28049_1#39	1_seroba	19F	
+28049_1#39	28_seroba	untypable	
+28049_1#72	106_seroba	23A	
+28048_1#142	47_seroba	6E(6B)	
+27859_1#42	45_seroba	34	
+27859_1#42	613_seroba	untypable	
+27630_2#45	130_seroba	untypable	
+27630_2#45	186_seroba	untypable	
+27630_2#45	263_seroba	untypable	
+27630_2#45	323_seroba	untypable	
+27630_2#45	49_seroba	17F	contamination
+27630_2#45	61_seroba	untypable	
+27689_1#121	151_seroba	23B1	
+27689_1#82	16_seroba	19F	
+27859_1#51	1_seroba	19F	
+28049_1#159	20_seroba	23F	
+27958_1#1	71_seroba	21	
+27689_3#117	25_seroba	15C	
+27425_7#179	137_seroba	09N	contamination
+27425_7#179	174_seroba	untypable	
+27425_7#179	187_seroba	untypable	
+27425_7#179	28_seroba	untypable	
+27425_7#179	42_seroba	untypable	
+27630_2#114	87_seroba	33B	
+27754_1#13	118_seroba	untypable	
+27754_1#13	175_seroba	untypable	
+27754_1#13	214_seroba	untypable	
+27754_1#13	28_seroba	14	
+27754_1#13	332_seroba	untypable	
+27754_1#13	401_seroba	untypable	
+27754_1#13	402_seroba	untypable	
+27754_1#13	406_seroba	untypable	
+27689_2#24	165_seroba	33C	
+27689_2#24	323_seroba	untypable	
+27689_2#24	49_seroba	17F	
+27689_2#24	61_seroba	17F	contamination
+27689_3#10	42_seroba	untypable	
+28157_2#57	48_seroba	15B	
+28157_2#57	615_seroba	untypable	
+28157_1#1	165_seroba	untypable	
+28157_1#1	186_seroba	35B	contamination
+28157_1#1	20_seroba	untypable	
+27689_3#70	20_seroba	23F	
+27644_5#40	20_seroba	23F	
+27689_1#81	110_seroba	06A	
+27535_1#88	180_seroba	06A	
+27689_4#134	30_seroba	10F	
+27689_4#134	317_seroba	untypable	
+28354_1#78	45_seroba	34	
+27689_4#50	47_seroba	6E(6B)	contamination
+27689_4#50	69_seroba	15A	
+27689_3#94	293_seroba	10X	
+27689_3#94	47_seroba	6E(6B)	
+27536_3#106	215_seroba	untypable	
+27536_3#106	30_seroba	10B	
+27536_3#106	82_seroba	06C	
+28049_1#2	16_seroba	19F	
+28049_1#101	16_seroba	19F	
+27754_1#64	1_seroba	19F	
+27754_1#64	43_seroba	09V	
+27689_2#68	20_seroba	23F	
+27689_2#68	28_seroba	untypable	
+28157_1#161	1_seroba	19F	
+27689_1#156	37_seroba	6E(6B)	
+27644_5#94	23_seroba	06A	
+27644_5#94	292_seroba	untypable	
+27644_5#94	45_seroba	34	
+27644_5#26	128_seroba	03	
+27644_5#26	87_seroba	33B	
+28157_3#188	69_seroba	15A	
+27463_4#158	47_seroba	6E(6A)	
+27689_3#43	1_seroba	19F	
+27689_3#43	287_seroba	untypable	
+27535_1#56	73_seroba	11A	
+27425_7#140	1_seroba	19F	
+27425_7#140	30_seroba	10F	
+27536_3#90	87_seroba	33B	
+27463_3#123	130_seroba	04	
+27689_3#112	47_seroba	6E(6B)	
+27689_4#56	34_seroba	34	
+27535_1#87	37_seroba	6E(6B)	
+28049_1#50	10_seroba	17F	
+28042_1#150	47_seroba	6E(6B)	
+28048_1#178	87_seroba	33B	
+27425_7#169	20_seroba	23F	
+27425_7#169	87_seroba	33B	
+28157_3#10	203_seroba	untypable	
+28157_3#10	69_seroba	15A	
+27463_3#119	1_seroba	19F	
+27463_3#119	122_seroba	10A	
+27535_1#156	16_seroba	19F	
+27689_2#47	28_seroba	14	
+27689_2#47	47_seroba	6E(6B)	
+27754_1#19	107_seroba	18C	
+27754_1#19	66_seroba	untypable	
+27689_3#174	1_seroba	19F	
+27535_1#164	154_seroba	35F	
+28354_1#20	1_seroba	19F	contamination
+28354_1#20	167_seroba	untypable	
+28157_1#20	28_seroba	14	contamination
+27535_1#138	137_seroba	09N	contamination
+27535_1#138	138_seroba	09N	contamination
+27535_1#138	174_seroba	untypable	
+27535_1#138	185_seroba	untypable	
+27535_1#138	187_seroba	untypable	
+27535_1#138	319_seroba	untypable	
+27535_1#138	544_seroba	untypable	
+27535_1#138	559_seroba	untypable	
+27535_1#138	63_seroba	untypable	
+28157_2#63	47_seroba	6E(6B)	
+27689_2#161	225_seroba	untypable	
+27689_2#161	40_seroba	13	
+27689_2#161	495_seroba	13	contamination
+27689_2#161	67_seroba	untypable	
+27463_3#72	10_seroba	19A	
+27630_2#105	123_seroba	37	
+27536_3#37	1_seroba	19F	
+27536_3#37	264_seroba	untypable	
+27536_3#37	28_seroba	14	contamination
+27536_3#37	73_seroba	untypable	
+28157_1#137	20_seroba	untypable	
+28157_1#137	25_seroba	15C	
+27630_2#71	47_seroba	6E(6B)	
+27630_2#71	60_seroba	Swiss_NT	
+27859_1#157	1_seroba	19F	
+28653_1#1	20_seroba	23F	
+28157_3#157	1_seroba	19F	
+27689_4#76	28_seroba	14	
+28049_1#191	25_seroba	15B	
+28042_1#132	5_seroba	23F	
+28042_1#132	539_seroba	untypable	
+28157_1#174	40_seroba	22A	contamination
+27689_2#141	1_seroba	19F	
+28157_2#149	69_seroba	15A	
+27630_2#33	107_seroba	18C	
+27630_2#33	28_seroba	untypable	
+27630_2#33	37_seroba	6E(6B)	
+28157_3#111	106_seroba	23A	
+28157_3#111	82_seroba	06A	
+28157_2#132	1_seroba	19F	
+27463_3#110	34_seroba	34	contamination
+28042_1#62	20_seroba	23F	
+27630_2#70	66_seroba	untypable	
+28048_1#81	10_seroba	19A	
+27536_3#99	107_seroba	18C	
+27859_1#162	20_seroba	23F	
+27754_1#156	1_seroba	19F	
+27754_1#156	150_seroba	untypable	
+27754_1#156	47_seroba	6E(6A)	contamination
+28157_3#117	37_seroba	6E(6B)	
+28157_3#117	87_seroba	untypable	
+27689_4#188	1_seroba	19F	
+28042_1#68	10_seroba	19A	
+27689_3#129	2_seroba	01	contamination
+27463_4#98	104_seroba	16F	contamination
+27535_1#24	32_seroba	07F	contamination
+27689_4#127	1_seroba	19F	
+28354_1#66	106_seroba	23A	
+28354_1#66	166_seroba	06A	
+27958_1#99	1_seroba	19F	contamination
+28049_1#67	1_seroba	untypable	
+28049_1#67	20_seroba	23F	
+28157_3#161	263_seroba	6E(6B)	
+27463_4#12	149_seroba	32F	
+27859_1#93	1_seroba	19F	
+27859_1#93	451_seroba	untypable	
+27425_7#94	28_seroba	14	
+27958_1#98	127_seroba	13	
+27630_2#174	20_seroba	23F	
+28354_1#105	45_seroba	34	contamination
+28354_1#105	6_seroba	09V	
+28354_1#105	615_seroba	untypable	
+27689_2#45	71_seroba	21	
+27754_1#187	5_seroba	23F	
+27754_1#187	539_seroba	untypable	
+27958_1#59	173_seroba	untypable	
+27958_1#59	30_seroba	10B	
+27958_1#59	407_seroba	untypable	
+27958_1#59	513_seroba	untypable	
+27958_1#59	580_seroba	untypable	
+28354_1#67	28_seroba	14	contamination
+27754_1#163	28_seroba	14	contamination
+27754_1#175	20_seroba	23F	
+27754_1#175	42_seroba	Swiss_NT	contamination
+28354_1#6	10_seroba	17F	
+27689_1#58	122_seroba	10A	
+27425_7#114	1_seroba	19F	
+27689_2#139	1_seroba	19F	
+27689_2#139	28_seroba	14	
+28157_1#88	14_seroba	23F	
+28049_1#129	127_seroba	13	
+27689_1#175	130_seroba	04	
+27463_3#169	66_seroba	untypable	
+27463_3#169	9_seroba	14	
+28157_3#45	1_seroba	19F	
+27644_5#132	151_seroba	23B1	contamination
+27644_5#132	82_seroba	06A	
+28157_3#122	38_seroba	38	contamination
+27958_1#89	107_seroba	untypable	
+27958_1#89	138_seroba	untypable	
+27958_1#89	215_seroba	untypable	
+27958_1#89	37_seroba	6E(6B)	
+27958_1#89	66_seroba	untypable	
+27644_5#184	1_seroba	19F	
+27425_7#47	87_seroba	33B	
+27644_5#151	9_seroba	14	
+27689_4#142	25_seroba	15B	
+27535_1#128	130_seroba	untypable	
+27535_1#128	6_seroba	09V	contamination
+28157_2#83	10_seroba	19A	
+28049_1#181	138_seroba	untypable	
+28049_1#181	180_seroba	untypable	
+28049_1#181	5_seroba	23A	
+28157_2#28	1_seroba	19F	
+27644_5#70	1_seroba	19F	
+27536_3#118	20_seroba	23F	
+27689_3#27	28_seroba	14	contamination
+28157_1#178	10_seroba	19A	
+27463_4#127	28_seroba	14	
+28049_1#12	14_seroba	23F	
+27535_1#114	197_seroba	untypable	
+27535_1#114	37_seroba	6E(6B)	
+27535_1#114	509_seroba	6E(6B)	
+28157_3#97	180_seroba	06A	
+27689_2#66	150_seroba	untypable	
+27689_2#66	215_seroba	untypable	
+27689_2#66	565_seroba	18F	
+27689_2#66	605_seroba	untypable	
+27689_2#66	71_seroba	21	
+27689_3#132	1_seroba	19F	
+27754_1#100	283_seroba	35C	
+27754_1#100	42_seroba	untypable	
+27689_2#62	42_seroba	Swiss_NT	contamination
+27958_1#109	26_seroba	12F	
+27958_1#109	87_seroba	33B	
+27859_1#70	323_seroba	untypable	
+27859_1#70	49_seroba	17F	
+27859_1#70	61_seroba	untypable	
+27859_1#70	63_seroba	untypable	
+28157_2#11	1_seroba	19F	
+28042_1#186	10_seroba	17F	contamination
+27535_1#149	282_seroba	untypable	
+27535_1#149	45_seroba	untypable	
+27535_1#149	502_seroba	untypable	
+27535_1#149	6_seroba	09V	contamination
+27535_1#149	615_seroba	untypable	
+28157_1#4	173_seroba	35B	contamination
+27689_1#47	150_seroba	serogroup 24	contamination
+27689_1#47	2_seroba	01	contamination
+27958_1#63	9_seroba	14	
+27689_2#109	87_seroba	33B	
+28157_1#90	47_seroba	6E(6B)	
+27630_2#146	47_seroba	6E(6A)	
+27630_2#146	66_seroba	untypable	
+27689_2#86	1_seroba	19F	
+28049_1#136	25_seroba	untypable	
+28049_1#136	43_seroba	09V	contamination
+28049_1#136	57_seroba	31	
+27689_4#77	87_seroba	6E(6B)	
+27958_1#187	37_seroba	6E(6B)	
+27630_2#5	20_seroba	23F	
+28157_2#14	1_seroba	19F	
+28157_2#14	23_seroba	06A	
+28049_1#178	14_seroba	23F	
+28049_1#178	28_seroba	untypable	
+28042_1#69	43_seroba	09V	
+28042_1#69	47_seroba	6E(6B)	
+28049_1#24	28_seroba	untypable	
+27425_7#91	1_seroba	19F	
+27425_7#91	87_seroba	33B	
+27689_3#7	16_seroba	19F	
+27463_4#155	118_seroba	untypable	
+27463_4#155	20_seroba	23F	
+27463_4#155	613_seroba	untypable	
+28157_3#135	263_seroba	6E(6B)	
+28042_1#94	1_seroba	untypable	
+28042_1#94	84_seroba	19F	
+28157_3#47	10_seroba	19A	
+27689_2#140	73_seroba	11A	
+27859_1#117	24_seroba	23F	
+27859_1#117	47_seroba	6E(6B)	
+27689_2#134	42_seroba	Swiss_NT	
+27754_1#131	9_seroba	14	contamination
+28049_1#97	24_seroba	23F	
+27536_3#179	172_seroba	20	contamination
+27644_5#67	45_seroba	34	
+27958_1#134	47_seroba	6E(6B)	
+27463_4#143	165_seroba	untypable	
+27463_4#143	203_seroba	35A	
+27535_1#50	73_seroba	11A	
+27859_1#91	28_seroba	14	
+27754_1#86	149_seroba	32F	contamination
+27754_1#86	188_seroba	23F	contamination
+28042_1#92	173_seroba	35B	contamination
+28042_1#92	9_seroba	14	
+27689_4#104	47_seroba	6E(6B)	
+28157_1#44	104_seroba	16F	contamination
+28157_1#44	186_seroba	35B	contamination
+27958_1#179	47_seroba	6E(6B)	
+28157_1#154	1_seroba	19F	
+27535_1#161	20_seroba	23F	
+27689_4#91	1_seroba	19F	
+27689_4#91	60_seroba	untypable	
+27958_1#45	84_seroba	19F	
+28157_1#142	1_seroba	19F	
+28042_1#187	87_seroba	33B	
+28048_1#165	1_seroba	19F	
+27689_2#148	137_seroba	09N	contamination
+27425_7#171	611_seroba	untypable	
+28157_2#32	37_seroba	6E(6B)	
+28157_2#32	42_seroba	Swiss_NT	
+28048_1#19	1_seroba	19F	
+27644_5#87	107_seroba	untypable	
+27644_5#87	28_seroba	untypable	
+27644_5#87	37_seroba	6E(6B)	
+27754_1#73	71_seroba	21	
+27859_1#65	149_seroba	28F	
+27859_1#65	165_seroba	33C	
+27859_1#65	20_seroba	23F	
+27754_1#14	1_seroba	19F	
+27754_1#14	611_seroba	untypable	
+27958_1#159	167_seroba	34	
+27958_1#159	32_seroba	07F	contamination
+27754_1#105	1_seroba	19F	
+27689_2#105	9_seroba	14	contamination
+27463_3#26	134_seroba	13	contamination
+28157_1#39	1_seroba	19F	
+27644_5#104	23_seroba	06A	
+27644_5#104	25_seroba	15C	
+27644_5#104	292_seroba	untypable	
+28049_1#127	310_seroba	untypable	
+28049_1#127	5_seroba	23F	
+28049_1#127	539_seroba	untypable	
+27425_7#162	20_seroba	23F	
+27463_4#50	106_seroba	23F	
+27958_1#141	138_seroba	09L	contamination
+27425_7#131	123_seroba	37	
+27958_1#85	1_seroba	19F	
+27630_2#102	69_seroba	15A	
+27425_7#76	43_seroba	09V	
+27958_1#43	1_seroba	19F	
+27958_1#43	37_seroba	6E(6B)	
+27463_4#26	87_seroba	33B	
+28354_1#45	1_seroba	19F	
+27689_2#60	30_seroba	10B	
+27754_1#110	137_seroba	09N	contamination
+27859_1#46	87_seroba	6E(6B)	contamination
+28048_1#145	73_seroba	11A	
+27689_4#157	25_seroba	15B	
+28157_3#174	122_seroba	10A	
+27535_1#49	37_seroba	6E(6B)	
+27644_5#89	127_seroba	13	
+27536_3#130	38_seroba	38	contamination
+27536_3#130	63_seroba	06C	
+28042_1#58	10_seroba	19A	
+27630_2#58	37_seroba	6E(6B)	
+28157_1#104	224_seroba	08	
+28157_1#104	47_seroba	6E(6B)	
+28049_1#63	91_seroba	40	
+27859_1#115	69_seroba	15A	
+27859_1#13	1_seroba	19F	
+27958_1#24	25_seroba	15B	
+27689_4#75	30_seroba	10B	
+27859_1#56	73_seroba	11A	
+28157_1#73	1_seroba	19F	
+27630_2#111	20_seroba	23F	
+27689_4#23	166_seroba	06A	
+28157_2#138	1_seroba	19F	
+28157_2#145	69_seroba	15A	
+27859_1#132	10_seroba	19A	
+27536_3#155	66_seroba	untypable	
+27630_2#48	16_seroba	19F	
+27630_2#48	342_seroba	6E(6B)	contamination
+27630_2#48	424_seroba	untypable	
+27630_2#48	82_seroba	untypable	
+28048_1#36	9_seroba	14	
+27689_1#171	1_seroba	19F	
+27644_5#86	20_seroba	untypable	
+27644_5#86	30_seroba	10A	
+28157_1#82	1_seroba	19F	
+28048_1#171	20_seroba	23F	
+28048_1#171	30_seroba	10F	
+28049_1#46	10_seroba	19A	
+28049_1#46	48_seroba	15B	
+28049_1#46	615_seroba	untypable	
+27689_2#28	14_seroba	23F	
+27689_2#28	28_seroba	untypable	
+28157_3#81	48_seroba	15B	
+28157_3#81	615_seroba	untypable	
+28042_1#111	9_seroba	14	
+28049_1#169	166_seroba	06A	
+27463_4#171	118_seroba	untypable	
+27463_4#171	151_seroba	23B1	
+27463_4#171	454_seroba	untypable	
+27463_4#171	6_seroba	09V	contamination
+28157_2#29	1_seroba	19F	
+27644_5#31	167_seroba	34	
+27644_5#31	87_seroba	33B	
+28048_1#121	1_seroba	19F	
+28048_1#121	167_seroba	untypable	
+27689_4#140	69_seroba	15A	
+27463_4#122	20_seroba	23F	
+27463_4#122	28_seroba	untypable	
+28048_1#1	107_seroba	18C	
+27536_3#12	166_seroba	6E(6B)	
+27536_3#12	180_seroba	untypable	
+27536_3#12	261_seroba	untypable	
+27536_3#12	534_seroba	untypable	
+28354_1#63	1_seroba	19F	
+28354_1#63	82_seroba	06A	
+28048_1#183	23_seroba	6E(6B)	
+27535_1#47	130_seroba	untypable	
+27535_1#47	6_seroba	09V	contamination
+27689_4#120	138_seroba	09L	contamination
+27689_4#120	42_seroba	Swiss_NT	
+28049_1#10	24_seroba	23F	
+27689_2#39	60_seroba	Swiss_NT	
+27689_2#14	20_seroba	23F	
+27689_2#14	45_seroba	34	
+27689_2#14	9_seroba	14	
+27630_2#166	1_seroba	19F	
+27630_2#166	28_seroba	14	contamination
+27689_4#189	1_seroba	19F	
+27689_1#77	127_seroba	13	contamination
+27689_1#77	37_seroba	6E(6B)	
+27689_4#191	10_seroba	19A	
+27689_4#191	69_seroba	15A	
+28042_1#163	14_seroba	23F	
+28042_1#163	28_seroba	untypable	
+28157_1#119	171_seroba	6E(6B)	
+28157_1#119	342_seroba	6E(6B)	
+28157_1#119	37_seroba	6E(6B)	
+28157_1#119	509_seroba	6E(6B)	
+27754_1#40	34_seroba	34	
+27958_1#36	47_seroba	6E(6B)	
+27463_3#156	165_seroba	33C	
+28157_3#102	16_seroba	19F	
+27689_3#171	151_seroba	23B1	contamination
+27689_3#171	69_seroba	15A	
+27630_2#161	20_seroba	23F	
+27689_2#25	20_seroba	23F	
+28048_1#99	1_seroba	19F	
+27536_3#47	25_seroba	15C	
+27958_1#90	37_seroba	6E(6B)	
+28042_1#8	23_seroba	6E(6B)	
+28354_1#35	16_seroba	19F	
+28157_3#18	151_seroba	23B1	
+28354_1#130	1_seroba	untypable	
+28354_1#130	60_seroba	Swiss_NT	
+27535_1#64	137_seroba	09N	contamination
+28157_2#190	1_seroba	19F	
+27859_1#149	28_seroba	untypable	
+27859_1#149	63_seroba	06C	
+27425_7#41	1_seroba	19F	
+27425_7#41	134_seroba	13	
+27859_1#84	1_seroba	19F	
+27859_1#84	287_seroba	untypable	
+27859_1#84	40_seroba	untypable	
+27463_4#78	127_seroba	13	
+27644_5#138	25_seroba	15C	
+27689_1#89	2_seroba	01	contamination
+27463_3#88	187_seroba	35F	contamination
+27463_3#88	66_seroba	untypable	
+27535_1#76	32_seroba	07F	contamination
+27535_1#76	9_seroba	14	
+27689_4#18	1_seroba	19F	
+27859_1#72	188_seroba	35F	
+27689_4#114	20_seroba	23F	
+27689_4#11	106_seroba	23A	
+27689_4#11	26_seroba	46	
+27689_4#11	40_seroba	22A	contamination
+27689_2#64	1_seroba	19F	
+27463_4#176	118_seroba	untypable	
+27630_2#163	1_seroba	19F	
+28049_1#100	1_seroba	19F	
+28042_1#84	287_seroba	06C	
+28157_3#61	123_seroba	37	
+27859_1#43	28_seroba	14	
+27859_1#43	71_seroba	21	
+28049_1#30	25_seroba	15C	
+28049_1#30	265_seroba	untypable	
+27754_1#56	66_seroba	untypable	
+27859_1#71	106_seroba	23F	
+27630_2#130	34_seroba	34	
+27630_2#130	66_seroba	untypable	
+27536_3#45	154_seroba	35F	
+27536_3#115	104_seroba	16F	contamination
+27536_3#15	45_seroba	34	
+27425_7#180	28_seroba	untypable	
+27425_7#180	71_seroba	21	
+28048_1#9	87_seroba	33B	
+27754_1#4	28_seroba	14	
+27463_3#98	20_seroba	23F	
